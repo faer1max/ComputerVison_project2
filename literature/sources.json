@@ -1,0 +1,82 @@
+[
+  {
+    "category": "01_foundations",
+    "id": "01_MVTec_AD_CVPR2019",
+    "title": "MVTec AD -- A Comprehensive Real-World Dataset for Unsupervised Anomaly Detection",
+    "url": "https://openaccess.thecvf.com/content_CVPR_2019/papers/Bergmann_MVTec_AD_--_A_Comprehensive_Real-World_Dataset_for_Unsupervised_Anomaly_CVPR_2019_paper.pdf",
+    "version": "CVPR 2019",
+    "check": "mvtec ad"
+  },
+  {
+    "category": "01_foundations",
+    "id": "02_PaDiM_ICPR2021_arXiv",
+    "title": "PaDiM: a Patch Distribution Modeling Framework for Anomaly Detection and Localization",
+    "url": "https://arxiv.org/pdf/2011.08785v1",
+    "version": "arXiv v1; ICPR workshop paper",
+    "check": "padim"
+  },
+  {
+    "category": "01_foundations",
+    "id": "03_PatchCore_CVPR2022",
+    "title": "Towards Total Recall in Industrial Anomaly Detection",
+    "url": "https://openaccess.thecvf.com/content/CVPR2022/papers/Roth_Towards_Total_Recall_in_Industrial_Anomaly_Detection_CVPR_2022_paper.pdf",
+    "version": "CVPR 2022",
+    "check": "towards total recall"
+  },
+  {
+    "category": "02_reconstruction_and_synthesis",
+    "id": "04_DRAEM_ICCV2021",
+    "title": "DRAEM - A Discriminatively Trained Reconstruction Embedding for Surface Anomaly Detection",
+    "url": "https://openaccess.thecvf.com/content/ICCV2021/papers/Zavrtanik_DRAEM_-_A_Discriminatively_Trained_Reconstruction_Embedding_for_Surface_Anomaly_ICCV_2021_paper.pdf",
+    "version": "ICCV 2021",
+    "check": "discriminatively trained"
+  },
+  {
+    "category": "02_reconstruction_and_synthesis",
+    "id": "05_CutPaste_CVPR2021",
+    "title": "CutPaste: Self-Supervised Learning for Anomaly Detection and Localization",
+    "url": "https://openaccess.thecvf.com/content/CVPR2021/papers/Li_CutPaste_Self-Supervised_Learning_for_Anomaly_Detection_and_Localization_CVPR_2021_paper.pdf",
+    "version": "CVPR 2021",
+    "check": "cutpaste"
+  },
+  {
+    "category": "03_foundation_models",
+    "id": "06_DINOv2_TMLR2024_arXiv",
+    "title": "DINOv2: Learning Robust Visual Features without Supervision",
+    "url": "https://arxiv.org/pdf/2304.07193v2",
+    "version": "arXiv v2; TMLR 2024 paper",
+    "check": "dinov2"
+  },
+  {
+    "category": "03_foundation_models",
+    "id": "07_AnomalyCLIP_ICLR2024",
+    "title": "AnomalyCLIP: Object-agnostic Prompt Learning for Zero-shot Anomaly Detection",
+    "url": "https://openreview.net/notes/edits/attachment?id=HM1Swt7ABY&name=pdf",
+    "version": "ICLR 2024 conference paper from OpenReview",
+    "check": "anomalyclip"
+  },
+  {
+    "category": "03_foundation_models",
+    "id": "08_AnomalyDINO_WACV2025",
+    "title": "AnomalyDINO: Boosting Patch-Based Few-Shot Anomaly Detection with DINOv2",
+    "url": "https://openaccess.thecvf.com/content/WACV2025/papers/Damm_AnomalyDINO_Boosting_Patch-Based_Few-Shot_Anomaly_Detection_with_DINOv2_WACV_2025_paper.pdf",
+    "version": "WACV 2025",
+    "check": "anomalydino"
+  },
+  {
+    "category": "04_efficiency_and_robustness",
+    "id": "09_EfficientAD_WACV2024",
+    "title": "EfficientAD: Accurate Visual Anomaly Detection at Millisecond-Level Latencies",
+    "url": "https://openaccess.thecvf.com/content/WACV2024/papers/Batzner_EfficientAD_Accurate_Visual_Anomaly_Detection_at_Millisecond-Level_Latencies_WACV_2024_paper.pdf",
+    "version": "WACV 2024",
+    "check": "efficientad"
+  },
+  {
+    "category": "04_efficiency_and_robustness",
+    "id": "10_MVTec_AD_2_IJCV2026",
+    "title": "The MVTec AD 2 Dataset: Advanced Scenarios for Unsupervised Anomaly Detection",
+    "url": "https://link.springer.com/content/pdf/10.1007/s11263-026-02743-0.pdf",
+    "version": "IJCV 2026 published open-access version",
+    "check": "advanced scenarios"
+  }
+]

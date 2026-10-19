@@ -1,0 +1,13 @@
+# Install torch and torchvision first from the CUDA wheel index shown below.
+numpy
+scipy
+scikit-image
+opencv-python
+pillow
+matplotlib
+pandas
+scikit-learn
+tqdm
+pyyaml
+jupyterlab
+tensorboard

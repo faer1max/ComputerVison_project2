@@ -1,0 +1,22 @@
+[
+  {
+    "name": "AnomalyDINO",
+    "url": "https://github.com/dammsi/AnomalyDINO.git",
+    "commit": "b9d1c2648e3a5247437d4d953d907a8f3d994457"
+  },
+  {
+    "name": "AnomalyCLIP",
+    "url": "https://github.com/zqhang/AnomalyCLIP.git",
+    "commit": "3911738c0867544f545a076ad78f3f11d9ecbfdf"
+  },
+  {
+    "name": "dinov2",
+    "url": "https://github.com/facebookresearch/dinov2.git",
+    "commit": "7764ea0f912e53c92e82eb78a2a1631e92725fc8"
+  },
+  {
+    "name": "spot-diff",
+    "url": "https://github.com/amazon-science/spot-diff.git",
+    "commit": "2a692ab575001cbde74d402d897a7286086c6199"
+  }
+]

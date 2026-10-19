@@ -16,6 +16,13 @@ data/
 datasets/
 checkpoints/
 weights/
+external/
+literature/**/*.pdf
+literature/**/*.partial
+literature/**/*.parts/
+assets/templates/*.zip
+assets/templates/*.partial
+assets/templates/*.parts/
 outputs/
 runs/
 wandb/

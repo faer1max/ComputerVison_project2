@@ -1,0 +1,38 @@
+[
+  {
+    "name": "CVPR template",
+    "url": "https://github.com/cvpr-org/author-kit/archive/refs/tags/CVPR2026-v1(latex).zip",
+    "status": "ready",
+    "path": "assets/templates/CVPR2026-v1-latex.zip",
+    "bytes": 29800,
+    "sha256": "ef672bf4ad1c6801237b957d57b0087d4412e7dee01ad3b512abe82960c6466c",
+    "official_sha256_verified": false
+  },
+  {
+    "name": "DINOv2 ViT-S/14",
+    "url": "https://dl.fbaipublicfiles.com/dinov2/dinov2_vits14/dinov2_vits14_pretrain.pth",
+    "path": "weights\\dinov2_vits14_pretrain.pth",
+    "bytes": 88283115,
+    "sha256": "b938bf1bc15cd2ec0feacfe3a1bb553fe8ea9ca46a7e1d8d00217f29aef60cd9",
+    "official_sha256_verified": false,
+    "status": "ready"
+  },
+  {
+    "name": "CLIP ViT-L/14@336px",
+    "url": "https://openaipublic.azureedge.net/clip/models/3035c92b350959924f9f00213499208652fc7ea050643e8b385c2dac08641f02/ViT-L-14-336px.pt",
+    "path": "weights\\ViT-L-14-336px.pt",
+    "bytes": 934088680,
+    "sha256": "3035c92b350959924f9f00213499208652fc7ea050643e8b385c2dac08641f02",
+    "official_sha256_verified": true,
+    "status": "ready"
+  },
+  {
+    "name": "VisA",
+    "url": "https://amazon-visual-anomaly.s3.us-west-2.amazonaws.com/VisA_20220922.tar",
+    "path": "data\\downloads\\VisA_20220922.tar",
+    "bytes": 1929840640,
+    "sha256": "2eb8690c803ab37de0324772964100169ec8ba1fa3f7e94291c9ca673f40f362",
+    "official_sha256_verified": false,
+    "status": "ready"
+  }
+]

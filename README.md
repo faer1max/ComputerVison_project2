@@ -63,7 +63,22 @@ Efficiency:
 - peak GPU memory
 - memory-bank size
 
+## Project Layout
+
+The repository root is `D:/MinghuaXiong/computervision_project` (the CV project folder).
+
+- `part1/`: classical template/difference and reconstruction baselines.
+- `part2/`: AnomalyDINO reproduction and AnomalyCLIP comparison.
+- `part3/`: robustness improvements, controlled ablations, and failure analysis.
+- `literature/`: the ten recommended papers grouped by topic, sources, and reading notes.
+- `data/`, `weights/`, `external/`: shared datasets, model weights, and official repositories.
+- `scripts/`: shared preparation utilities.
+- `assets/`: download inventory, source revisions, data verification, and report template.
+- `outputs/part1/`, `outputs/part2/`, `outputs/part3/`: per-part results, created when experiments run and excluded from Git.
+
+Each part has its own README. Keep the same data split and evaluation protocol across parts. Shared assets remain at the root to avoid duplication. See `PREPARATION.md` for downloaded asset details and `PROJECT_NOTES.md` for course requirements.
+
 ## Repository Status
 
-This repository is being prepared for the final project. Code, setup instructions, data preparation steps, model checkpoints, evaluation commands, and representative visual results will be added as the implementation progresses.
+Part 1 now contains runnable template-difference and normal-only convolutional autoencoder baselines, with shared VisA loading and evaluation utilities. See `part1/README.md` for setup, commands, metric protocol, and output locations. Parts 2 and 3 remain planned work; their folders contain project notes only.
 
