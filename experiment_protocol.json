@@ -1,0 +1,19 @@
+{
+  "version": "course448-v1",
+  "categories": ["candle", "capsules", "cashew", "chewinggum", "fryum", "pipe_fryum"],
+  "image_size": [448, 448],
+  "rgb_resize": "Pillow BILINEAR; RGB; square; no crop/padding",
+  "mask_resize": "Pillow NEAREST; L; mask > 0",
+  "split_seed": 42,
+  "validation_fraction": 0.1,
+  "image_target_fpr": 0.05,
+  "pixel_target_fpr": 0.01,
+  "prediction_rule": "score > threshold",
+  "aupro_max_fpr": 0.3,
+  "aupro_thresholds": 200,
+  "aupro_connectivity": 8,
+  "template_max_references": 24,
+  "autoencoder_epochs": 10,
+  "autoencoder_batch_size": 16,
+  "autoencoder_learning_rate": 0.001
+}

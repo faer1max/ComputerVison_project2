@@ -1,13 +1,9 @@
-# Install torch and torchvision first from the CUDA wheel index shown below.
-numpy
-scipy
-scikit-image
-opencv-python
-pillow
-matplotlib
-pandas
-scikit-learn
-tqdm
-pyyaml
-jupyterlab
-tensorboard
+# 安装PyTorch后安装本文件；以下为本次全量运行实际使用的直接依赖。
+numpy==2.4.6
+scipy==1.17.1
+scikit-image==0.26.0
+opencv-python==5.0.0.93
+pillow==12.3.0
+matplotlib==3.11.2
+pandas==3.0.6
+scikit-learn==1.9.1

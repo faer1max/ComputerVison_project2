@@ -41,4 +41,7 @@ wandb/
 Thumbs.db
 .vscode/
 .idea/
+tmp/
+part2/.deps/
+part2/.faiss/
 

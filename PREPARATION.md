@@ -42,11 +42,11 @@ python scripts/prepare_visa.py
 
 ## 运行环境与待办
 
-2026-10-18 检查：本机 NVIDIA RTX 4060 Laptop GPU，约 8 GB 显存；D 盘准备前约 95 GiB 可用，C 盘约 7 GiB 可用。环境和缓存优先放在 D 盘。
-
-现有 `D:/conda/envs/cv` 是 Python 3.11，但尚未安装 PyTorch。本次准备不修改该环境。后续需配置独立、兼容本机 CUDA 驱动的 PyTorch 环境，安装图像处理、评估及检索依赖，再先运行单张图验证。两份官方 requirements 的年代和版本约束不同，不能直接假定可以混装；Windows 上的 FAISS 安装方案也需验证。
-
-开始实现无需用户另行上传数据。若课程还有额外评分细则、截止日期、老师补充说明或已有实验记录，可补充到项目中。作者、队友及最终提交账号信息可在报告与提交阶段提供。
+2026-11-05：Part 1 使用 Python 3.11 / CUDA PyTorch；共享输入协议固定于
+`experiment_protocol.json`，精确运行环境和验证摘要见 `results/part1_course448`。
+数据默认位于项目内 `data/VisA`；通过 `CVPROJECT_DATA_ROOT` 可以复用其他目录的数据。
+运行命令以 `part1/README.md` 为准。Part 2 的FAISS/NumPy依赖需独立配置，
+不要用Part1的requirements直接覆盖其环境。数据、权重和完整实验输出不随Git提交。
 
 ## 官方来源
 

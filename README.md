@@ -65,7 +65,7 @@ Efficiency:
 
 ## Project Layout
 
-The repository root is `D:/MinghuaXiong/computervision_project` (the CV project folder).
+Paths below are relative to the repository root.
 
 - `part1/`: classical template/difference and reconstruction baselines.
 - `part2/`: AnomalyDINO reproduction and AnomalyCLIP comparison.
@@ -74,11 +74,13 @@ The repository root is `D:/MinghuaXiong/computervision_project` (the CV project 
 - `data/`, `weights/`, `external/`: shared datasets, model weights, and official repositories.
 - `scripts/`: shared preparation utilities.
 - `assets/`: download inventory, source revisions, data verification, and report template.
-- `outputs/part1/`, `outputs/part2/`, `outputs/part3/`: per-part results, created when experiments run and excluded from Git.
+- `experiment_protocol.json`: shared course448 input, data-split and metric contract.
+- `outputs/course448/part1/`: regenerated Part 1 predictions/checkpoints (excluded from Git).
+- `results/part1_course448/`: verified, shareable summaries and representative figures.
 
 Each part has its own README. Keep the same data split and evaluation protocol across parts. Shared assets remain at the root to avoid duplication. See `PREPARATION.md` for downloaded asset details and `PROJECT_NOTES.md` for course requirements.
 
 ## Repository Status
 
-Part 1 now contains runnable template-difference and normal-only convolutional autoencoder baselines, with shared VisA loading and evaluation utilities. See `part1/README.md` for setup, commands, metric protocol, and output locations. Parts 2 and 3 remain planned work; their folders contain project notes only.
+Part 1 now contains runnable template-difference and normal-only convolutional autoencoder baselines, with shared 448x448 VisA loading and evaluation utilities. Template maps are restored to test-image coordinates before pixel evaluation. See `part1/README.md` for setup, commands, metric protocol, and output locations. Parts 2 and 3 remain planned work; their folders contain project notes only.
 

@@ -3,6 +3,9 @@
 from __future__ import annotations
 
 import random
+import os
+import json
+import hashlib
 from pathlib import Path
 
 import numpy as np
@@ -12,17 +15,22 @@ from PIL import Image
 
 # %% 路径与数据配置
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
-DATA_ROOT = PROJECT_ROOT / "data" / "VisA"
+PROTOCOL = json.loads((PROJECT_ROOT / "experiment_protocol.json").read_text(encoding="utf-8"))
+DATA_ROOT = Path(os.environ.get("CVPROJECT_DATA_ROOT", str(PROJECT_ROOT / "data" / "VisA"))).resolve()
 SPLIT_CSV = DATA_ROOT / "split_csv" / "1cls.csv"
-OUTPUT_DIR = PROJECT_ROOT / "outputs" / "part1"
-REQUIRED_CATEGORIES = (
-    "candle", "capsules", "cashew", "chewinggum", "fryum", "pipe_fryum"
-)
-IMAGE_SIZE = (256, 256)  # Pillow 参数顺序为 (宽, 高)
+OUTPUT_DIR = Path(os.environ.get("CVPROJECT_OUTPUT_ROOT", str(PROJECT_ROOT / "outputs" / "course448" / "part1"))).resolve()
+REQUIRED_CATEGORIES = tuple(PROTOCOL["categories"])
+IMAGE_SIZE = tuple(PROTOCOL["image_size"])  # Pillow 参数顺序为 (宽, 高)。
+
+
+def source_revision() -> dict:
+    """记录实际源码身份，防止未提交代码的结果被归到另一版本。"""
+    paths = [PROJECT_ROOT / "experiment_protocol.json", *sorted((PROJECT_ROOT / "part1").glob("*.py"))]
+    return {path.relative_to(PROJECT_ROOT).as_posix(): hashlib.sha256(path.read_bytes()).hexdigest() for path in paths}
 
 
 # %% 可复现设置
-def set_seed(seed: int = 42) -> None:
+def set_seed(seed: int = PROTOCOL["split_seed"]) -> None:
     """固定 Python、NumPy、PyTorch CPU/GPU 的随机数序列。"""
     random.seed(seed)
     np.random.seed(seed)
@@ -96,8 +104,8 @@ def load_visa_split(
 
 def split_normal_train(
     train_rows: pd.DataFrame,
-    validation_fraction: float = 0.1,
-    seed: int = 42,
+    validation_fraction: float = PROTOCOL["validation_fraction"],
+    seed: int = PROTOCOL["split_seed"],
 ) -> tuple[pd.DataFrame, pd.DataFrame]:
     """只将正常官方训练图划分为训练子集和验证子集。"""
     if not 0 < validation_fraction < 1:
@@ -191,5 +199,3 @@ def save_prediction_set(
     csv_path = output_dir / "predictions.csv"
     result.to_csv(csv_path, index=False)
     return csv_path
-
-\n
