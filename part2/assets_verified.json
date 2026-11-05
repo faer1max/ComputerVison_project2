@@ -1,0 +1,18 @@
+[
+  {
+    "path": "weights/dinov2_vits14_pretrain.pth",
+    "sha256": "b938bf1bc15cd2ec0feacfe3a1bb553fe8ea9ca46a7e1d8d00217f29aef60cd9",
+    "matches_preparation_record": true
+  },
+  {
+    "path": "weights/ViT-L-14-336px.pt",
+    "sha256": "3035c92b350959924f9f00213499208652fc7ea050643e8b385c2dac08641f02",
+    "matches_preparation_record": true
+  },
+  {
+    "path": "external/AnomalyCLIP/checkpoints/9_12_4_multiscale_visa/epoch_15.pth",
+    "git_blob": "72adc786e031b49ea288ba5f815f0d38cf158708",
+    "sha256": "415c5dcb52668b8c33fb9c1a351c686d632b919df5b384d63fa9ce7a2338ced4",
+    "matches_official_commit": true
+  }
+]
