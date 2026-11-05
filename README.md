@@ -82,5 +82,5 @@ Each part has its own README. Keep the same data split and evaluation protocol a
 
 ## Repository Status
 
-Part 1 now contains runnable template-difference and normal-only convolutional autoencoder baselines, with shared 448x448 VisA loading and evaluation utilities. Template maps are restored to test-image coordinates before pixel evaluation. See `part1/README.md` for setup, commands, metric protocol, and output locations. Parts 2 and 3 remain planned work; their folders contain project notes only.
+Part 1 now contains runnable template-difference and normal-only convolutional autoencoder baselines, with shared 448x448 VisA loading and evaluation utilities. Template maps are restored to test-image coordinates before pixel evaluation. See `part1/README.md` for setup, commands, metric protocol, and output locations. Part 2 includes the course448 foundation-model runner, fixed reference selections, verification tools and a directory/architecture report in `part2/REPORT.md`. Its verified summaries are under `results/part2_course448` once the full experiment is complete. Part 3 remains pending.
 
