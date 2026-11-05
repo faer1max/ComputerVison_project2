@@ -1,0 +1,14 @@
+{
+  "status": "passed",
+  "runs": 78,
+  "maps": 16692,
+  "source_sha256": {
+    "benchmark.py": "67a26d5782adcdc2067586a34cd72e6af3854fb299f8a081bcd985a96f4a3456",
+    "course_inputs.py": "c3ff0bb6bf9090bebc48fd9b3554ba0501bfbe92d69ecd1cdd7e9f7ac804f288",
+    "experiment_protocol.json": "9bcf036cbffdd132954dd85a9500e9f62bfb2f879c0905c732f2fe146e7e64e7",
+    "reference_selections.csv": "b1b302582c12598e0aba451cafcc33b5ad63d96fa667af956bd3c1a21b19303e",
+    "03_evaluate.py": "a358c7a53c10d1958f78a4ac138c0a6aca3e046d74903c80ba2009c5f69f6e8b",
+    "common.py": "21a6837222a19cfd8d3ec10456f5d776fb717c2b7e0fc5d3a390caf517427415"
+  },
+  "std_ddof": 1
+}

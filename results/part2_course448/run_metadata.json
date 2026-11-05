@@ -1,0 +1,2222 @@
+[
+  {
+    "method": "dino",
+    "category": "candle",
+    "seed": 42,
+    "shot": 1,
+    "references": [
+      "candle/Data/Images/Normal/0119.JPG"
+    ],
+    "memory_bank_bytes": 12582912,
+    "memory_bank_patches": 8192,
+    "build_seconds": 0.22792070000286913,
+    "scoring_seconds": 4.179735900106607,
+    "feature_extraction_seconds_so_far": 9.993694700060587,
+    "peak_gpu_allocated_bytes": 117069824,
+    "rotation_angles": [
+      0,
+      45,
+      90,
+      135,
+      180,
+      225,
+      270,
+      315
+    ],
+    "test_masking": true,
+    "reference_masking": false
+  },
+  {
+    "method": "dino",
+    "category": "capsules",
+    "seed": 42,
+    "shot": 1,
+    "references": [
+      "capsules/Data/Images/Normal/399.JPG"
+    ],
+    "memory_bank_bytes": 12582912,
+    "memory_bank_patches": 8192,
+    "build_seconds": 0.5757568000044557,
+    "scoring_seconds": 4.944483400016907,
+    "feature_extraction_seconds_so_far": 17.74077550002403,
+    "peak_gpu_allocated_bytes": 117069824,
+    "rotation_angles": [
+      0,
+      45,
+      90,
+      135,
+      180,
+      225,
+      270,
+      315
+    ],
+    "test_masking": true,
+    "reference_masking": false
+  },
+  {
+    "method": "dino",
+    "category": "cashew",
+    "seed": 42,
+    "shot": 1,
+    "references": [
+      "cashew/Data/Images/Normal/088.JPG"
+    ],
+    "memory_bank_bytes": 12582912,
+    "memory_bank_patches": 8192,
+    "build_seconds": 0.22285230000125011,
+    "scoring_seconds": 2.417093099982594,
+    "feature_extraction_seconds_so_far": 7.373083999984374,
+    "peak_gpu_allocated_bytes": 117069824,
+    "rotation_angles": [
+      0,
+      45,
+      90,
+      135,
+      180,
+      225,
+      270,
+      315
+    ],
+    "test_masking": true,
+    "reference_masking": false
+  },
+  {
+    "method": "dino",
+    "category": "chewinggum",
+    "seed": 42,
+    "shot": 1,
+    "references": [
+      "chewinggum/Data/Images/Normal/139.JPG"
+    ],
+    "memory_bank_bytes": 12582912,
+    "memory_bank_patches": 8192,
+    "build_seconds": 0.21819070000492502,
+    "scoring_seconds": 2.470726699932129,
+    "feature_extraction_seconds_so_far": 7.12923600000795,
+    "peak_gpu_allocated_bytes": 117069824,
+    "rotation_angles": [
+      0,
+      45,
+      90,
+      135,
+      180,
+      225,
+      270,
+      315
+    ],
+    "test_masking": true,
+    "reference_masking": false
+  },
+  {
+    "method": "dino",
+    "category": "fryum",
+    "seed": 42,
+    "shot": 1,
+    "references": [
+      "fryum/Data/Images/Normal/040.JPG"
+    ],
+    "memory_bank_bytes": 12582912,
+    "memory_bank_patches": 8192,
+    "build_seconds": 0.5558607999992091,
+    "scoring_seconds": 5.169454699906055,
+    "feature_extraction_seconds_so_far": 18.66441420004412,
+    "peak_gpu_allocated_bytes": 117069824,
+    "rotation_angles": [
+      0,
+      45,
+      90,
+      135,
+      180,
+      225,
+      270,
+      315
+    ],
+    "test_masking": true,
+    "reference_masking": false
+  },
+  {
+    "method": "dino",
+    "category": "pipe_fryum",
+    "seed": 42,
+    "shot": 1,
+    "references": [
+      "pipe_fryum/Data/Images/Normal/311.JPG"
+    ],
+    "memory_bank_bytes": 12582912,
+    "memory_bank_patches": 8192,
+    "build_seconds": 0.49005140000372194,
+    "scoring_seconds": 5.54685370005609,
+    "feature_extraction_seconds_so_far": 16.170130399928894,
+    "peak_gpu_allocated_bytes": 117069824,
+    "rotation_angles": [
+      0,
+      45,
+      90,
+      135,
+      180,
+      225,
+      270,
+      315
+    ],
+    "test_masking": true,
+    "reference_masking": false
+  },
+  {
+    "method": "dino",
+    "category": "candle",
+    "seed": 42,
+    "shot": 2,
+    "references": [
+      "candle/Data/Images/Normal/0119.JPG",
+      "candle/Data/Images/Normal/0253.JPG"
+    ],
+    "memory_bank_bytes": 25165824,
+    "memory_bank_patches": 16384,
+    "build_seconds": 0.21637539999937871,
+    "scoring_seconds": 6.897369300138962,
+    "feature_extraction_seconds_so_far": 10.180301200060057,
+    "peak_gpu_allocated_bytes": 117069824,
+    "rotation_angles": [
+      0,
+      45,
+      90,
+      135,
+      180,
+      225,
+      270,
+      315
+    ],
+    "test_masking": true,
+    "reference_masking": false
+  },
+  {
+    "method": "dino",
+    "category": "capsules",
+    "seed": 42,
+    "shot": 2,
+    "references": [
+      "capsules/Data/Images/Normal/399.JPG",
+      "capsules/Data/Images/Normal/579.JPG"
+    ],
+    "memory_bank_bytes": 25165824,
+    "memory_bank_patches": 16384,
+    "build_seconds": 0.24293500000203494,
+    "scoring_seconds": 7.4713266000617296,
+    "feature_extraction_seconds_so_far": 17.953214500019385,
+    "peak_gpu_allocated_bytes": 117069824,
+    "rotation_angles": [
+      0,
+      45,
+      90,
+      135,
+      180,
+      225,
+      270,
+      315
+    ],
+    "test_masking": true,
+    "reference_masking": false
+  },
+  {
+    "method": "dino",
+    "category": "cashew",
+    "seed": 42,
+    "shot": 2,
+    "references": [
+      "cashew/Data/Images/Normal/088.JPG",
+      "cashew/Data/Images/Normal/200.JPG"
+    ],
+    "memory_bank_bytes": 25165824,
+    "memory_bank_patches": 16384,
+    "build_seconds": 0.23445190000347793,
+    "scoring_seconds": 3.8223121999690193,
+    "feature_extraction_seconds_so_far": 7.576258499982941,
+    "peak_gpu_allocated_bytes": 117069824,
+    "rotation_angles": [
+      0,
+      45,
+      90,
+      135,
+      180,
+      225,
+      270,
+      315
+    ],
+    "test_masking": true,
+    "reference_masking": false
+  },
+  {
+    "method": "dino",
+    "category": "chewinggum",
+    "seed": 42,
+    "shot": 2,
+    "references": [
+      "chewinggum/Data/Images/Normal/139.JPG",
+      "chewinggum/Data/Images/Normal/230.JPG"
+    ],
+    "memory_bank_bytes": 25165824,
+    "memory_bank_patches": 16384,
+    "build_seconds": 0.26228229999833275,
+    "scoring_seconds": 4.109717399915098,
+    "feature_extraction_seconds_so_far": 7.35813120000239,
+    "peak_gpu_allocated_bytes": 117069824,
+    "rotation_angles": [
+      0,
+      45,
+      90,
+      135,
+      180,
+      225,
+      270,
+      315
+    ],
+    "test_masking": true,
+    "reference_masking": false
+  },
+  {
+    "method": "dino",
+    "category": "fryum",
+    "seed": 42,
+    "shot": 2,
+    "references": [
+      "fryum/Data/Images/Normal/040.JPG",
+      "fryum/Data/Images/Normal/463.JPG"
+    ],
+    "memory_bank_bytes": 25165824,
+    "memory_bank_patches": 16384,
+    "build_seconds": 0.5227011999959359,
+    "scoring_seconds": 7.742743400071049,
+    "feature_extraction_seconds_so_far": 19.114616000035312,
+    "peak_gpu_allocated_bytes": 117069824,
+    "rotation_angles": [
+      0,
+      45,
+      90,
+      135,
+      180,
+      225,
+      270,
+      315
+    ],
+    "test_masking": true,
+    "reference_masking": false
+  },
+  {
+    "method": "dino",
+    "category": "pipe_fryum",
+    "seed": 42,
+    "shot": 2,
+    "references": [
+      "pipe_fryum/Data/Images/Normal/311.JPG",
+      "pipe_fryum/Data/Images/Normal/496.JPG"
+    ],
+    "memory_bank_bytes": 25165824,
+    "memory_bank_patches": 16384,
+    "build_seconds": 0.6194257000024663,
+    "scoring_seconds": 8.323543500009691,
+    "feature_extraction_seconds_so_far": 16.727143699929,
+    "peak_gpu_allocated_bytes": 117069824,
+    "rotation_angles": [
+      0,
+      45,
+      90,
+      135,
+      180,
+      225,
+      270,
+      315
+    ],
+    "test_masking": true,
+    "reference_masking": false
+  },
+  {
+    "method": "dino",
+    "category": "candle",
+    "seed": 42,
+    "shot": 4,
+    "references": [
+      "candle/Data/Images/Normal/0119.JPG",
+      "candle/Data/Images/Normal/0253.JPG",
+      "candle/Data/Images/Normal/0894.JPG",
+      "candle/Data/Images/Normal/0560.JPG"
+    ],
+    "memory_bank_bytes": 50331648,
+    "memory_bank_patches": 32768,
+    "build_seconds": 0.4588260000018636,
+    "scoring_seconds": 13.615607699990505,
+    "feature_extraction_seconds_so_far": 10.574463900069532,
+    "peak_gpu_allocated_bytes": 117069824,
+    "rotation_angles": [
+      0,
+      45,
+      90,
+      135,
+      180,
+      225,
+      270,
+      315
+    ],
+    "test_masking": true,
+    "reference_masking": false
+  },
+  {
+    "method": "dino",
+    "category": "capsules",
+    "seed": 42,
+    "shot": 4,
+    "references": [
+      "capsules/Data/Images/Normal/399.JPG",
+      "capsules/Data/Images/Normal/579.JPG",
+      "capsules/Data/Images/Normal/537.JPG",
+      "capsules/Data/Images/Normal/283.JPG"
+    ],
+    "memory_bank_bytes": 50331648,
+    "memory_bank_patches": 32768,
+    "build_seconds": 1.2029936000035377,
+    "scoring_seconds": 15.783241900055145,
+    "feature_extraction_seconds_so_far": 19.090313600019726,
+    "peak_gpu_allocated_bytes": 117069824,
+    "rotation_angles": [
+      0,
+      45,
+      90,
+      135,
+      180,
+      225,
+      270,
+      315
+    ],
+    "test_masking": true,
+    "reference_masking": false
+  },
+  {
+    "method": "dino",
+    "category": "cashew",
+    "seed": 42,
+    "shot": 4,
+    "references": [
+      "cashew/Data/Images/Normal/088.JPG",
+      "cashew/Data/Images/Normal/200.JPG",
+      "cashew/Data/Images/Normal/289.JPG",
+      "cashew/Data/Images/Normal/383.JPG"
+    ],
+    "memory_bank_bytes": 50331648,
+    "memory_bank_patches": 32768,
+    "build_seconds": 0.47135790000174893,
+    "scoring_seconds": 6.634704600022815,
+    "feature_extraction_seconds_so_far": 7.986876299983123,
+    "peak_gpu_allocated_bytes": 117069824,
+    "rotation_angles": [
+      0,
+      45,
+      90,
+      135,
+      180,
+      225,
+      270,
+      315
+    ],
+    "test_masking": true,
+    "reference_masking": false
+  },
+  {
+    "method": "dino",
+    "category": "chewinggum",
+    "seed": 42,
+    "shot": 4,
+    "references": [
+      "chewinggum/Data/Images/Normal/139.JPG",
+      "chewinggum/Data/Images/Normal/230.JPG",
+      "chewinggum/Data/Images/Normal/146.JPG",
+      "chewinggum/Data/Images/Normal/231.JPG"
+    ],
+    "memory_bank_bytes": 50331648,
+    "memory_bank_patches": 32768,
+    "build_seconds": 0.4543402999988757,
+    "scoring_seconds": 7.848334199967212,
+    "feature_extraction_seconds_so_far": 7.750964599996223,
+    "peak_gpu_allocated_bytes": 117069824,
+    "rotation_angles": [
+      0,
+      45,
+      90,
+      135,
+      180,
+      225,
+      270,
+      315
+    ],
+    "test_masking": true,
+    "reference_masking": false
+  },
+  {
+    "method": "dino",
+    "category": "fryum",
+    "seed": 42,
+    "shot": 4,
+    "references": [
+      "fryum/Data/Images/Normal/040.JPG",
+      "fryum/Data/Images/Normal/463.JPG",
+      "fryum/Data/Images/Normal/243.JPG",
+      "fryum/Data/Images/Normal/064.JPG"
+    ],
+    "memory_bank_bytes": 50331648,
+    "memory_bank_patches": 32768,
+    "build_seconds": 1.2153117999987444,
+    "scoring_seconds": 12.315444000007119,
+    "feature_extraction_seconds_so_far": 20.199313800039818,
+    "peak_gpu_allocated_bytes": 117069824,
+    "rotation_angles": [
+      0,
+      45,
+      90,
+      135,
+      180,
+      225,
+      270,
+      315
+    ],
+    "test_masking": true,
+    "reference_masking": false
+  },
+  {
+    "method": "dino",
+    "category": "pipe_fryum",
+    "seed": 42,
+    "shot": 4,
+    "references": [
+      "pipe_fryum/Data/Images/Normal/311.JPG",
+      "pipe_fryum/Data/Images/Normal/496.JPG",
+      "pipe_fryum/Data/Images/Normal/474.JPG",
+      "pipe_fryum/Data/Images/Normal/481.JPG"
+    ],
+    "memory_bank_bytes": 50331648,
+    "memory_bank_patches": 32768,
+    "build_seconds": 1.1734733999910532,
+    "scoring_seconds": 13.102840699983062,
+    "feature_extraction_seconds_so_far": 17.783019599926774,
+    "peak_gpu_allocated_bytes": 117069824,
+    "rotation_angles": [
+      0,
+      45,
+      90,
+      135,
+      180,
+      225,
+      270,
+      315
+    ],
+    "test_masking": true,
+    "reference_masking": false
+  },
+  {
+    "method": "dino",
+    "category": "candle",
+    "seed": 42,
+    "shot": 8,
+    "references": [
+      "candle/Data/Images/Normal/0119.JPG",
+      "candle/Data/Images/Normal/0253.JPG",
+      "candle/Data/Images/Normal/0894.JPG",
+      "candle/Data/Images/Normal/0560.JPG",
+      "candle/Data/Images/Normal/0575.JPG",
+      "candle/Data/Images/Normal/0713.JPG",
+      "candle/Data/Images/Normal/0192.JPG",
+      "candle/Data/Images/Normal/0103.JPG"
+    ],
+    "memory_bank_bytes": 100663296,
+    "memory_bank_patches": 65536,
+    "build_seconds": 0.9349075999998604,
+    "scoring_seconds": 26.069416300080775,
+    "feature_extraction_seconds_so_far": 11.389658500069345,
+    "peak_gpu_allocated_bytes": 117069824,
+    "rotation_angles": [
+      0,
+      45,
+      90,
+      135,
+      180,
+      225,
+      270,
+      315
+    ],
+    "test_masking": true,
+    "reference_masking": false
+  },
+  {
+    "method": "dino",
+    "category": "capsules",
+    "seed": 42,
+    "shot": 8,
+    "references": [
+      "capsules/Data/Images/Normal/399.JPG",
+      "capsules/Data/Images/Normal/579.JPG",
+      "capsules/Data/Images/Normal/537.JPG",
+      "capsules/Data/Images/Normal/283.JPG",
+      "capsules/Data/Images/Normal/561.JPG",
+      "capsules/Data/Images/Normal/346.JPG",
+      "capsules/Data/Images/Normal/497.JPG",
+      "capsules/Data/Images/Normal/204.JPG"
+    ],
+    "memory_bank_bytes": 100663296,
+    "memory_bank_patches": 65536,
+    "build_seconds": 1.012479800003348,
+    "scoring_seconds": 26.14838940005575,
+    "feature_extraction_seconds_so_far": 19.966957800032105,
+    "peak_gpu_allocated_bytes": 117069824,
+    "rotation_angles": [
+      0,
+      45,
+      90,
+      135,
+      180,
+      225,
+      270,
+      315
+    ],
+    "test_masking": true,
+    "reference_masking": false
+  },
+  {
+    "method": "dino",
+    "category": "cashew",
+    "seed": 42,
+    "shot": 8,
+    "references": [
+      "cashew/Data/Images/Normal/088.JPG",
+      "cashew/Data/Images/Normal/200.JPG",
+      "cashew/Data/Images/Normal/289.JPG",
+      "cashew/Data/Images/Normal/383.JPG",
+      "cashew/Data/Images/Normal/221.JPG",
+      "cashew/Data/Images/Normal/168.JPG",
+      "cashew/Data/Images/Normal/357.JPG",
+      "cashew/Data/Images/Normal/077.JPG"
+    ],
+    "memory_bank_bytes": 100663296,
+    "memory_bank_patches": 65536,
+    "build_seconds": 0.9574141999983112,
+    "scoring_seconds": 11.809559399931459,
+    "feature_extraction_seconds_so_far": 8.826898999985133,
+    "peak_gpu_allocated_bytes": 117069824,
+    "rotation_angles": [
+      0,
+      45,
+      90,
+      135,
+      180,
+      225,
+      270,
+      315
+    ],
+    "test_masking": true,
+    "reference_masking": false
+  },
+  {
+    "method": "dino",
+    "category": "chewinggum",
+    "seed": 42,
+    "shot": 8,
+    "references": [
+      "chewinggum/Data/Images/Normal/139.JPG",
+      "chewinggum/Data/Images/Normal/230.JPG",
+      "chewinggum/Data/Images/Normal/146.JPG",
+      "chewinggum/Data/Images/Normal/231.JPG",
+      "chewinggum/Data/Images/Normal/271.JPG",
+      "chewinggum/Data/Images/Normal/379.JPG",
+      "chewinggum/Data/Images/Normal/410.JPG",
+      "chewinggum/Data/Images/Normal/217.JPG"
+    ],
+    "memory_bank_bytes": 100663296,
+    "memory_bank_patches": 65536,
+    "build_seconds": 0.8985452000051737,
+    "scoring_seconds": 12.718160300035379,
+    "feature_extraction_seconds_so_far": 8.535290500003612,
+    "peak_gpu_allocated_bytes": 117069824,
+    "rotation_angles": [
+      0,
+      45,
+      90,
+      135,
+      180,
+      225,
+      270,
+      315
+    ],
+    "test_masking": true,
+    "reference_masking": false
+  },
+  {
+    "method": "dino",
+    "category": "fryum",
+    "seed": 42,
+    "shot": 8,
+    "references": [
+      "fryum/Data/Images/Normal/040.JPG",
+      "fryum/Data/Images/Normal/463.JPG",
+      "fryum/Data/Images/Normal/243.JPG",
+      "fryum/Data/Images/Normal/064.JPG",
+      "fryum/Data/Images/Normal/218.JPG",
+      "fryum/Data/Images/Normal/174.JPG",
+      "fryum/Data/Images/Normal/163.JPG",
+      "fryum/Data/Images/Normal/007.JPG"
+    ],
+    "memory_bank_bytes": 100663296,
+    "memory_bank_patches": 65536,
+    "build_seconds": 2.4546027000033064,
+    "scoring_seconds": 21.698132199977408,
+    "feature_extraction_seconds_so_far": 22.422408600032213,
+    "peak_gpu_allocated_bytes": 117069824,
+    "rotation_angles": [
+      0,
+      45,
+      90,
+      135,
+      180,
+      225,
+      270,
+      315
+    ],
+    "test_masking": true,
+    "reference_masking": false
+  },
+  {
+    "method": "dino",
+    "category": "pipe_fryum",
+    "seed": 42,
+    "shot": 8,
+    "references": [
+      "pipe_fryum/Data/Images/Normal/311.JPG",
+      "pipe_fryum/Data/Images/Normal/496.JPG",
+      "pipe_fryum/Data/Images/Normal/474.JPG",
+      "pipe_fryum/Data/Images/Normal/481.JPG",
+      "pipe_fryum/Data/Images/Normal/320.JPG",
+      "pipe_fryum/Data/Images/Normal/359.JPG",
+      "pipe_fryum/Data/Images/Normal/131.JPG",
+      "pipe_fryum/Data/Images/Normal/242.JPG"
+    ],
+    "memory_bank_bytes": 100663296,
+    "memory_bank_patches": 65536,
+    "build_seconds": 2.530993899999885,
+    "scoring_seconds": 23.976046699957806,
+    "feature_extraction_seconds_so_far": 20.07662779992097,
+    "peak_gpu_allocated_bytes": 117069824,
+    "rotation_angles": [
+      0,
+      45,
+      90,
+      135,
+      180,
+      225,
+      270,
+      315
+    ],
+    "test_masking": true,
+    "reference_masking": false
+  },
+  {
+    "method": "dino",
+    "category": "candle",
+    "seed": 43,
+    "shot": 1,
+    "references": [
+      "candle/Data/Images/Normal/0298.JPG"
+    ],
+    "memory_bank_bytes": 12582912,
+    "memory_bank_patches": 8192,
+    "build_seconds": 0.20671980000042822,
+    "scoring_seconds": 4.457702100087772,
+    "feature_extraction_seconds_so_far": 11.577962800067326,
+    "peak_gpu_allocated_bytes": 117069824,
+    "rotation_angles": [
+      0,
+      45,
+      90,
+      135,
+      180,
+      225,
+      270,
+      315
+    ],
+    "test_masking": true,
+    "reference_masking": false
+  },
+  {
+    "method": "dino",
+    "category": "capsules",
+    "seed": 43,
+    "shot": 1,
+    "references": [
+      "capsules/Data/Images/Normal/105.JPG"
+    ],
+    "memory_bank_bytes": 12582912,
+    "memory_bank_patches": 8192,
+    "build_seconds": 0.5736864999998943,
+    "scoring_seconds": 5.185469800082501,
+    "feature_extraction_seconds_so_far": 20.52166680002847,
+    "peak_gpu_allocated_bytes": 117069824,
+    "rotation_angles": [
+      0,
+      45,
+      90,
+      135,
+      180,
+      225,
+      270,
+      315
+    ],
+    "test_masking": true,
+    "reference_masking": false
+  },
+  {
+    "method": "dino",
+    "category": "cashew",
+    "seed": 43,
+    "shot": 1,
+    "references": [
+      "cashew/Data/Images/Normal/388.JPG"
+    ],
+    "memory_bank_bytes": 12582912,
+    "memory_bank_patches": 8192,
+    "build_seconds": 0.21318950000568293,
+    "scoring_seconds": 2.376209300069604,
+    "feature_extraction_seconds_so_far": 9.021510299986403,
+    "peak_gpu_allocated_bytes": 117069824,
+    "rotation_angles": [
+      0,
+      45,
+      90,
+      135,
+      180,
+      225,
+      270,
+      315
+    ],
+    "test_masking": true,
+    "reference_masking": false
+  },
+  {
+    "method": "dino",
+    "category": "chewinggum",
+    "seed": 43,
+    "shot": 1,
+    "references": [
+      "chewinggum/Data/Images/Normal/298.JPG"
+    ],
+    "memory_bank_bytes": 12582912,
+    "memory_bank_patches": 8192,
+    "build_seconds": 0.22139039999456145,
+    "scoring_seconds": 2.3594261999678565,
+    "feature_extraction_seconds_so_far": 8.739106300010462,
+    "peak_gpu_allocated_bytes": 117069824,
+    "rotation_angles": [
+      0,
+      45,
+      90,
+      135,
+      180,
+      225,
+      270,
+      315
+    ],
+    "test_masking": true,
+    "reference_masking": false
+  },
+  {
+    "method": "dino",
+    "category": "fryum",
+    "seed": 43,
+    "shot": 1,
+    "references": [
+      "fryum/Data/Images/Normal/205.JPG"
+    ],
+    "memory_bank_bytes": 12582912,
+    "memory_bank_patches": 8192,
+    "build_seconds": 0.7016953000129433,
+    "scoring_seconds": 5.431515499993111,
+    "feature_extraction_seconds_so_far": 23.07978500002355,
+    "peak_gpu_allocated_bytes": 117069824,
+    "rotation_angles": [
+      0,
+      45,
+      90,
+      135,
+      180,
+      225,
+      270,
+      315
+    ],
+    "test_masking": true,
+    "reference_masking": false
+  },
+  {
+    "method": "dino",
+    "category": "pipe_fryum",
+    "seed": 43,
+    "shot": 1,
+    "references": [
+      "pipe_fryum/Data/Images/Normal/139.JPG"
+    ],
+    "memory_bank_bytes": 12582912,
+    "memory_bank_patches": 8192,
+    "build_seconds": 0.5538966000021901,
+    "scoring_seconds": 5.675944599963259,
+    "feature_extraction_seconds_so_far": 20.595481899930746,
+    "peak_gpu_allocated_bytes": 117069824,
+    "rotation_angles": [
+      0,
+      45,
+      90,
+      135,
+      180,
+      225,
+      270,
+      315
+    ],
+    "test_masking": true,
+    "reference_masking": false
+  },
+  {
+    "method": "dino",
+    "category": "candle",
+    "seed": 43,
+    "shot": 2,
+    "references": [
+      "candle/Data/Images/Normal/0298.JPG",
+      "candle/Data/Images/Normal/0083.JPG"
+    ],
+    "memory_bank_bytes": 25165824,
+    "memory_bank_patches": 16384,
+    "build_seconds": 0.26741819999733707,
+    "scoring_seconds": 7.824050000061106,
+    "feature_extraction_seconds_so_far": 11.807631500065327,
+    "peak_gpu_allocated_bytes": 117069824,
+    "rotation_angles": [
+      0,
+      45,
+      90,
+      135,
+      180,
+      225,
+      270,
+      315
+    ],
+    "test_masking": true,
+    "reference_masking": false
+  },
+  {
+    "method": "dino",
+    "category": "capsules",
+    "seed": 43,
+    "shot": 2,
+    "references": [
+      "capsules/Data/Images/Normal/105.JPG",
+      "capsules/Data/Images/Normal/290.JPG"
+    ],
+    "memory_bank_bytes": 25165824,
+    "memory_bank_patches": 16384,
+    "build_seconds": 0.24933359999704408,
+    "scoring_seconds": 7.596125200048846,
+    "feature_extraction_seconds_so_far": 20.734865600024932,
+    "peak_gpu_allocated_bytes": 117069824,
+    "rotation_angles": [
+      0,
+      45,
+      90,
+      135,
+      180,
+      225,
+      270,
+      315
+    ],
+    "test_masking": true,
+    "reference_masking": false
+  },
+  {
+    "method": "dino",
+    "category": "cashew",
+    "seed": 43,
+    "shot": 2,
+    "references": [
+      "cashew/Data/Images/Normal/388.JPG",
+      "cashew/Data/Images/Normal/253.JPG"
+    ],
+    "memory_bank_bytes": 25165824,
+    "memory_bank_patches": 16384,
+    "build_seconds": 0.24480350000521867,
+    "scoring_seconds": 3.6002929000242148,
+    "feature_extraction_seconds_so_far": 9.236109799981932,
+    "peak_gpu_allocated_bytes": 117069824,
+    "rotation_angles": [
+      0,
+      45,
+      90,
+      135,
+      180,
+      225,
+      270,
+      315
+    ],
+    "test_masking": true,
+    "reference_masking": false
+  },
+  {
+    "method": "dino",
+    "category": "chewinggum",
+    "seed": 43,
+    "shot": 2,
+    "references": [
+      "chewinggum/Data/Images/Normal/298.JPG",
+      "chewinggum/Data/Images/Normal/378.JPG"
+    ],
+    "memory_bank_bytes": 25165824,
+    "memory_bank_patches": 16384,
+    "build_seconds": 0.26295910000044387,
+    "scoring_seconds": 4.265723400108982,
+    "feature_extraction_seconds_so_far": 8.964927200009697,
+    "peak_gpu_allocated_bytes": 117069824,
+    "rotation_angles": [
+      0,
+      45,
+      90,
+      135,
+      180,
+      225,
+      270,
+      315
+    ],
+    "test_masking": true,
+    "reference_masking": false
+  },
+  {
+    "method": "dino",
+    "category": "fryum",
+    "seed": 43,
+    "shot": 2,
+    "references": [
+      "fryum/Data/Images/Normal/205.JPG",
+      "fryum/Data/Images/Normal/475.JPG"
+    ],
+    "memory_bank_bytes": 25165824,
+    "memory_bank_patches": 16384,
+    "build_seconds": 0.5295740000001388,
+    "scoring_seconds": 7.515521399967838,
+    "feature_extraction_seconds_so_far": 23.54764630002319,
+    "peak_gpu_allocated_bytes": 117069824,
+    "rotation_angles": [
+      0,
+      45,
+      90,
+      135,
+      180,
+      225,
+      270,
+      315
+    ],
+    "test_masking": true,
+    "reference_masking": false
+  },
+  {
+    "method": "dino",
+    "category": "pipe_fryum",
+    "seed": 43,
+    "shot": 2,
+    "references": [
+      "pipe_fryum/Data/Images/Normal/139.JPG",
+      "pipe_fryum/Data/Images/Normal/243.JPG"
+    ],
+    "memory_bank_bytes": 25165824,
+    "memory_bank_patches": 16384,
+    "build_seconds": 0.4971450000011828,
+    "scoring_seconds": 8.36113340005977,
+    "feature_extraction_seconds_so_far": 21.03457219993288,
+    "peak_gpu_allocated_bytes": 117069824,
+    "rotation_angles": [
+      0,
+      45,
+      90,
+      135,
+      180,
+      225,
+      270,
+      315
+    ],
+    "test_masking": true,
+    "reference_masking": false
+  },
+  {
+    "method": "dino",
+    "category": "candle",
+    "seed": 43,
+    "shot": 4,
+    "references": [
+      "candle/Data/Images/Normal/0298.JPG",
+      "candle/Data/Images/Normal/0083.JPG",
+      "candle/Data/Images/Normal/0056.JPG",
+      "candle/Data/Images/Normal/0973.JPG"
+    ],
+    "memory_bank_bytes": 50331648,
+    "memory_bank_patches": 32768,
+    "build_seconds": 0.4530548999973689,
+    "scoring_seconds": 13.887383400040562,
+    "feature_extraction_seconds_so_far": 12.202993900056754,
+    "peak_gpu_allocated_bytes": 117069824,
+    "rotation_angles": [
+      0,
+      45,
+      90,
+      135,
+      180,
+      225,
+      270,
+      315
+    ],
+    "test_masking": true,
+    "reference_masking": false
+  },
+  {
+    "method": "dino",
+    "category": "capsules",
+    "seed": 43,
+    "shot": 4,
+    "references": [
+      "capsules/Data/Images/Normal/105.JPG",
+      "capsules/Data/Images/Normal/290.JPG",
+      "capsules/Data/Images/Normal/517.JPG",
+      "capsules/Data/Images/Normal/584.JPG"
+    ],
+    "memory_bank_bytes": 50331648,
+    "memory_bank_patches": 32768,
+    "build_seconds": 1.2138464000017848,
+    "scoring_seconds": 14.905418400041526,
+    "feature_extraction_seconds_so_far": 21.881956300028833,
+    "peak_gpu_allocated_bytes": 117069824,
+    "rotation_angles": [
+      0,
+      45,
+      90,
+      135,
+      180,
+      225,
+      270,
+      315
+    ],
+    "test_masking": true,
+    "reference_masking": false
+  },
+  {
+    "method": "dino",
+    "category": "cashew",
+    "seed": 43,
+    "shot": 4,
+    "references": [
+      "cashew/Data/Images/Normal/388.JPG",
+      "cashew/Data/Images/Normal/253.JPG",
+      "cashew/Data/Images/Normal/187.JPG",
+      "cashew/Data/Images/Normal/188.JPG"
+    ],
+    "memory_bank_bytes": 50331648,
+    "memory_bank_patches": 32768,
+    "build_seconds": 0.5045644999991055,
+    "scoring_seconds": 6.842534799972782,
+    "feature_extraction_seconds_so_far": 9.677924599978724,
+    "peak_gpu_allocated_bytes": 117069824,
+    "rotation_angles": [
+      0,
+      45,
+      90,
+      135,
+      180,
+      225,
+      270,
+      315
+    ],
+    "test_masking": true,
+    "reference_masking": false
+  },
+  {
+    "method": "dino",
+    "category": "chewinggum",
+    "seed": 43,
+    "shot": 4,
+    "references": [
+      "chewinggum/Data/Images/Normal/298.JPG",
+      "chewinggum/Data/Images/Normal/378.JPG",
+      "chewinggum/Data/Images/Normal/141.JPG",
+      "chewinggum/Data/Images/Normal/354.JPG"
+    ],
+    "memory_bank_bytes": 50331648,
+    "memory_bank_patches": 32768,
+    "build_seconds": 0.45726970001123846,
+    "scoring_seconds": 7.642179700123961,
+    "feature_extraction_seconds_so_far": 9.360865000009653,
+    "peak_gpu_allocated_bytes": 117069824,
+    "rotation_angles": [
+      0,
+      45,
+      90,
+      135,
+      180,
+      225,
+      270,
+      315
+    ],
+    "test_masking": true,
+    "reference_masking": false
+  },
+  {
+    "method": "dino",
+    "category": "fryum",
+    "seed": 43,
+    "shot": 4,
+    "references": [
+      "fryum/Data/Images/Normal/205.JPG",
+      "fryum/Data/Images/Normal/475.JPG",
+      "fryum/Data/Images/Normal/410.JPG",
+      "fryum/Data/Images/Normal/305.JPG"
+    ],
+    "memory_bank_bytes": 50331648,
+    "memory_bank_patches": 32768,
+    "build_seconds": 1.2740239000122529,
+    "scoring_seconds": 12.468892899822094,
+    "feature_extraction_seconds_so_far": 24.696962800022447,
+    "peak_gpu_allocated_bytes": 117069824,
+    "rotation_angles": [
+      0,
+      45,
+      90,
+      135,
+      180,
+      225,
+      270,
+      315
+    ],
+    "test_masking": true,
+    "reference_masking": false
+  },
+  {
+    "method": "dino",
+    "category": "pipe_fryum",
+    "seed": 43,
+    "shot": 4,
+    "references": [
+      "pipe_fryum/Data/Images/Normal/139.JPG",
+      "pipe_fryum/Data/Images/Normal/243.JPG",
+      "pipe_fryum/Data/Images/Normal/185.JPG",
+      "pipe_fryum/Data/Images/Normal/043.JPG"
+    ],
+    "memory_bank_bytes": 50331648,
+    "memory_bank_patches": 32768,
+    "build_seconds": 0.8398180000076536,
+    "scoring_seconds": 13.06060170008277,
+    "feature_extraction_seconds_so_far": 21.744091399916215,
+    "peak_gpu_allocated_bytes": 117069824,
+    "rotation_angles": [
+      0,
+      45,
+      90,
+      135,
+      180,
+      225,
+      270,
+      315
+    ],
+    "test_masking": true,
+    "reference_masking": false
+  },
+  {
+    "method": "dino",
+    "category": "candle",
+    "seed": 43,
+    "shot": 8,
+    "references": [
+      "candle/Data/Images/Normal/0298.JPG",
+      "candle/Data/Images/Normal/0083.JPG",
+      "candle/Data/Images/Normal/0056.JPG",
+      "candle/Data/Images/Normal/0973.JPG",
+      "candle/Data/Images/Normal/0118.JPG",
+      "candle/Data/Images/Normal/0316.JPG",
+      "candle/Data/Images/Normal/0472.JPG",
+      "candle/Data/Images/Normal/0874.JPG"
+    ],
+    "memory_bank_bytes": 100663296,
+    "memory_bank_patches": 65536,
+    "build_seconds": 0.9275953000033041,
+    "scoring_seconds": 26.833517000028223,
+    "feature_extraction_seconds_so_far": 13.00662860005832,
+    "peak_gpu_allocated_bytes": 117069824,
+    "rotation_angles": [
+      0,
+      45,
+      90,
+      135,
+      180,
+      225,
+      270,
+      315
+    ],
+    "test_masking": true,
+    "reference_masking": false
+  },
+  {
+    "method": "dino",
+    "category": "capsules",
+    "seed": 43,
+    "shot": 8,
+    "references": [
+      "capsules/Data/Images/Normal/105.JPG",
+      "capsules/Data/Images/Normal/290.JPG",
+      "capsules/Data/Images/Normal/517.JPG",
+      "capsules/Data/Images/Normal/584.JPG",
+      "capsules/Data/Images/Normal/162.JPG",
+      "capsules/Data/Images/Normal/108.JPG",
+      "capsules/Data/Images/Normal/336.JPG",
+      "capsules/Data/Images/Normal/213.JPG"
+    ],
+    "memory_bank_bytes": 100663296,
+    "memory_bank_patches": 65536,
+    "build_seconds": 1.034766299999319,
+    "scoring_seconds": 26.041409299970837,
+    "feature_extraction_seconds_so_far": 22.77564410003106,
+    "peak_gpu_allocated_bytes": 117069824,
+    "rotation_angles": [
+      0,
+      45,
+      90,
+      135,
+      180,
+      225,
+      270,
+      315
+    ],
+    "test_masking": true,
+    "reference_masking": false
+  },
+  {
+    "method": "dino",
+    "category": "cashew",
+    "seed": 43,
+    "shot": 8,
+    "references": [
+      "cashew/Data/Images/Normal/388.JPG",
+      "cashew/Data/Images/Normal/253.JPG",
+      "cashew/Data/Images/Normal/187.JPG",
+      "cashew/Data/Images/Normal/188.JPG",
+      "cashew/Data/Images/Normal/436.JPG",
+      "cashew/Data/Images/Normal/043.JPG",
+      "cashew/Data/Images/Normal/407.JPG",
+      "cashew/Data/Images/Normal/329.JPG"
+    ],
+    "memory_bank_bytes": 100663296,
+    "memory_bank_patches": 65536,
+    "build_seconds": 1.5645109999968554,
+    "scoring_seconds": 23.010642300017935,
+    "feature_extraction_seconds_so_far": 10.999474399977771,
+    "peak_gpu_allocated_bytes": 117069824,
+    "rotation_angles": [
+      0,
+      45,
+      90,
+      135,
+      180,
+      225,
+      270,
+      315
+    ],
+    "test_masking": true,
+    "reference_masking": false
+  },
+  {
+    "method": "dino",
+    "category": "chewinggum",
+    "seed": 43,
+    "shot": 8,
+    "references": [
+      "chewinggum/Data/Images/Normal/298.JPG",
+      "chewinggum/Data/Images/Normal/378.JPG",
+      "chewinggum/Data/Images/Normal/141.JPG",
+      "chewinggum/Data/Images/Normal/354.JPG",
+      "chewinggum/Data/Images/Normal/051.JPG",
+      "chewinggum/Data/Images/Normal/419.JPG",
+      "chewinggum/Data/Images/Normal/347.JPG",
+      "chewinggum/Data/Images/Normal/318.JPG"
+    ],
+    "memory_bank_bytes": 100663296,
+    "memory_bank_patches": 65536,
+    "build_seconds": 1.4812509000039427,
+    "scoring_seconds": 25.368093700002646,
+    "feature_extraction_seconds_so_far": 10.588197999997647,
+    "peak_gpu_allocated_bytes": 117069824,
+    "rotation_angles": [
+      0,
+      45,
+      90,
+      135,
+      180,
+      225,
+      270,
+      315
+    ],
+    "test_masking": true,
+    "reference_masking": false
+  },
+  {
+    "method": "dino",
+    "category": "fryum",
+    "seed": 43,
+    "shot": 8,
+    "references": [
+      "fryum/Data/Images/Normal/205.JPG",
+      "fryum/Data/Images/Normal/475.JPG",
+      "fryum/Data/Images/Normal/410.JPG",
+      "fryum/Data/Images/Normal/305.JPG",
+      "fryum/Data/Images/Normal/296.JPG",
+      "fryum/Data/Images/Normal/011.JPG",
+      "fryum/Data/Images/Normal/179.JPG",
+      "fryum/Data/Images/Normal/045.JPG"
+    ],
+    "memory_bank_bytes": 100663296,
+    "memory_bank_patches": 65536,
+    "build_seconds": 2.388450600003125,
+    "scoring_seconds": 24.542394400108606,
+    "feature_extraction_seconds_so_far": 26.8136701000185,
+    "peak_gpu_allocated_bytes": 117069824,
+    "rotation_angles": [
+      0,
+      45,
+      90,
+      135,
+      180,
+      225,
+      270,
+      315
+    ],
+    "test_masking": true,
+    "reference_masking": false
+  },
+  {
+    "method": "dino",
+    "category": "pipe_fryum",
+    "seed": 43,
+    "shot": 8,
+    "references": [
+      "pipe_fryum/Data/Images/Normal/139.JPG",
+      "pipe_fryum/Data/Images/Normal/243.JPG",
+      "pipe_fryum/Data/Images/Normal/185.JPG",
+      "pipe_fryum/Data/Images/Normal/043.JPG",
+      "pipe_fryum/Data/Images/Normal/365.JPG",
+      "pipe_fryum/Data/Images/Normal/401.JPG",
+      "pipe_fryum/Data/Images/Normal/179.JPG",
+      "pipe_fryum/Data/Images/Normal/475.JPG"
+    ],
+    "memory_bank_bytes": 100663296,
+    "memory_bank_patches": 65536,
+    "build_seconds": 1.2422159000125248,
+    "scoring_seconds": 25.869876399985515,
+    "feature_extraction_seconds_so_far": 22.79033829990658,
+    "peak_gpu_allocated_bytes": 117069824,
+    "rotation_angles": [
+      0,
+      45,
+      90,
+      135,
+      180,
+      225,
+      270,
+      315
+    ],
+    "test_masking": true,
+    "reference_masking": false
+  },
+  {
+    "method": "dino",
+    "category": "candle",
+    "seed": 44,
+    "shot": 1,
+    "references": [
+      "candle/Data/Images/Normal/0175.JPG"
+    ],
+    "memory_bank_bytes": 12582912,
+    "memory_bank_patches": 8192,
+    "build_seconds": 0.5754716999945231,
+    "scoring_seconds": 6.072136400085583,
+    "feature_extraction_seconds_so_far": 13.563896500054398,
+    "peak_gpu_allocated_bytes": 117069824,
+    "rotation_angles": [
+      0,
+      45,
+      90,
+      135,
+      180,
+      225,
+      270,
+      315
+    ],
+    "test_masking": true,
+    "reference_masking": false
+  },
+  {
+    "method": "dino",
+    "category": "capsules",
+    "seed": 44,
+    "shot": 1,
+    "references": [
+      "capsules/Data/Images/Normal/392.JPG"
+    ],
+    "memory_bank_bytes": 12582912,
+    "memory_bank_patches": 8192,
+    "build_seconds": 0.2225440999973216,
+    "scoring_seconds": 4.052882700001646,
+    "feature_extraction_seconds_so_far": 22.978262500029814,
+    "peak_gpu_allocated_bytes": 117069824,
+    "rotation_angles": [
+      0,
+      45,
+      90,
+      135,
+      180,
+      225,
+      270,
+      315
+    ],
+    "test_masking": true,
+    "reference_masking": false
+  },
+  {
+    "method": "dino",
+    "category": "cashew",
+    "seed": 44,
+    "shot": 1,
+    "references": [
+      "cashew/Data/Images/Normal/249.JPG"
+    ],
+    "memory_bank_bytes": 12582912,
+    "memory_bank_patches": 8192,
+    "build_seconds": 0.35148130000015954,
+    "scoring_seconds": 5.434490000014193,
+    "feature_extraction_seconds_so_far": 11.313718799974595,
+    "peak_gpu_allocated_bytes": 117069824,
+    "rotation_angles": [
+      0,
+      45,
+      90,
+      135,
+      180,
+      225,
+      270,
+      315
+    ],
+    "test_masking": true,
+    "reference_masking": false
+  },
+  {
+    "method": "dino",
+    "category": "chewinggum",
+    "seed": 44,
+    "shot": 1,
+    "references": [
+      "chewinggum/Data/Images/Normal/317.JPG"
+    ],
+    "memory_bank_bytes": 12582912,
+    "memory_bank_patches": 8192,
+    "build_seconds": 0.37904029998753686,
+    "scoring_seconds": 5.211465499989572,
+    "feature_extraction_seconds_so_far": 10.929947599986917,
+    "peak_gpu_allocated_bytes": 117069824,
+    "rotation_angles": [
+      0,
+      45,
+      90,
+      135,
+      180,
+      225,
+      270,
+      315
+    ],
+    "test_masking": true,
+    "reference_masking": false
+  },
+  {
+    "method": "dino",
+    "category": "fryum",
+    "seed": 44,
+    "shot": 1,
+    "references": [
+      "fryum/Data/Images/Normal/396.JPG"
+    ],
+    "memory_bank_bytes": 12582912,
+    "memory_bank_patches": 8192,
+    "build_seconds": 0.5606358999939403,
+    "scoring_seconds": 5.522257800083025,
+    "feature_extraction_seconds_so_far": 27.335183600021992,
+    "peak_gpu_allocated_bytes": 117069824,
+    "rotation_angles": [
+      0,
+      45,
+      90,
+      135,
+      180,
+      225,
+      270,
+      315
+    ],
+    "test_masking": true,
+    "reference_masking": false
+  },
+  {
+    "method": "dino",
+    "category": "pipe_fryum",
+    "seed": 44,
+    "shot": 1,
+    "references": [
+      "pipe_fryum/Data/Images/Normal/047.JPG"
+    ],
+    "memory_bank_bytes": 12582912,
+    "memory_bank_patches": 8192,
+    "build_seconds": 0.38035279999894556,
+    "scoring_seconds": 5.244876600118005,
+    "feature_extraction_seconds_so_far": 23.13329069990141,
+    "peak_gpu_allocated_bytes": 117069824,
+    "rotation_angles": [
+      0,
+      45,
+      90,
+      135,
+      180,
+      225,
+      270,
+      315
+    ],
+    "test_masking": true,
+    "reference_masking": false
+  },
+  {
+    "method": "dino",
+    "category": "candle",
+    "seed": 44,
+    "shot": 2,
+    "references": [
+      "candle/Data/Images/Normal/0175.JPG",
+      "candle/Data/Images/Normal/0482.JPG"
+    ],
+    "memory_bank_bytes": 25165824,
+    "memory_bank_patches": 16384,
+    "build_seconds": 0.5973303999999189,
+    "scoring_seconds": 9.7818357999422,
+    "feature_extraction_seconds_so_far": 14.116692100054934,
+    "peak_gpu_allocated_bytes": 117069824,
+    "rotation_angles": [
+      0,
+      45,
+      90,
+      135,
+      180,
+      225,
+      270,
+      315
+    ],
+    "test_masking": true,
+    "reference_masking": false
+  },
+  {
+    "method": "dino",
+    "category": "capsules",
+    "seed": 44,
+    "shot": 2,
+    "references": [
+      "capsules/Data/Images/Normal/392.JPG",
+      "capsules/Data/Images/Normal/348.JPG"
+    ],
+    "memory_bank_bytes": 25165824,
+    "memory_bank_patches": 16384,
+    "build_seconds": 0.22929389999626437,
+    "scoring_seconds": 6.3608698999960325,
+    "feature_extraction_seconds_so_far": 23.175065400035237,
+    "peak_gpu_allocated_bytes": 117069824,
+    "rotation_angles": [
+      0,
+      45,
+      90,
+      135,
+      180,
+      225,
+      270,
+      315
+    ],
+    "test_masking": true,
+    "reference_masking": false
+  },
+  {
+    "method": "dino",
+    "category": "cashew",
+    "seed": 44,
+    "shot": 2,
+    "references": [
+      "cashew/Data/Images/Normal/249.JPG",
+      "cashew/Data/Images/Normal/468.JPG"
+    ],
+    "memory_bank_bytes": 25165824,
+    "memory_bank_patches": 16384,
+    "build_seconds": 0.3853631000019959,
+    "scoring_seconds": 8.20124440001382,
+    "feature_extraction_seconds_so_far": 11.63774009996996,
+    "peak_gpu_allocated_bytes": 117069824,
+    "rotation_angles": [
+      0,
+      45,
+      90,
+      135,
+      180,
+      225,
+      270,
+      315
+    ],
+    "test_masking": true,
+    "reference_masking": false
+  },
+  {
+    "method": "dino",
+    "category": "chewinggum",
+    "seed": 44,
+    "shot": 2,
+    "references": [
+      "chewinggum/Data/Images/Normal/317.JPG",
+      "chewinggum/Data/Images/Normal/293.JPG"
+    ],
+    "memory_bank_bytes": 25165824,
+    "memory_bank_patches": 16384,
+    "build_seconds": 0.2316304999985732,
+    "scoring_seconds": 3.808739200117998,
+    "feature_extraction_seconds_so_far": 11.130858099990292,
+    "peak_gpu_allocated_bytes": 117069824,
+    "rotation_angles": [
+      0,
+      45,
+      90,
+      135,
+      180,
+      225,
+      270,
+      315
+    ],
+    "test_masking": true,
+    "reference_masking": false
+  },
+  {
+    "method": "dino",
+    "category": "fryum",
+    "seed": 44,
+    "shot": 2,
+    "references": [
+      "fryum/Data/Images/Normal/396.JPG",
+      "fryum/Data/Images/Normal/404.JPG"
+    ],
+    "memory_bank_bytes": 25165824,
+    "memory_bank_patches": 16384,
+    "build_seconds": 0.6494058999960544,
+    "scoring_seconds": 7.604161299925181,
+    "feature_extraction_seconds_so_far": 27.919747800013283,
+    "peak_gpu_allocated_bytes": 117069824,
+    "rotation_angles": [
+      0,
+      45,
+      90,
+      135,
+      180,
+      225,
+      270,
+      315
+    ],
+    "test_masking": true,
+    "reference_masking": false
+  },
+  {
+    "method": "dino",
+    "category": "pipe_fryum",
+    "seed": 44,
+    "shot": 2,
+    "references": [
+      "pipe_fryum/Data/Images/Normal/047.JPG",
+      "pipe_fryum/Data/Images/Normal/401.JPG"
+    ],
+    "memory_bank_bytes": 25165824,
+    "memory_bank_patches": 16384,
+    "build_seconds": 0.04107700000167824,
+    "scoring_seconds": 8.010491999943042,
+    "feature_extraction_seconds_so_far": 23.13329069990141,
+    "peak_gpu_allocated_bytes": 96745984,
+    "rotation_angles": [
+      0,
+      45,
+      90,
+      135,
+      180,
+      225,
+      270,
+      315
+    ],
+    "test_masking": true,
+    "reference_masking": false
+  },
+  {
+    "method": "dino",
+    "category": "candle",
+    "seed": 44,
+    "shot": 4,
+    "references": [
+      "candle/Data/Images/Normal/0175.JPG",
+      "candle/Data/Images/Normal/0482.JPG",
+      "candle/Data/Images/Normal/0280.JPG",
+      "candle/Data/Images/Normal/0381.JPG"
+    ],
+    "memory_bank_bytes": 50331648,
+    "memory_bank_patches": 32768,
+    "build_seconds": 0.5068219000022509,
+    "scoring_seconds": 17.303386800020235,
+    "feature_extraction_seconds_so_far": 14.5481704000631,
+    "peak_gpu_allocated_bytes": 117069824,
+    "rotation_angles": [
+      0,
+      45,
+      90,
+      135,
+      180,
+      225,
+      270,
+      315
+    ],
+    "test_masking": true,
+    "reference_masking": false
+  },
+  {
+    "method": "dino",
+    "category": "capsules",
+    "seed": 44,
+    "shot": 4,
+    "references": [
+      "capsules/Data/Images/Normal/392.JPG",
+      "capsules/Data/Images/Normal/348.JPG",
+      "capsules/Data/Images/Normal/287.JPG",
+      "capsules/Data/Images/Normal/453.JPG"
+    ],
+    "memory_bank_bytes": 50331648,
+    "memory_bank_patches": 32768,
+    "build_seconds": 0.48944749999645865,
+    "scoring_seconds": 11.464163700024073,
+    "feature_extraction_seconds_so_far": 23.599509100029536,
+    "peak_gpu_allocated_bytes": 117069824,
+    "rotation_angles": [
+      0,
+      45,
+      90,
+      135,
+      180,
+      225,
+      270,
+      315
+    ],
+    "test_masking": true,
+    "reference_masking": false
+  },
+  {
+    "method": "dino",
+    "category": "cashew",
+    "seed": 44,
+    "shot": 4,
+    "references": [
+      "cashew/Data/Images/Normal/249.JPG",
+      "cashew/Data/Images/Normal/468.JPG",
+      "cashew/Data/Images/Normal/072.JPG",
+      "cashew/Data/Images/Normal/211.JPG"
+    ],
+    "memory_bank_bytes": 50331648,
+    "memory_bank_patches": 32768,
+    "build_seconds": 0.4613074000008055,
+    "scoring_seconds": 5.817204499981017,
+    "feature_extraction_seconds_so_far": 12.038360099970305,
+    "peak_gpu_allocated_bytes": 117069824,
+    "rotation_angles": [
+      0,
+      45,
+      90,
+      135,
+      180,
+      225,
+      270,
+      315
+    ],
+    "test_masking": true,
+    "reference_masking": false
+  },
+  {
+    "method": "dino",
+    "category": "chewinggum",
+    "seed": 44,
+    "shot": 4,
+    "references": [
+      "chewinggum/Data/Images/Normal/317.JPG",
+      "chewinggum/Data/Images/Normal/293.JPG",
+      "chewinggum/Data/Images/Normal/082.JPG",
+      "chewinggum/Data/Images/Normal/350.JPG"
+    ],
+    "memory_bank_bytes": 50331648,
+    "memory_bank_patches": 32768,
+    "build_seconds": 0.4629992999980459,
+    "scoring_seconds": 6.808148600015556,
+    "feature_extraction_seconds_so_far": 11.534048899979098,
+    "peak_gpu_allocated_bytes": 117069824,
+    "rotation_angles": [
+      0,
+      45,
+      90,
+      135,
+      180,
+      225,
+      270,
+      315
+    ],
+    "test_masking": true,
+    "reference_masking": false
+  },
+  {
+    "method": "dino",
+    "category": "fryum",
+    "seed": 44,
+    "shot": 4,
+    "references": [
+      "fryum/Data/Images/Normal/396.JPG",
+      "fryum/Data/Images/Normal/404.JPG",
+      "fryum/Data/Images/Normal/316.JPG",
+      "fryum/Data/Images/Normal/001.JPG"
+    ],
+    "memory_bank_bytes": 50331648,
+    "memory_bank_patches": 32768,
+    "build_seconds": 0.8213811999885365,
+    "scoring_seconds": 12.302869600054692,
+    "feature_extraction_seconds_so_far": 28.618398000020534,
+    "peak_gpu_allocated_bytes": 117069824,
+    "rotation_angles": [
+      0,
+      45,
+      90,
+      135,
+      180,
+      225,
+      270,
+      315
+    ],
+    "test_masking": true,
+    "reference_masking": false
+  },
+  {
+    "method": "dino",
+    "category": "pipe_fryum",
+    "seed": 44,
+    "shot": 4,
+    "references": [
+      "pipe_fryum/Data/Images/Normal/047.JPG",
+      "pipe_fryum/Data/Images/Normal/401.JPG",
+      "pipe_fryum/Data/Images/Normal/162.JPG",
+      "pipe_fryum/Data/Images/Normal/068.JPG"
+    ],
+    "memory_bank_bytes": 50331648,
+    "memory_bank_patches": 32768,
+    "build_seconds": 0.8222789999999804,
+    "scoring_seconds": 13.391784200197435,
+    "feature_extraction_seconds_so_far": 23.820510799909243,
+    "peak_gpu_allocated_bytes": 117069824,
+    "rotation_angles": [
+      0,
+      45,
+      90,
+      135,
+      180,
+      225,
+      270,
+      315
+    ],
+    "test_masking": true,
+    "reference_masking": false
+  },
+  {
+    "method": "dino",
+    "category": "candle",
+    "seed": 44,
+    "shot": 8,
+    "references": [
+      "candle/Data/Images/Normal/0175.JPG",
+      "candle/Data/Images/Normal/0482.JPG",
+      "candle/Data/Images/Normal/0280.JPG",
+      "candle/Data/Images/Normal/0381.JPG",
+      "candle/Data/Images/Normal/0431.JPG",
+      "candle/Data/Images/Normal/0080.JPG",
+      "candle/Data/Images/Normal/0582.JPG",
+      "candle/Data/Images/Normal/0588.JPG"
+    ],
+    "memory_bank_bytes": 100663296,
+    "memory_bank_patches": 65536,
+    "build_seconds": 2.3401689999955124,
+    "scoring_seconds": 34.18975229997159,
+    "feature_extraction_seconds_so_far": 16.744412000065495,
+    "peak_gpu_allocated_bytes": 117069824,
+    "rotation_angles": [
+      0,
+      45,
+      90,
+      135,
+      180,
+      225,
+      270,
+      315
+    ],
+    "test_masking": true,
+    "reference_masking": false
+  },
+  {
+    "method": "dino",
+    "category": "capsules",
+    "seed": 44,
+    "shot": 8,
+    "references": [
+      "capsules/Data/Images/Normal/392.JPG",
+      "capsules/Data/Images/Normal/348.JPG",
+      "capsules/Data/Images/Normal/287.JPG",
+      "capsules/Data/Images/Normal/453.JPG",
+      "capsules/Data/Images/Normal/521.JPG",
+      "capsules/Data/Images/Normal/338.JPG",
+      "capsules/Data/Images/Normal/556.JPG",
+      "capsules/Data/Images/Normal/593.JPG"
+    ],
+    "memory_bank_bytes": 100663296,
+    "memory_bank_patches": 65536,
+    "build_seconds": 0.9512704000007943,
+    "scoring_seconds": 22.848387800062483,
+    "feature_extraction_seconds_so_far": 24.435172900026373,
+    "peak_gpu_allocated_bytes": 117069824,
+    "rotation_angles": [
+      0,
+      45,
+      90,
+      135,
+      180,
+      225,
+      270,
+      315
+    ],
+    "test_masking": true,
+    "reference_masking": false
+  },
+  {
+    "method": "dino",
+    "category": "cashew",
+    "seed": 44,
+    "shot": 8,
+    "references": [
+      "cashew/Data/Images/Normal/249.JPG",
+      "cashew/Data/Images/Normal/468.JPG",
+      "cashew/Data/Images/Normal/072.JPG",
+      "cashew/Data/Images/Normal/211.JPG",
+      "cashew/Data/Images/Normal/071.JPG",
+      "cashew/Data/Images/Normal/299.JPG",
+      "cashew/Data/Images/Normal/045.JPG",
+      "cashew/Data/Images/Normal/381.JPG"
+    ],
+    "memory_bank_bytes": 100663296,
+    "memory_bank_patches": 65536,
+    "build_seconds": 0.9578162999969209,
+    "scoring_seconds": 12.006898400082719,
+    "feature_extraction_seconds_so_far": 12.869972199951007,
+    "peak_gpu_allocated_bytes": 117069824,
+    "rotation_angles": [
+      0,
+      45,
+      90,
+      135,
+      180,
+      225,
+      270,
+      315
+    ],
+    "test_masking": true,
+    "reference_masking": false
+  },
+  {
+    "method": "dino",
+    "category": "chewinggum",
+    "seed": 44,
+    "shot": 8,
+    "references": [
+      "chewinggum/Data/Images/Normal/317.JPG",
+      "chewinggum/Data/Images/Normal/293.JPG",
+      "chewinggum/Data/Images/Normal/082.JPG",
+      "chewinggum/Data/Images/Normal/350.JPG",
+      "chewinggum/Data/Images/Normal/034.JPG",
+      "chewinggum/Data/Images/Normal/160.JPG",
+      "chewinggum/Data/Images/Normal/159.JPG",
+      "chewinggum/Data/Images/Normal/033.JPG"
+    ],
+    "memory_bank_bytes": 100663296,
+    "memory_bank_patches": 65536,
+    "build_seconds": 0.1972111000068253,
+    "scoring_seconds": 24.25610179992509,
+    "feature_extraction_seconds_so_far": 0.0,
+    "peak_gpu_allocated_bytes": 88226304,
+    "rotation_angles": [
+      0,
+      45,
+      90,
+      135,
+      180,
+      225,
+      270,
+      315
+    ],
+    "test_masking": true,
+    "reference_masking": false
+  },
+  {
+    "method": "dino",
+    "category": "fryum",
+    "seed": 44,
+    "shot": 8,
+    "references": [
+      "fryum/Data/Images/Normal/396.JPG",
+      "fryum/Data/Images/Normal/404.JPG",
+      "fryum/Data/Images/Normal/316.JPG",
+      "fryum/Data/Images/Normal/001.JPG",
+      "fryum/Data/Images/Normal/448.JPG",
+      "fryum/Data/Images/Normal/426.JPG",
+      "fryum/Data/Images/Normal/223.JPG",
+      "fryum/Data/Images/Normal/026.JPG"
+    ],
+    "memory_bank_bytes": 100663296,
+    "memory_bank_patches": 65536,
+    "build_seconds": 2.5941421000025002,
+    "scoring_seconds": 21.244984999968437,
+    "feature_extraction_seconds_so_far": 30.976820099996985,
+    "peak_gpu_allocated_bytes": 117069824,
+    "rotation_angles": [
+      0,
+      45,
+      90,
+      135,
+      180,
+      225,
+      270,
+      315
+    ],
+    "test_masking": true,
+    "reference_masking": false
+  },
+  {
+    "method": "dino",
+    "category": "pipe_fryum",
+    "seed": 44,
+    "shot": 8,
+    "references": [
+      "pipe_fryum/Data/Images/Normal/047.JPG",
+      "pipe_fryum/Data/Images/Normal/401.JPG",
+      "pipe_fryum/Data/Images/Normal/162.JPG",
+      "pipe_fryum/Data/Images/Normal/068.JPG",
+      "pipe_fryum/Data/Images/Normal/355.JPG",
+      "pipe_fryum/Data/Images/Normal/174.JPG",
+      "pipe_fryum/Data/Images/Normal/330.JPG",
+      "pipe_fryum/Data/Images/Normal/380.JPG"
+    ],
+    "memory_bank_bytes": 100663296,
+    "memory_bank_patches": 65536,
+    "build_seconds": 1.5928213000006508,
+    "scoring_seconds": 24.16114720008045,
+    "feature_extraction_seconds_so_far": 25.16461169991817,
+    "peak_gpu_allocated_bytes": 117069824,
+    "rotation_angles": [
+      0,
+      45,
+      90,
+      135,
+      180,
+      225,
+      270,
+      315
+    ],
+    "test_masking": true,
+    "reference_masking": false
+  },
+  {
+    "method": "clip",
+    "category": "candle",
+    "seed": 42,
+    "shot": 0,
+    "feature_extraction_seconds": 81.76479809996817,
+    "scoring_seconds": 1.8768229999113828,
+    "peak_gpu_allocated_bytes": 1991132672,
+    "checkpoint": "MVTec-trained epoch15; no VisA fitting",
+    "features_list": [
+      24
+    ]
+  },
+  {
+    "method": "clip",
+    "category": "capsules",
+    "seed": 42,
+    "shot": 0,
+    "feature_extraction_seconds": 60.79296879997855,
+    "scoring_seconds": 1.618234699992172,
+    "peak_gpu_allocated_bytes": 1991132672,
+    "checkpoint": "MVTec-trained epoch15; no VisA fitting",
+    "features_list": [
+      24
+    ]
+  },
+  {
+    "method": "clip",
+    "category": "cashew",
+    "seed": 42,
+    "shot": 0,
+    "feature_extraction_seconds": 60.87417509997613,
+    "scoring_seconds": 1.3353945999770076,
+    "peak_gpu_allocated_bytes": 1991132672,
+    "checkpoint": "MVTec-trained epoch15; no VisA fitting",
+    "features_list": [
+      24
+    ]
+  },
+  {
+    "method": "clip",
+    "category": "chewinggum",
+    "seed": 42,
+    "shot": 0,
+    "feature_extraction_seconds": 54.902646900038235,
+    "scoring_seconds": 1.4664051000509062,
+    "peak_gpu_allocated_bytes": 1991132672,
+    "checkpoint": "MVTec-trained epoch15; no VisA fitting",
+    "features_list": [
+      24
+    ]
+  },
+  {
+    "method": "clip",
+    "category": "fryum",
+    "seed": 42,
+    "shot": 0,
+    "feature_extraction_seconds": 54.90836310001032,
+    "scoring_seconds": 1.4311294999642996,
+    "peak_gpu_allocated_bytes": 1991132672,
+    "checkpoint": "MVTec-trained epoch15; no VisA fitting",
+    "features_list": [
+      24
+    ]
+  },
+  {
+    "method": "clip",
+    "category": "pipe_fryum",
+    "seed": 42,
+    "shot": 0,
+    "feature_extraction_seconds": 55.00047310008085,
+    "scoring_seconds": 1.383561100003135,
+    "peak_gpu_allocated_bytes": 1991132672,
+    "checkpoint": "MVTec-trained epoch15; no VisA fitting",
+    "features_list": [
+      24
+    ]
+  }
+]

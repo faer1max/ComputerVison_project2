@@ -1,0 +1,25 @@
+method,category,image,error_type,native_score,native_threshold,gt_pixel_fraction,predicted_pixel_fraction,pixel_recall,observation_group,selected
+dino,candle,candle/Data/Images/Normal/0303.JPG,FP,0.2941961586475372,0.2764609456062317,0.0,0.019670758928571428,,normal-image false alarm,True
+dino,candle,candle/Data/Images/Anomaly/000.JPG,FN,0.2591021656990051,0.2764609456062317,0.0009416852678571429,0.01869917889030612,1.0,small annotated defect (<1% pixels),True
+dino,capsules,capsules/Data/Images/Anomaly/000.JPG,FN,0.1955756098031997,0.3140873312950134,0.0005530532525510204,0.020079320790816327,1.0,small annotated defect (<1% pixels),True
+dino,capsules,capsules/Data/Images/Anomaly/001.JPG,FN,0.2132407128810882,0.3140873312950134,0.0007174744897959184,0.012794961734693877,1.0,small annotated defect (<1% pixels),True
+dino,cashew,cashew/Data/Images/Normal/050.JPG,FP,0.24263796210289,0.2383555471897125,0.0,0.014718191964285714,,normal-image false alarm,True
+dino,cashew,cashew/Data/Images/Anomaly/001.JPG,FN,0.236000657081604,0.2383555471897125,0.0011310188137755102,0.01127032844387755,0.9911894273127754,small annotated defect (<1% pixels),True
+dino,chewinggum,chewinggum/Data/Images/Normal/342.JPG,FP,0.3446331918239593,0.2378154695034027,0.0,0.017727598852040817,,normal-image false alarm,True
+dino,chewinggum,chewinggum/Data/Images/Anomaly/028.JPG,FN,0.2371421158313751,0.2378154695034027,0.0012804926658163266,0.031663544323979595,0.9455252918287937,small annotated defect (<1% pixels),True
+dino,fryum,fryum/Data/Images/Normal/324.JPG,FP,0.213970273733139,0.1951490193605423,0.0,0.026825573979591837,,normal-image false alarm,True
+dino,fryum,fryum/Data/Images/Anomaly/024.JPG,FN,0.184873029589653,0.1951490193605423,0.00015943877551020407,0.014907525510204082,1.0,small annotated defect (<1% pixels),True
+dino,pipe_fryum,pipe_fryum/Data/Images/Normal/013.JPG,FP,0.3724055588245392,0.295141339302063,0.0,0.06912667410714286,,normal-image false alarm,True
+dino,pipe_fryum,pipe_fryum/Data/Images/Anomaly/027.JPG,FN,0.2695595622062683,0.295141339302063,0.0018136160714285715,0.016158123405612245,0.9587912087912088,small annotated defect (<1% pixels),True
+clip,candle,candle/Data/Images/Normal/0107.JPG,FP,0.953078031539917,0.9453898668289183,0.0,0.011634048150510204,,normal-image false alarm,True
+clip,candle,candle/Data/Images/Anomaly/000.JPG,FN,0.9114587903022766,0.9453898668289183,0.0009416852678571429,0.0028698979591836736,0.5132275132275133,small annotated defect (<1% pixels),True
+clip,capsules,capsules/Data/Images/Normal/377.JPG,FP,0.8702293634414673,0.8639975786209106,0.0,0.026705994897959183,,normal-image false alarm,True
+clip,capsules,capsules/Data/Images/Anomaly/000.JPG,FN,0.8343433141708374,0.8639975786209106,0.0005530532525510204,0.009705835459183673,0.9369369369369369,small annotated defect (<1% pixels),True
+clip,cashew,cashew/Data/Images/Normal/012.JPG,FP,0.9605194330215454,0.9562198519706726,0.0,0.011554328762755101,,normal-image false alarm,True
+clip,cashew,cashew/Data/Images/Anomaly/001.JPG,FN,0.9242299795150756,0.9562198519706726,0.0011310188137755102,0.010468152104591837,1.0,small annotated defect (<1% pixels),True
+clip,chewinggum,chewinggum/Data/Images/Normal/467.JPG,FP,0.8685139417648315,0.8471333980560303,0.0,0.02170360331632653,,normal-image false alarm,True
+clip,chewinggum,chewinggum/Data/Images/Anomaly/027.JPG,FN,0.7935709357261658,0.8471333980560303,0.0022271603954081634,0.02330795599489796,0.9776286353467561,small annotated defect (<1% pixels),True
+clip,fryum,fryum/Data/Images/Normal/050.JPG,FP,0.9747961163520812,0.972652792930603,0.0,0.0,,normal-image false alarm,True
+clip,fryum,fryum/Data/Images/Anomaly/021.JPG,FN,0.9700632095336914,0.972652792930603,0.00043347417091836734,0.00432975924744898,1.0,small annotated defect (<1% pixels),True
+clip,pipe_fryum,pipe_fryum/Data/Images/Normal/093.JPG,FP,0.9704665541648864,0.9650012254714966,0.0,0.02573441485969388,,normal-image false alarm,True
+clip,pipe_fryum,pipe_fryum/Data/Images/Anomaly/013.JPG,FN,0.9600980281829834,0.9650012254714966,0.002152423469387755,0.03671576052295918,1.0,small annotated defect (<1% pixels),True

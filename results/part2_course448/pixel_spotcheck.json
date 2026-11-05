@@ -1,0 +1,38 @@
+{
+  "status": "passed",
+  "scope": "Two complete candle groups, DINO seed42 shot1 and CLIP; full pixel AUROC/AP/AUPRO and normal-validation pixel threshold recomputed",
+  "groups": [
+    {
+      "method": "dino",
+      "category": "candle",
+      "recomputed": {
+        "pixel_auroc": 0.9791860064808029,
+        "pixel_ap": 0.24456455427546525,
+        "aupro": 0.96226402328132,
+        "pixel_threshold": 0.13452336192131042
+      },
+      "absolute_differences": {
+        "pixel_auroc": 0.0,
+        "pixel_ap": 0.0,
+        "aupro": 0.0,
+        "pixel_threshold": 0.0
+      }
+    },
+    {
+      "method": "clip",
+      "category": "candle",
+      "recomputed": {
+        "pixel_auroc": 0.9890225492789768,
+        "pixel_ap": 0.30239001829877116,
+        "aupro": 0.9581746269936028,
+        "pixel_threshold": 0.15848404169082642
+      },
+      "absolute_differences": {
+        "pixel_auroc": 0.0,
+        "pixel_ap": 0.0,
+        "aupro": 0.0,
+        "pixel_threshold": 0.0
+      }
+    }
+  ]
+}

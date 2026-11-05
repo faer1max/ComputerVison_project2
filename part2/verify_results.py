@@ -29,6 +29,9 @@ def verify():
         for split,expected_rows in [('validation',val),('test',test)]:
             table=pd.read_csv(directory/split/'predictions.csv');assert set(table.image)==set(expected_rows.image) and len(table)==len(expected_rows)
             assert table.set_index('image').label.to_dict()==expected_rows.set_index('image').label.to_dict()
+            for column in ['image_path','mask_path']:
+                assert table.set_index('image')[column].fillna('').astype(str).to_dict()==expected_rows.set_index('image')[column].fillna('').astype(str).to_dict()
+            assert set(map(Path,table.map_path))==set((directory/split/'maps').glob('*.npy'))
             assert np.isfinite(table.native_score).all()
             for row in table.itertuples():
                 a=np.load(row.map_path);assert a.shape==(448,448) and a.dtype==np.float32 and np.isfinite(a).all();assert np.isclose(common.image_score(a),row.score,atol=1e-6);count+=1

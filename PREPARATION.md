@@ -38,14 +38,14 @@ python scripts/prepare_visa.py
 - AnomalyDINO 官方默认骨干是 `dinov2_vits14`，对应已准备的 ViT-S/14 权重。
 - 在 VisA 上评估 AnomalyCLIP 应使用 `external/AnomalyCLIP/checkpoints/9_12_4_multiscale_visa/epoch_15.pth`。官方 `train.sh` 明确将这组模型训练在 MVTec 上；没有 `_visa` 后缀的另一组模型训练在 VisA 上，不用于这里的零样本 VisA 评估。不能只根据脚本注释或目录名猜测训练来源。
 - 骨干权重已放在项目 `weights/` 中，后续运行时需要明确配置本地加载/缓存路径，避免默认重新下载到 C 盘。
-- 文件完整性检查不等于模型推理验证；尚未进行模型加载、训练、指标评估或显存测试。
+- 文件完整性检查不等于模型推理验证。本分支现已完成Part1与Part2的正式实验；Part2模型加载、官方接口数值核对、指标及显存记录见part2/REPORT.md和results/part2_course448。
 
 ## 运行环境与待办
 
 2026-11-05：Part 1 使用 Python 3.11 / CUDA PyTorch；共享输入协议固定于
 `experiment_protocol.json`，精确运行环境和验证摘要见 `results/part1_course448`。
 数据默认位于项目内 `data/VisA`；通过 `CVPROJECT_DATA_ROOT` 可以复用其他目录的数据。
-运行命令以 `part1/README.md` 为准。Part 2 的FAISS/NumPy依赖需独立配置，
+运行命令以 `part1/README.md` 为准。Part 2 的FAISS/NumPy依赖已采用独立配置，复现命令见part2/README.md，
 不要用Part1的requirements直接覆盖其环境。数据、权重和完整实验输出不随Git提交。
 
 ## 官方来源

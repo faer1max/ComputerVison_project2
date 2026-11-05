@@ -19,6 +19,7 @@ python part2/plot_results.py
 ```
 
 GPU必须支持当前PyTorch CUDA构建。只在当前进程加载.deps的NumPy1.26，不覆盖Part1 NumPy2环境。
+Part2另外需要与PyTorch匹配的torchvision；本次为torch2.12.0+cu130和torchvision0.27.0+cu130。请按PyTorch官方安装器选择匹配的GPU构建，再安装Part1基础依赖与上述独立兼容依赖，不要把CPU版或不匹配的torchvision混入。
 FAISS为官方conda1.8 CPU版（精确检索）；pip旧版与本机OpenMP冲突，不设置KMP_DUPLICATE_LIB_OK。
 `CVPROJECT_ASSETS`可指向已有共享资产目录；输出另指定独立位置，不能用smoke代替full。
 已有metrics.json的组支持恢复，但source.json身份不同会拒绝复用，必须新建输出目录。

@@ -1,0 +1,3 @@
+# Part 2 verified course448 results
+
+See ../../part2/REPORT.md for model architecture, directory meanings, actual metric tables and timing limitations. all_runs.csv preserves native and common heatmap scoring separately. DINO CSV means/std use three random seeds; CLIP is deterministic zero-shot. Raw validation/test predictions, maps, and feature cache stay local. verification.json records source identity and full-run checks; output_inventory.json records array counts and bytes. failure_inventory.csv covers only DINO seed42/1-shot and CLIP native operating points; 24 displayed failures are observations, not causal conclusions or parameter selection.

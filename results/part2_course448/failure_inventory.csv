@@ -1,0 +1,397 @@
+method,category,image,error_type,native_score,native_threshold,gt_pixel_fraction,predicted_pixel_fraction,pixel_recall,observation_group,selected
+dino,candle,candle/Data/Images/Normal/0790.JPG,FP,0.3185558319091797,0.2764609456062317,0.0,0.02098612882653061,,normal-image false alarm,False
+dino,candle,candle/Data/Images/Normal/0303.JPG,FP,0.2941961586475372,0.2764609456062317,0.0,0.019670758928571428,,normal-image false alarm,True
+dino,candle,candle/Data/Images/Normal/0617.JPG,FP,0.3009776473045349,0.2764609456062317,0.0,0.027722417091836735,,normal-image false alarm,False
+dino,candle,candle/Data/Images/Normal/0400.JPG,FP,0.2893900275230407,0.2764609456062317,0.0,0.01816605548469388,,normal-image false alarm,False
+dino,candle,candle/Data/Images/Normal/0730.JPG,FP,0.3198666572570801,0.2764609456062317,0.0,0.028788663903061226,,normal-image false alarm,False
+dino,candle,candle/Data/Images/Normal/0306.JPG,FP,0.3442281782627105,0.2764609456062317,0.0,0.05303830516581633,,normal-image false alarm,False
+dino,candle,candle/Data/Images/Normal/0694.JPG,FP,0.2785167694091797,0.2764609456062317,0.0,0.013751594387755101,,normal-image false alarm,False
+dino,candle,candle/Data/Images/Normal/0427.JPG,FP,0.3915871679782867,0.2764609456062317,0.0,0.04252531090561224,,normal-image false alarm,False
+dino,candle,candle/Data/Images/Normal/0552.JPG,FP,0.3231206834316253,0.2764609456062317,0.0,0.0240055006377551,,normal-image false alarm,False
+dino,candle,candle/Data/Images/Normal/0952.JPG,FP,0.2968389987945556,0.2764609456062317,0.0,0.014733139349489796,,normal-image false alarm,False
+dino,candle,candle/Data/Images/Normal/0871.JPG,FP,0.284110963344574,0.2764609456062317,0.0,0.014877630739795918,,normal-image false alarm,False
+dino,candle,candle/Data/Images/Anomaly/000.JPG,FN,0.2591021656990051,0.2764609456062317,0.0009416852678571429,0.01869917889030612,1.0,small annotated defect (<1% pixels),True
+dino,candle,candle/Data/Images/Anomaly/002.JPG,FN,0.263044536113739,0.2764609456062317,0.002122528698979592,0.02638213488520408,0.9460093896713615,small annotated defect (<1% pixels),False
+dino,candle,candle/Data/Images/Anomaly/008.JPG,FN,0.2741735577583313,0.2764609456062317,0.0014847735969387755,0.03851442920918367,1.0,small annotated defect (<1% pixels),False
+dino,candle,candle/Data/Images/Anomaly/014.JPG,FN,0.2702031135559082,0.2764609456062317,0.001913265306122449,0.015311104910714286,1.0,small annotated defect (<1% pixels),False
+dino,candle,candle/Data/Images/Anomaly/017.JPG,FN,0.2308589220046997,0.2764609456062317,0.001878388073979592,0.012949418048469387,0.7480106100795756,small annotated defect (<1% pixels),False
+dino,candle,candle/Data/Images/Anomaly/019.JPG,FN,0.2598952651023865,0.2764609456062317,0.0019780373086734694,0.010577766262755101,1.0,small annotated defect (<1% pixels),False
+dino,candle,candle/Data/Images/Anomaly/027.JPG,FN,0.2637433111667633,0.2764609456062317,0.000647720025510204,0.014165138711734694,0.6692307692307692,small annotated defect (<1% pixels),False
+dino,candle,candle/Data/Images/Anomaly/029.JPG,FN,0.2622975707054138,0.2764609456062317,0.001145966198979592,0.015355947066326531,0.7,small annotated defect (<1% pixels),False
+dino,candle,candle/Data/Images/Anomaly/035.JPG,FN,0.2748405039310455,0.2764609456062317,0.0014947385204081632,0.013158681441326531,0.0,small annotated defect (<1% pixels),False
+dino,candle,candle/Data/Images/Anomaly/036.JPG,FN,0.2170056104660034,0.2764609456062317,0.0012406329719387755,0.014219945790816327,0.0,small annotated defect (<1% pixels),False
+dino,candle,candle/Data/Images/Anomaly/037.JPG,FN,0.2158849239349365,0.2764609456062317,0.0009665975765306122,0.008808992346938776,0.0,small annotated defect (<1% pixels),False
+dino,candle,candle/Data/Images/Anomaly/039.JPG,FN,0.2657738327980041,0.2764609456062317,0.0023865991709183672,0.012505978954081632,0.0,small annotated defect (<1% pixels),False
+dino,candle,candle/Data/Images/Anomaly/046.JPG,FN,0.2660555243492126,0.2764609456062317,6.477200255102041e-05,0.014643455038265306,1.0,small annotated defect (<1% pixels),False
+dino,candle,candle/Data/Images/Anomaly/050.JPG,FN,0.2321804761886596,0.2764609456062317,0.0018484933035714285,0.010084502551020409,0.0215633423180593,small annotated defect (<1% pixels),False
+dino,candle,candle/Data/Images/Anomaly/055.JPG,FN,0.2728708684444427,0.2764609456062317,9.964923469387755e-05,0.023701570471938774,1.0,small annotated defect (<1% pixels),False
+dino,candle,candle/Data/Images/Anomaly/058.JPG,FN,0.2561927437782287,0.2764609456062317,2.491230867346939e-05,0.012794961734693877,1.0,small annotated defect (<1% pixels),False
+dino,candle,candle/Data/Images/Anomaly/060.JPG,FN,0.2535936832427978,0.2764609456062317,0.0029894770408163264,0.009038185586734694,1.0,small annotated defect (<1% pixels),False
+dino,candle,candle/Data/Images/Anomaly/062.JPG,FN,0.2491042613983154,0.2764609456062317,0.0038863201530612247,0.016287667410714284,0.9692307692307692,small annotated defect (<1% pixels),False
+dino,candle,candle/Data/Images/Anomaly/090.JPG,FN,0.2424067258834839,0.2764609456062317,0.004688496492346939,0.01984016262755102,0.822529224229543,small annotated defect (<1% pixels),False
+dino,candle,candle/Data/Images/Anomaly/092.JPG,FN,0.2648825049400329,0.2764609456062317,0.0029795121173469387,0.04117008131377551,0.7976588628762542,small annotated defect (<1% pixels),False
+dino,capsules,capsules/Data/Images/Anomaly/000.JPG,FN,0.1955756098031997,0.3140873312950134,0.0005530532525510204,0.020079320790816327,1.0,small annotated defect (<1% pixels),True
+dino,capsules,capsules/Data/Images/Anomaly/001.JPG,FN,0.2132407128810882,0.3140873312950134,0.0007174744897959184,0.012794961734693877,1.0,small annotated defect (<1% pixels),True
+dino,capsules,capsules/Data/Images/Anomaly/002.JPG,FN,0.1775594651699066,0.3140873312950134,0.0013851243622448979,0.010483099489795918,0.802158273381295,small annotated defect (<1% pixels),False
+dino,capsules,capsules/Data/Images/Anomaly/003.JPG,FN,0.2053735256195068,0.3140873312950134,0.0016491948341836734,0.01696029974489796,1.0,small annotated defect (<1% pixels),False
+dino,capsules,capsules/Data/Images/Anomaly/004.JPG,FN,0.2416802644729614,0.3140873312950134,0.0008021763392857143,0.02382613201530612,1.0,small annotated defect (<1% pixels),False
+dino,capsules,capsules/Data/Images/Anomaly/005.JPG,FN,0.2804469764232635,0.3140873312950134,0.0005580357142857143,0.024957150829081634,1.0,small annotated defect (<1% pixels),False
+dino,capsules,capsules/Data/Images/Anomaly/006.JPG,FN,0.2172650396823883,0.3140873312950134,0.0015595105229591836,0.019182477678571428,1.0,small annotated defect (<1% pixels),False
+dino,capsules,capsules/Data/Images/Anomaly/007.JPG,FN,0.1800561547279358,0.3140873312950134,0.000568000637755102,0.0071797273596938774,1.0,small annotated defect (<1% pixels),False
+dino,capsules,capsules/Data/Images/Anomaly/008.JPG,FN,0.1867425441741943,0.3140873312950134,0.0006028778698979591,0.01435447225765306,1.0,small annotated defect (<1% pixels),False
+dino,capsules,capsules/Data/Images/Anomaly/009.JPG,FN,0.2438521087169647,0.3140873312950134,0.0014947385204081632,0.02912747130102041,1.0,small annotated defect (<1% pixels),False
+dino,capsules,capsules/Data/Images/Anomaly/010.JPG,FN,0.3042236864566803,0.3140873312950134,0.0017687739158163266,0.023233219068877552,0.8816901408450705,small annotated defect (<1% pixels),False
+dino,capsules,capsules/Data/Images/Anomaly/012.JPG,FN,0.173820212483406,0.3140873312950134,0.0013203523596938774,0.013901068239795918,0.9018867924528302,small annotated defect (<1% pixels),False
+dino,capsules,capsules/Data/Images/Anomaly/014.JPG,FN,0.2403982430696487,0.3140873312950134,0.001136001275510204,0.0186344068877551,0.7982456140350878,small annotated defect (<1% pixels),False
+dino,capsules,capsules/Data/Images/Anomaly/015.JPG,FN,0.2451980113983154,0.3140873312950134,0.001295440051020408,0.021115672831632654,1.0,small annotated defect (<1% pixels),False
+dino,capsules,capsules/Data/Images/Anomaly/016.JPG,FN,0.2174889147281646,0.3140873312950134,0.0013103874362244898,0.016302614795918366,1.0,small annotated defect (<1% pixels),False
+dino,capsules,capsules/Data/Images/Anomaly/017.JPG,FN,0.1850626468658447,0.3140873312950134,0.0019830197704081634,0.018749003507653062,0.9346733668341709,small annotated defect (<1% pixels),False
+dino,capsules,capsules/Data/Images/Anomaly/018.JPG,FN,0.2903076112270355,0.3140873312950134,0.002565967793367347,0.03178810586734694,0.8349514563106796,small annotated defect (<1% pixels),False
+dino,capsules,capsules/Data/Images/Anomaly/019.JPG,FN,0.2620905339717865,0.3140873312950134,0.0014050542091836734,0.020129145408163265,1.0,small annotated defect (<1% pixels),False
+dino,capsules,capsules/Data/Images/Anomaly/020.JPG,FN,0.2503669261932373,0.3140873312950134,0.0019232302295918368,0.01881377551020408,1.0,small annotated defect (<1% pixels),False
+dino,capsules,capsules/Data/Images/Anomaly/021.JPG,FN,0.2008251249790191,0.3140873312950134,0.0006925621811224489,0.019526267538265307,1.0,small annotated defect (<1% pixels),False
+dino,capsules,capsules/Data/Images/Anomaly/022.JPG,FN,0.2201805561780929,0.3140873312950134,0.0008619658801020409,0.01085678411989796,1.0,small annotated defect (<1% pixels),False
+dino,capsules,capsules/Data/Images/Anomaly/023.JPG,FN,0.2491656243801117,0.3140873312950134,0.0005082110969387755,0.01420001594387755,1.0,small annotated defect (<1% pixels),False
+dino,capsules,capsules/Data/Images/Anomaly/025.JPG,FN,0.2518707513809204,0.3140873312950134,0.001539580676020408,0.021788305165816327,0.9288025889967637,small annotated defect (<1% pixels),False
+dino,capsules,capsules/Data/Images/Anomaly/026.JPG,FN,0.2918421626091003,0.3140873312950134,0.0013602120535714285,0.03168845663265306,1.0,small annotated defect (<1% pixels),False
+dino,capsules,capsules/Data/Images/Anomaly/027.JPG,FN,0.1885292828083038,0.3140873312950134,0.00025908801020408165,0.013402822066326531,0.38461538461538464,small annotated defect (<1% pixels),False
+dino,capsules,capsules/Data/Images/Anomaly/028.JPG,FN,0.2474147379398346,0.3140873312950134,0.0014847735969387755,0.02180325255102041,1.0,small annotated defect (<1% pixels),False
+dino,capsules,capsules/Data/Images/Anomaly/029.JPG,FN,0.2202047854661941,0.3140873312950134,0.00039361447704081633,0.01323341836734694,1.0,small annotated defect (<1% pixels),False
+dino,capsules,capsules/Data/Images/Anomaly/030.JPG,FN,0.1525953710079193,0.3140873312950134,0.00011957908163265306,0.003094108737244898,0.7916666666666666,small annotated defect (<1% pixels),False
+dino,capsules,capsules/Data/Images/Anomaly/031.JPG,FN,0.2399842739105224,0.3140873312950134,0.00010463169642857142,0.013592155612244899,1.0,small annotated defect (<1% pixels),False
+dino,capsules,capsules/Data/Images/Anomaly/032.JPG,FN,0.2509230673313141,0.3140873312950134,0.00015943877551020407,0.016237842793367346,1.0,small annotated defect (<1% pixels),False
+dino,capsules,capsules/Data/Images/Anomaly/033.JPG,FN,0.2067412585020065,0.3140873312950134,0.00013950892857142856,0.011419802295918368,0.9285714285714286,small annotated defect (<1% pixels),False
+dino,capsules,capsules/Data/Images/Anomaly/034.JPG,FN,0.1645204275846481,0.3140873312950134,0.0001096141581632653,0.012894610969387755,0.22727272727272727,small annotated defect (<1% pixels),False
+dino,capsules,capsules/Data/Images/Anomaly/035.JPG,FN,0.160837173461914,0.3140873312950134,9.964923469387755e-05,0.00594905931122449,1.0,small annotated defect (<1% pixels),False
+dino,capsules,capsules/Data/Images/Anomaly/036.JPG,FN,0.1623952686786651,0.3140873312950134,0.000244140625,0.0016491948341836734,1.0,small annotated defect (<1% pixels),False
+dino,capsules,capsules/Data/Images/Anomaly/037.JPG,FN,0.1731107980012893,0.3140873312950134,0.00012456154336734694,0.006561902104591837,1.0,small annotated defect (<1% pixels),False
+dino,capsules,capsules/Data/Images/Anomaly/038.JPG,FN,0.2019826471805572,0.3140873312950134,7.971938775510203e-05,0.013452646683673469,1.0,small annotated defect (<1% pixels),False
+dino,capsules,capsules/Data/Images/Anomaly/039.JPG,FN,0.1591722071170807,0.3140873312950134,0.00014449139030612245,0.00543586575255102,1.0,small annotated defect (<1% pixels),False
+dino,capsules,capsules/Data/Images/Anomaly/040.JPG,FN,0.2018117010593414,0.3140873312950134,9.964923469387755e-05,0.01200275031887755,1.0,small annotated defect (<1% pixels),False
+dino,capsules,capsules/Data/Images/Anomaly/041.JPG,FN,0.1804964244365692,0.3140873312950134,0.00013452646683673468,0.00810646524234694,1.0,small annotated defect (<1% pixels),False
+dino,capsules,capsules/Data/Images/Anomaly/042.JPG,FN,0.1678884625434875,0.3140873312950134,0.00015943877551020407,0.01044822225765306,0.59375,small annotated defect (<1% pixels),False
+dino,capsules,capsules/Data/Images/Anomaly/043.JPG,FN,0.1772113740444183,0.3140873312950134,0.00017438616071428572,0.005973971619897959,1.0,small annotated defect (<1% pixels),False
+dino,capsules,capsules/Data/Images/Anomaly/044.JPG,FN,0.3085428774356842,0.3140873312950134,0.0001096141581632653,0.02272999043367347,1.0,small annotated defect (<1% pixels),False
+dino,capsules,capsules/Data/Images/Anomaly/045.JPG,FN,0.3116834759712219,0.3140873312950134,0.0057846380739795915,0.052769252232142856,0.7002583979328165,small annotated defect (<1% pixels),False
+dino,capsules,capsules/Data/Images/Anomaly/056.JPG,FN,0.2119154036045074,0.3140873312950134,0.01612822863520408,0.032570352359693876,0.5971578622181032,larger annotated defect (>=1% pixels),False
+dino,capsules,capsules/Data/Images/Anomaly/061.JPG,FN,0.2875050604343414,0.3140873312950134,0.006855867346938775,0.040891063456632654,1.0,small annotated defect (<1% pixels),False
+dino,capsules,capsules/Data/Images/Anomaly/062.JPG,FN,0.2888705730438232,0.3140873312950134,0.009028220663265306,0.028584382971938774,0.8068432671081678,small annotated defect (<1% pixels),False
+dino,capsules,capsules/Data/Images/Anomaly/065.JPG,FN,0.188376635313034,0.3140873312950134,0.014170121173469387,0.036451690051020405,0.3829113924050633,larger annotated defect (>=1% pixels),False
+dino,capsules,capsules/Data/Images/Anomaly/066.JPG,FN,0.1558303236961364,0.3140873312950134,0.013507453762755101,0.00750358737244898,0.02028771670970122,larger annotated defect (>=1% pixels),False
+dino,capsules,capsules/Data/Images/Anomaly/067.JPG,FN,0.2647858560085296,0.3140873312950134,0.015261280293367346,0.05990911989795918,0.8850799869409076,larger annotated defect (>=1% pixels),False
+dino,capsules,capsules/Data/Images/Anomaly/068.JPG,FN,0.2482638657093048,0.3140873312950134,0.01671615911989796,0.054079639668367346,0.9201192250372578,larger annotated defect (>=1% pixels),False
+dino,capsules,capsules/Data/Images/Anomaly/071.JPG,FN,0.2336047887802124,0.3140873312950134,0.01647201849489796,0.033302774234693876,0.721415607985481,larger annotated defect (>=1% pixels),False
+dino,capsules,capsules/Data/Images/Anomaly/074.JPG,FN,0.2667866349220276,0.3140873312950134,0.017403738839285716,0.03369638871173469,0.9845405095906098,larger annotated defect (>=1% pixels),False
+dino,capsules,capsules/Data/Images/Anomaly/075.JPG,FN,0.2998121380805969,0.3140873312950134,0.016073421556122448,0.055918168048469385,1.0,larger annotated defect (>=1% pixels),False
+dino,capsules,capsules/Data/Images/Anomaly/076.JPG,FN,0.2419653683900833,0.3140873312950134,0.0159488600127551,0.04416454081632653,0.7585129646985317,larger annotated defect (>=1% pixels),False
+dino,capsules,capsules/Data/Images/Anomaly/077.JPG,FN,0.2651441097259521,0.3140873312950134,0.016043526785714284,0.04648138552295918,0.8027950310559007,larger annotated defect (>=1% pixels),False
+dino,capsules,capsules/Data/Images/Anomaly/078.JPG,FN,0.2881704270839691,0.3140873312950134,0.017867107780612245,0.07520029496173469,0.9272169548243168,larger annotated defect (>=1% pixels),False
+dino,capsules,capsules/Data/Images/Anomaly/079.JPG,FN,0.3082440793514251,0.3140873312950134,0.016671316964285716,0.03162368463010204,0.9488942020322774,larger annotated defect (>=1% pixels),False
+dino,capsules,capsules/Data/Images/Anomaly/082.JPG,FN,0.2675566971302032,0.3140873312950134,0.01534099968112245,0.02774234693877551,0.5953231568691133,larger annotated defect (>=1% pixels),False
+dino,capsules,capsules/Data/Images/Anomaly/084.JPG,FN,0.3042306303977966,0.3140873312950134,0.016063456632653062,0.03202228156887755,1.0,larger annotated defect (>=1% pixels),False
+dino,capsules,capsules/Data/Images/Anomaly/085.JPG,FN,0.2298184931278228,0.3140873312950134,0.004832987882653061,0.011245416135204082,0.9948453608247423,small annotated defect (<1% pixels),False
+dino,capsules,capsules/Data/Images/Anomaly/086.JPG,FN,0.1759860217571258,0.3140873312950134,0.0006776147959183673,0.009092992665816327,0.7279411764705882,small annotated defect (<1% pixels),False
+dino,capsules,capsules/Data/Images/Anomaly/087.JPG,FN,0.1550403088331222,0.3140873312950134,0.0003338249362244898,0.0054807079081632655,0.9253731343283582,small annotated defect (<1% pixels),False
+dino,capsules,capsules/Data/Images/Anomaly/088.JPG,FN,0.2342120110988617,0.3140873312950134,0.0009068080357142857,0.014015664859693877,0.5274725274725275,small annotated defect (<1% pixels),False
+dino,capsules,capsules/Data/Images/Anomaly/089.JPG,FN,0.2120697200298309,0.3140873312950134,0.0005381058673469387,0.015056999362244899,1.0,small annotated defect (<1% pixels),False
+dino,capsules,capsules/Data/Images/Anomaly/090.JPG,FN,0.2169346064329147,0.3140873312950134,0.00038364955357142856,0.011285275829081632,0.7662337662337663,small annotated defect (<1% pixels),False
+dino,capsules,capsules/Data/Images/Anomaly/091.JPG,FN,0.1789627969264984,0.3140873312950134,0.0005580357142857143,0.0062380420918367345,0.0,small annotated defect (<1% pixels),False
+dino,capsules,capsules/Data/Images/Anomaly/092.JPG,FN,0.1908139288425445,0.3140873312950134,0.00027403539540816324,0.006885762117346939,0.6545454545454545,small annotated defect (<1% pixels),False
+dino,capsules,capsules/Data/Images/Anomaly/093.JPG,FN,0.1847446858882904,0.3140873312950134,0.0006576849489795918,0.014718191964285714,0.7272727272727273,small annotated defect (<1% pixels),False
+dino,capsules,capsules/Data/Images/Anomaly/094.JPG,FN,0.1641140282154083,0.3140873312950134,0.00038863201530612245,0.00643734056122449,0.15384615384615385,small annotated defect (<1% pixels),False
+dino,capsules,capsules/Data/Images/Anomaly/095.JPG,FN,0.2073045670986175,0.3140873312950134,0.0008221061862244898,0.016671316964285716,1.0,small annotated defect (<1% pixels),False
+dino,capsules,capsules/Data/Images/Anomaly/096.JPG,FN,0.2187377214431762,0.3140873312950134,0.0010562818877551021,0.023716517857142856,0.9858490566037735,small annotated defect (<1% pixels),False
+dino,capsules,capsules/Data/Images/Anomaly/097.JPG,FN,0.1943262368440628,0.3140873312950134,0.0009466677295918367,0.014503946109693877,0.9263157894736842,small annotated defect (<1% pixels),False
+dino,capsules,capsules/Data/Images/Anomaly/098.JPG,FN,0.2438465654850006,0.3140873312950134,0.000896843112244898,0.0177425462372449,1.0,small annotated defect (<1% pixels),False
+dino,capsules,capsules/Data/Images/Anomaly/099.JPG,FN,0.2326502054929733,0.3140873312950134,0.001305404974489796,0.016596580038265307,0.9580152671755725,small annotated defect (<1% pixels),False
+dino,cashew,cashew/Data/Images/Normal/050.JPG,FP,0.24263796210289,0.2383555471897125,0.0,0.014718191964285714,,normal-image false alarm,True
+dino,cashew,cashew/Data/Images/Normal/367.JPG,FP,0.278812974691391,0.2383555471897125,0.0,0.06133908641581633,,normal-image false alarm,False
+dino,cashew,cashew/Data/Images/Normal/344.JPG,FP,0.2416681945323944,0.2383555471897125,0.0,0.017737563775510203,,normal-image false alarm,False
+dino,cashew,cashew/Data/Images/Anomaly/001.JPG,FN,0.236000657081604,0.2383555471897125,0.0011310188137755102,0.01127032844387755,0.9911894273127754,small annotated defect (<1% pixels),True
+dino,cashew,cashew/Data/Images/Anomaly/008.JPG,FN,0.2278201133012771,0.2383555471897125,0.0006726323341836735,0.007976921237244899,1.0,small annotated defect (<1% pixels),False
+dino,cashew,cashew/Data/Images/Anomaly/044.JPG,FN,0.2353374511003494,0.2383555471897125,0.0006975446428571429,0.022809709821428572,1.0,small annotated defect (<1% pixels),False
+dino,cashew,cashew/Data/Images/Anomaly/045.JPG,FN,0.2085175961256027,0.2383555471897125,0.0006078603316326531,0.021399673150510203,1.0,small annotated defect (<1% pixels),False
+dino,cashew,cashew/Data/Images/Anomaly/048.JPG,FN,0.2106533944606781,0.2383555471897125,0.002047791772959184,0.014528858418367346,0.9829683698296837,small annotated defect (<1% pixels),False
+dino,cashew,cashew/Data/Images/Anomaly/050.JPG,FN,0.2118467092514038,0.2383555471897125,0.0006726323341836735,0.008510044642857142,1.0,small annotated defect (<1% pixels),False
+dino,cashew,cashew/Data/Images/Anomaly/051.JPG,FN,0.2342183589935302,0.2383555471897125,0.0013004225127551021,0.014060507015306123,1.0,small annotated defect (<1% pixels),False
+dino,cashew,cashew/Data/Images/Anomaly/053.JPG,FN,0.2364645898342132,0.2383555471897125,0.0005630181760204082,0.018958266900510203,1.0,small annotated defect (<1% pixels),False
+dino,cashew,cashew/Data/Images/Anomaly/054.JPG,FN,0.1687829196453094,0.2383555471897125,0.0009217554209183673,0.0042500398596938774,0.9945945945945946,small annotated defect (<1% pixels),False
+dino,cashew,cashew/Data/Images/Anomaly/055.JPG,FN,0.2355203628540039,0.2383555471897125,8.470184948979592e-05,0.012436224489795918,0.5294117647058824,small annotated defect (<1% pixels),False
+dino,cashew,cashew/Data/Images/Anomaly/056.JPG,FN,0.1946727335453033,0.2383555471897125,0.0015694754464285715,0.012680365114795918,0.9428571428571428,small annotated defect (<1% pixels),False
+dino,cashew,cashew/Data/Images/Anomaly/057.JPG,FN,0.220426008105278,0.2383555471897125,8.96843112244898e-05,0.012152224170918368,0.0,small annotated defect (<1% pixels),False
+dino,cashew,cashew/Data/Images/Anomaly/058.JPG,FN,0.1987040489912033,0.2383555471897125,0.0006975446428571429,0.026850486288265307,0.02142857142857143,small annotated defect (<1% pixels),False
+dino,cashew,cashew/Data/Images/Anomaly/059.JPG,FN,0.2040154635906219,0.2383555471897125,0.0006776147959183673,0.013208506058673469,1.0,small annotated defect (<1% pixels),False
+dino,cashew,cashew/Data/Images/Anomaly/061.JPG,FN,0.1913436502218246,0.2383555471897125,0.0003089126275510204,0.010468152104591837,0.8387096774193549,small annotated defect (<1% pixels),False
+dino,cashew,cashew/Data/Images/Anomaly/062.JPG,FN,0.1809788048267364,0.2383555471897125,0.000204280931122449,0.011853276466836735,0.7317073170731707,small annotated defect (<1% pixels),False
+dino,cashew,cashew/Data/Images/Anomaly/063.JPG,FN,0.1515918374061584,0.2383555471897125,8.96843112244898e-05,0.005839445153061225,1.0,small annotated defect (<1% pixels),False
+dino,cashew,cashew/Data/Images/Anomaly/064.JPG,FN,0.1981786042451858,0.2383555471897125,0.00016442123724489795,0.017144650829081634,1.0,small annotated defect (<1% pixels),False
+dino,cashew,cashew/Data/Images/Anomaly/066.JPG,FN,0.1921814233064651,0.2383555471897125,0.00021424585459183673,0.01333805006377551,0.813953488372093,small annotated defect (<1% pixels),False
+dino,cashew,cashew/Data/Images/Anomaly/067.JPG,FN,0.2088163346052169,0.2383555471897125,7.473692602040816e-05,0.015002192283163265,0.0,small annotated defect (<1% pixels),False
+dino,cashew,cashew/Data/Images/Anomaly/068.JPG,FN,0.1890722960233688,0.2383555471897125,0.00018435108418367346,0.01576949139030612,1.0,small annotated defect (<1% pixels),False
+dino,cashew,cashew/Data/Images/Anomaly/070.JPG,FN,0.181601881980896,0.2383555471897125,0.00011459661989795919,0.006402463329081632,0.0,small annotated defect (<1% pixels),False
+dino,cashew,cashew/Data/Images/Anomaly/071.JPG,FN,0.1919516772031784,0.2383555471897125,0.00023915816326530612,0.012959382971938776,1.0,small annotated defect (<1% pixels),False
+dino,cashew,cashew/Data/Images/Anomaly/072.JPG,FN,0.2212402522563934,0.2383555471897125,0.000284000318877551,0.03346221301020408,1.0,small annotated defect (<1% pixels),False
+dino,cashew,cashew/Data/Images/Anomaly/073.JPG,FN,0.2337957620620727,0.2383555471897125,0.00015943877551020407,0.03387077487244898,1.0,small annotated defect (<1% pixels),False
+dino,cashew,cashew/Data/Images/Anomaly/074.JPG,FN,0.1987727433443069,0.2383555471897125,0.0002889827806122449,0.037408322704081634,1.0,small annotated defect (<1% pixels),False
+dino,cashew,cashew/Data/Images/Anomaly/075.JPG,FN,0.1699089556932449,0.2383555471897125,0.00027901785714285713,0.009441764987244899,0.23214285714285715,small annotated defect (<1% pixels),False
+dino,cashew,cashew/Data/Images/Anomaly/077.JPG,FN,0.1922356486320495,0.2383555471897125,0.00030393016581632654,0.0157894212372449,1.0,small annotated defect (<1% pixels),False
+dino,cashew,cashew/Data/Images/Anomaly/082.JPG,FN,0.232278972864151,0.2383555471897125,0.001992984693877551,0.027438416772959183,1.0,small annotated defect (<1% pixels),False
+dino,cashew,cashew/Data/Images/Anomaly/087.JPG,FN,0.2254270017147064,0.2383555471897125,0.0016392299107142857,0.02604830994897959,0.7355623100303952,small annotated defect (<1% pixels),False
+dino,cashew,cashew/Data/Images/Anomaly/088.JPG,FN,0.2262543737888336,0.2383555471897125,0.0019780373086734694,0.018265704719387755,0.9924433249370277,small annotated defect (<1% pixels),False
+dino,cashew,cashew/Data/Images/Anomaly/093.JPG,FN,0.2348762452602386,0.2383555471897125,0.0016840720663265306,0.02036332110969388,0.8313609467455622,small annotated defect (<1% pixels),False
+dino,chewinggum,chewinggum/Data/Images/Normal/467.JPG,FP,0.3016720712184906,0.2378154695034027,0.0,0.04299864477040816,,normal-image false alarm,False
+dino,chewinggum,chewinggum/Data/Images/Normal/342.JPG,FP,0.3446331918239593,0.2378154695034027,0.0,0.017727598852040817,,normal-image false alarm,True
+dino,chewinggum,chewinggum/Data/Images/Anomaly/028.JPG,FN,0.2371421158313751,0.2378154695034027,0.0012804926658163266,0.031663544323979595,0.9455252918287937,small annotated defect (<1% pixels),True
+dino,chewinggum,chewinggum/Data/Images/Anomaly/031.JPG,FN,0.2297282665967941,0.2378154695034027,0.0019830197704081634,0.015211455676020409,0.3442211055276382,small annotated defect (<1% pixels),False
+dino,chewinggum,chewinggum/Data/Images/Anomaly/033.JPG,FN,0.2078993767499923,0.2378154695034027,0.0007672991071428571,0.011803451849489796,0.032467532467532464,small annotated defect (<1% pixels),False
+dino,chewinggum,chewinggum/Data/Images/Anomaly/037.JPG,FN,0.2236218899488449,0.2378154695034027,0.0016193000637755102,0.028958067602040817,0.9476923076923077,small annotated defect (<1% pixels),False
+dino,fryum,fryum/Data/Images/Normal/324.JPG,FP,0.213970273733139,0.1951490193605423,0.0,0.026825573979591837,,normal-image false alarm,True
+dino,fryum,fryum/Data/Images/Anomaly/024.JPG,FN,0.184873029589653,0.1951490193605423,0.00015943877551020407,0.014907525510204082,1.0,small annotated defect (<1% pixels),True
+dino,fryum,fryum/Data/Images/Anomaly/028.JPG,FN,0.1665482223033905,0.1951490193605423,7.971938775510203e-05,0.008181202168367346,1.0,small annotated defect (<1% pixels),False
+dino,fryum,fryum/Data/Images/Anomaly/029.JPG,FN,0.1933406293392181,0.1951490193605423,0.0004185267857142857,0.007533482142857143,1.0,small annotated defect (<1% pixels),False
+dino,fryum,fryum/Data/Images/Anomaly/031.JPG,FN,0.179159790277481,0.1951490193605423,0.00011459661989795919,0.0072245695153061226,1.0,small annotated defect (<1% pixels),False
+dino,fryum,fryum/Data/Images/Anomaly/035.JPG,FN,0.1883338689804077,0.1951490193605423,0.0002491230867346939,0.018998126594387755,1.0,small annotated defect (<1% pixels),False
+dino,fryum,fryum/Data/Images/Anomaly/036.JPG,FN,0.1843098253011703,0.1951490193605423,8.96843112244898e-05,0.010617625956632654,1.0,small annotated defect (<1% pixels),False
+dino,fryum,fryum/Data/Images/Anomaly/060.JPG,FN,0.166249468922615,0.1951490193605423,0.0018534757653061226,0.02019889987244898,0.9919354838709677,small annotated defect (<1% pixels),False
+dino,fryum,fryum/Data/Images/Anomaly/090.JPG,FN,0.1401633769273758,0.1951490193605423,0.0002939652423469388,0.007184709821428571,1.0,small annotated defect (<1% pixels),False
+dino,fryum,fryum/Data/Images/Anomaly/093.JPG,FN,0.184840589761734,0.1951490193605423,0.0023567044005102043,0.05362125318877551,0.5243128964059197,small annotated defect (<1% pixels),False
+dino,fryum,fryum/Data/Images/Anomaly/094.JPG,FN,0.127972275018692,0.1951490193605423,0.000652702487244898,0.0021723533163265306,0.0,small annotated defect (<1% pixels),False
+dino,fryum,fryum/Data/Images/Anomaly/095.JPG,FN,0.1479097306728363,0.1951490193605423,0.0013602120535714285,0.010184151785714286,0.30036630036630035,small annotated defect (<1% pixels),False
+dino,fryum,fryum/Data/Images/Anomaly/098.JPG,FN,0.1669231653213501,0.1951490193605423,0.0017289142219387755,0.008883729272959183,0.15561959654178675,small annotated defect (<1% pixels),False
+dino,pipe_fryum,pipe_fryum/Data/Images/Normal/352.JPG,FP,0.378496915102005,0.295141339302063,0.0,0.10801478794642858,,normal-image false alarm,False
+dino,pipe_fryum,pipe_fryum/Data/Images/Normal/104.JPG,FP,0.3182852268218994,0.295141339302063,0.0,0.024409080038265307,,normal-image false alarm,False
+dino,pipe_fryum,pipe_fryum/Data/Images/Normal/013.JPG,FP,0.3724055588245392,0.295141339302063,0.0,0.06912667410714286,,normal-image false alarm,True
+dino,pipe_fryum,pipe_fryum/Data/Images/Normal/260.JPG,FP,0.4054693579673767,0.295141339302063,0.0,0.09652523118622448,,normal-image false alarm,False
+dino,pipe_fryum,pipe_fryum/Data/Images/Normal/344.JPG,FP,0.2978652119636535,0.295141339302063,0.0,0.0381706393494898,,normal-image false alarm,False
+dino,pipe_fryum,pipe_fryum/Data/Images/Normal/482.JPG,FP,0.3438392281532287,0.295141339302063,0.0,0.042445591517857144,,normal-image false alarm,False
+dino,pipe_fryum,pipe_fryum/Data/Images/Normal/272.JPG,FP,0.3032075762748718,0.295141339302063,0.0,0.03216677295918367,,normal-image false alarm,False
+dino,pipe_fryum,pipe_fryum/Data/Images/Anomaly/027.JPG,FN,0.2695595622062683,0.295141339302063,0.0018136160714285715,0.016158123405612245,0.9587912087912088,small annotated defect (<1% pixels),True
+dino,pipe_fryum,pipe_fryum/Data/Images/Anomaly/050.JPG,FN,0.2778068482875824,0.295141339302063,0.00048828125,0.011499521683673469,1.0,small annotated defect (<1% pixels),False
+dino,pipe_fryum,pipe_fryum/Data/Images/Anomaly/052.JPG,FN,0.2358087003231048,0.295141339302063,0.0004932637117346938,0.004842952806122449,1.0,small annotated defect (<1% pixels),False
+dino,pipe_fryum,pipe_fryum/Data/Images/Anomaly/055.JPG,FN,0.2696086168289184,0.295141339302063,0.00038863201530612245,0.00759327168367347,1.0,small annotated defect (<1% pixels),False
+dino,pipe_fryum,pipe_fryum/Data/Images/Anomaly/062.JPG,FN,0.253972589969635,0.295141339302063,0.0003637197066326531,0.010298748405612245,1.0,small annotated defect (<1% pixels),False
+dino,pipe_fryum,pipe_fryum/Data/Images/Anomaly/063.JPG,FN,0.2728480100631714,0.295141339302063,0.00030393016581632654,0.00836555325255102,1.0,small annotated defect (<1% pixels),False
+dino,pipe_fryum,pipe_fryum/Data/Images/Anomaly/064.JPG,FN,0.2564653754234314,0.295141339302063,0.00046336894132653064,0.004987444196428571,1.0,small annotated defect (<1% pixels),False
+dino,pipe_fryum,pipe_fryum/Data/Images/Anomaly/065.JPG,FN,0.2722768783569336,0.295141339302063,0.0005331234056122449,0.014264787946428572,1.0,small annotated defect (<1% pixels),False
+dino,pipe_fryum,pipe_fryum/Data/Images/Anomaly/073.JPG,FN,0.2795515656471252,0.295141339302063,0.0020926339285714285,0.01764289700255102,0.8976190476190476,small annotated defect (<1% pixels),False
+dino,pipe_fryum,pipe_fryum/Data/Images/Anomaly/075.JPG,FN,0.2457718849182129,0.295141339302063,0.001504703443877551,0.010308713329081632,0.9139072847682119,small annotated defect (<1% pixels),False
+dino,pipe_fryum,pipe_fryum/Data/Images/Anomaly/086.JPG,FN,0.2618688642978668,0.295141339302063,0.0012755102040816326,0.011150749362244899,1.0,small annotated defect (<1% pixels),False
+dino,pipe_fryum,pipe_fryum/Data/Images/Anomaly/088.JPG,FN,0.2661262154579162,0.295141339302063,0.0009018255739795918,0.0069704639668367345,1.0,small annotated defect (<1% pixels),False
+dino,pipe_fryum,pipe_fryum/Data/Images/Anomaly/089.JPG,FN,0.2546520531177521,0.295141339302063,0.004180285395408163,0.013158681441326531,0.9165673420738975,small annotated defect (<1% pixels),False
+clip,candle,candle/Data/Images/Normal/0107.JPG,FP,0.953078031539917,0.9453898668289183,0.0,0.011634048150510204,,normal-image false alarm,True
+clip,candle,candle/Data/Images/Normal/0690.JPG,FP,0.9485721588134766,0.9453898668289183,0.0,0.025858976403061226,,normal-image false alarm,False
+clip,candle,candle/Data/Images/Normal/0617.JPG,FP,0.9464271664619446,0.9453898668289183,0.0,0.032390983737244895,,normal-image false alarm,False
+clip,candle,candle/Data/Images/Normal/0725.JPG,FP,0.9505768418312072,0.9453898668289183,0.0,0.005465760522959184,,normal-image false alarm,False
+clip,candle,candle/Data/Images/Normal/0751.JPG,FP,0.9493035078048706,0.9453898668289183,0.0,0.022620376275510203,,normal-image false alarm,False
+clip,candle,candle/Data/Images/Normal/0844.JPG,FP,0.9549785256385804,0.9453898668289183,0.0,0.025266063456632654,,normal-image false alarm,False
+clip,candle,candle/Data/Images/Normal/0333.JPG,FP,0.9491755962371826,0.9453898668289183,0.0,0.01944156568877551,,normal-image false alarm,False
+clip,candle,candle/Data/Images/Normal/0784.JPG,FP,0.9456108212471008,0.9453898668289183,0.0,0.003781688456632653,,normal-image false alarm,False
+clip,candle,candle/Data/Images/Normal/0796.JPG,FP,0.953890323638916,0.9453898668289183,0.0,0.03978993941326531,,normal-image false alarm,False
+clip,candle,candle/Data/Images/Normal/0994.JPG,FP,0.9529836177825928,0.9453898668289183,0.0,0.01869917889030612,,normal-image false alarm,False
+clip,candle,candle/Data/Images/Anomaly/000.JPG,FN,0.9114587903022766,0.9453898668289183,0.0009416852678571429,0.0028698979591836736,0.5132275132275133,small annotated defect (<1% pixels),True
+clip,candle,candle/Data/Images/Anomaly/002.JPG,FN,0.9438195824623108,0.9453898668289183,0.002122528698979592,0.040049027423469385,1.0,small annotated defect (<1% pixels),False
+clip,candle,candle/Data/Images/Anomaly/011.JPG,FN,0.9379208087921144,0.9453898668289183,0.004384566326530612,0.013617067920918368,0.8465909090909091,small annotated defect (<1% pixels),False
+clip,candle,candle/Data/Images/Anomaly/014.JPG,FN,0.9345619082450868,0.9453898668289183,0.001913265306122449,0.012595663265306123,0.6432291666666666,small annotated defect (<1% pixels),False
+clip,candle,candle/Data/Images/Anomaly/015.JPG,FN,0.9234832525253296,0.9453898668289183,0.0011658960459183674,0.01175860969387755,0.8589743589743589,small annotated defect (<1% pixels),False
+clip,candle,candle/Data/Images/Anomaly/016.JPG,FN,0.9035948514938354,0.9453898668289183,0.0007124920280612245,0.007817482461734694,0.916083916083916,small annotated defect (<1% pixels),False
+clip,candle,candle/Data/Images/Anomaly/017.JPG,FN,0.9200758934020996,0.9453898668289183,0.001878388073979592,0.02963069993622449,0.7055702917771883,small annotated defect (<1% pixels),False
+clip,candle,candle/Data/Images/Anomaly/018.JPG,FN,0.9299739003181458,0.9453898668289183,0.0022171954719387753,0.013791454081632654,1.0,small annotated defect (<1% pixels),False
+clip,candle,candle/Data/Images/Anomaly/022.JPG,FN,0.9264557957649232,0.9453898668289183,0.001305404974489796,0.019292091836734693,1.0,small annotated defect (<1% pixels),False
+clip,candle,candle/Data/Images/Anomaly/023.JPG,FN,0.9369298815727234,0.9453898668289183,0.0024563536352040817,0.01756816007653061,1.0,small annotated defect (<1% pixels),False
+clip,candle,candle/Data/Images/Anomaly/024.JPG,FN,0.9369572401046752,0.9453898668289183,0.0012157206632653062,0.019969706632653062,1.0,small annotated defect (<1% pixels),False
+clip,candle,candle/Data/Images/Anomaly/027.JPG,FN,0.9091882109642028,0.9453898668289183,0.000647720025510204,0.011499521683673469,0.6076923076923076,small annotated defect (<1% pixels),False
+clip,candle,candle/Data/Images/Anomaly/029.JPG,FN,0.9328957796096802,0.9453898668289183,0.001145966198979592,0.0040756536989795915,0.24782608695652175,small annotated defect (<1% pixels),False
+clip,candle,candle/Data/Images/Anomaly/031.JPG,FN,0.937247097492218,0.9453898668289183,0.0015943877551020409,0.02447883450255102,0.778125,small annotated defect (<1% pixels),False
+clip,candle,candle/Data/Images/Anomaly/034.JPG,FN,0.9423540830612184,0.9453898668289183,0.0024563536352040817,0.02359195631377551,0.6308316430020284,small annotated defect (<1% pixels),False
+clip,candle,candle/Data/Images/Anomaly/036.JPG,FN,0.9168999791145324,0.9453898668289183,0.0012406329719387755,0.020453005420918366,1.0,small annotated defect (<1% pixels),False
+clip,candle,candle/Data/Images/Anomaly/037.JPG,FN,0.938432514667511,0.9453898668289183,0.0009665975765306122,0.02130500637755102,1.0,small annotated defect (<1% pixels),False
+clip,candle,candle/Data/Images/Anomaly/038.JPG,FN,0.9428196549415588,0.9453898668289183,0.0013103874362244898,0.01089664381377551,0.19011406844106463,small annotated defect (<1% pixels),False
+clip,candle,candle/Data/Images/Anomaly/039.JPG,FN,0.929642915725708,0.9453898668289183,0.0023865991709183672,0.00016442123724489795,0.0,small annotated defect (<1% pixels),False
+clip,candle,candle/Data/Images/Anomaly/040.JPG,FN,0.9449677467346193,0.9453898668289183,0.00010463169642857142,0.015759526466836735,1.0,small annotated defect (<1% pixels),False
+clip,candle,candle/Data/Images/Anomaly/043.JPG,FN,0.936519742012024,0.9453898668289183,8.470184948979592e-05,0.013228435905612245,1.0,small annotated defect (<1% pixels),False
+clip,candle,candle/Data/Images/Anomaly/044.JPG,FN,0.9319401979446412,0.9453898668289183,9.466677295918367e-05,0.010114397321428572,0.631578947368421,small annotated defect (<1% pixels),False
+clip,candle,candle/Data/Images/Anomaly/045.JPG,FN,0.934562623500824,0.9453898668289183,3.487723214285714e-05,0.009102957589285714,1.0,small annotated defect (<1% pixels),False
+clip,candle,candle/Data/Images/Anomaly/046.JPG,FN,0.9003347754478455,0.9453898668289183,6.477200255102041e-05,0.0017289142219387755,1.0,small annotated defect (<1% pixels),False
+clip,candle,candle/Data/Images/Anomaly/047.JPG,FN,0.9336187243461608,0.9453898668289183,2.9894770408163265e-05,0.010622608418367346,1.0,small annotated defect (<1% pixels),False
+clip,candle,candle/Data/Images/Anomaly/049.JPG,FN,0.9199816584587096,0.9453898668289183,8.96843112244898e-05,0.004867865114795918,1.0,small annotated defect (<1% pixels),False
+clip,candle,candle/Data/Images/Anomaly/050.JPG,FN,0.9164928793907166,0.9453898668289183,0.0018484933035714285,0.007209622130102041,0.8409703504043127,small annotated defect (<1% pixels),False
+clip,candle,candle/Data/Images/Anomaly/051.JPG,FN,0.939887285232544,0.9453898668289183,6.477200255102041e-05,0.0021424585459183672,1.0,small annotated defect (<1% pixels),False
+clip,candle,candle/Data/Images/Anomaly/052.JPG,FN,0.9349946975708008,0.9453898668289183,8.470184948979592e-05,0.004653619260204082,0.0,small annotated defect (<1% pixels),False
+clip,candle,candle/Data/Images/Anomaly/054.JPG,FN,0.924026370048523,0.9453898668289183,3.985969387755102e-05,0.005266462053571429,1.0,small annotated defect (<1% pixels),False
+clip,candle,candle/Data/Images/Anomaly/056.JPG,FN,0.942651867866516,0.9453898668289183,1.4947385204081632e-05,0.020258689413265307,0.3333333333333333,small annotated defect (<1% pixels),False
+clip,candle,candle/Data/Images/Anomaly/058.JPG,FN,0.9307180047035216,0.9453898668289183,2.491230867346939e-05,0.008784080038265306,1.0,small annotated defect (<1% pixels),False
+clip,candle,candle/Data/Images/Anomaly/059.JPG,FN,0.941645324230194,0.9453898668289183,1.992984693877551e-05,0.002551020408163265,0.0,small annotated defect (<1% pixels),False
+clip,candle,candle/Data/Images/Anomaly/060.JPG,FN,0.9141380786895752,0.9453898668289183,0.0029894770408163264,0.01201271524234694,0.9566666666666667,small annotated defect (<1% pixels),False
+clip,candle,candle/Data/Images/Anomaly/062.JPG,FN,0.9360039830207824,0.9453898668289183,0.0038863201530612247,0.007907166772959183,0.708974358974359,small annotated defect (<1% pixels),False
+clip,candle,candle/Data/Images/Anomaly/085.JPG,FN,0.9358879327774048,0.9453898668289183,0.005311304209183673,0.0404426419005102,0.9840525328330206,small annotated defect (<1% pixels),False
+clip,candle,candle/Data/Images/Anomaly/089.JPG,FN,0.937597930431366,0.9453898668289183,0.00801678093112245,0.03488719706632653,0.6848974518334369,small annotated defect (<1% pixels),False
+clip,candle,candle/Data/Images/Anomaly/090.JPG,FN,0.9278275966644288,0.9453898668289183,0.004688496492346939,0.014927455357142858,0.5547290116896918,small annotated defect (<1% pixels),False
+clip,candle,candle/Data/Images/Anomaly/091.JPG,FN,0.9422308802604676,0.9453898668289183,0.014324577487244899,0.04203702965561224,0.8928695652173914,larger annotated defect (>=1% pixels),False
+clip,candle,candle/Data/Images/Anomaly/093.JPG,FN,0.9305651187896729,0.9453898668289183,0.002481265943877551,0.03244080835459184,1.0,small annotated defect (<1% pixels),False
+clip,candle,candle/Data/Images/Anomaly/095.JPG,FN,0.921016812324524,0.9453898668289183,0.0023816167091836736,0.014892578125,0.9602510460251046,small annotated defect (<1% pixels),False
+clip,candle,candle/Data/Images/Anomaly/098.JPG,FN,0.9358459711074828,0.9453898668289183,0.012251873405612245,0.016850685586734693,0.5180967873119154,larger annotated defect (>=1% pixels),False
+clip,capsules,capsules/Data/Images/Normal/576.JPG,FP,0.8830409049987793,0.8639975786209106,0.0,0.021389708227040817,,normal-image false alarm,False
+clip,capsules,capsules/Data/Images/Normal/377.JPG,FP,0.8702293634414673,0.8639975786209106,0.0,0.026705994897959183,,normal-image false alarm,True
+clip,capsules,capsules/Data/Images/Normal/545.JPG,FP,0.8647010326385498,0.8639975786209106,0.0,0.011663942920918368,,normal-image false alarm,False
+clip,capsules,capsules/Data/Images/Anomaly/000.JPG,FN,0.8343433141708374,0.8639975786209106,0.0005530532525510204,0.009705835459183673,0.9369369369369369,small annotated defect (<1% pixels),True
+clip,capsules,capsules/Data/Images/Anomaly/001.JPG,FN,0.8478082418441772,0.8639975786209106,0.0007174744897959184,0.01273517219387755,1.0,small annotated defect (<1% pixels),False
+clip,capsules,capsules/Data/Images/Anomaly/003.JPG,FN,0.8333286643028259,0.8639975786209106,0.0016491948341836734,0.010906608737244899,0.8096676737160121,small annotated defect (<1% pixels),False
+clip,capsules,capsules/Data/Images/Anomaly/004.JPG,FN,0.8163811564445496,0.8639975786209106,0.0008021763392857143,0.011599170918367346,0.9254658385093167,small annotated defect (<1% pixels),False
+clip,capsules,capsules/Data/Images/Anomaly/005.JPG,FN,0.8193061947822571,0.8639975786209106,0.0005580357142857143,0.013646962691326531,1.0,small annotated defect (<1% pixels),False
+clip,capsules,capsules/Data/Images/Anomaly/006.JPG,FN,0.7375101447105408,0.8639975786209106,0.0015595105229591836,0.023018973214285716,0.6006389776357828,small annotated defect (<1% pixels),False
+clip,capsules,capsules/Data/Images/Anomaly/007.JPG,FN,0.8584076166152954,0.8639975786209106,0.000568000637755102,0.06299824617346939,1.0,small annotated defect (<1% pixels),False
+clip,capsules,capsules/Data/Images/Anomaly/008.JPG,FN,0.8094285130500793,0.8639975786209106,0.0006028778698979591,0.006133410395408163,1.0,small annotated defect (<1% pixels),False
+clip,capsules,capsules/Data/Images/Anomaly/012.JPG,FN,0.8304578065872192,0.8639975786209106,0.0013203523596938774,0.004987444196428571,0.0,small annotated defect (<1% pixels),False
+clip,capsules,capsules/Data/Images/Anomaly/013.JPG,FN,0.8428213000297546,0.8639975786209106,0.0013701769770408164,0.021050900829081634,0.01818181818181818,small annotated defect (<1% pixels),False
+clip,capsules,capsules/Data/Images/Anomaly/014.JPG,FN,0.8525030016899109,0.8639975786209106,0.001136001275510204,0.024209781568877552,1.0,small annotated defect (<1% pixels),False
+clip,capsules,capsules/Data/Images/Anomaly/015.JPG,FN,0.8273226022720337,0.8639975786209106,0.001295440051020408,0.012082469706632654,1.0,small annotated defect (<1% pixels),False
+clip,capsules,capsules/Data/Images/Anomaly/018.JPG,FN,0.8462548851966858,0.8639975786209106,0.002565967793367347,0.01708984375,1.0,small annotated defect (<1% pixels),False
+clip,capsules,capsules/Data/Images/Anomaly/019.JPG,FN,0.8372997641563416,0.8639975786209106,0.0014050542091836734,0.06134406887755102,1.0,small annotated defect (<1% pixels),False
+clip,capsules,capsules/Data/Images/Anomaly/021.JPG,FN,0.8374485373497009,0.8639975786209106,0.0006925621811224489,0.009112922512755101,1.0,small annotated defect (<1% pixels),False
+clip,capsules,capsules/Data/Images/Anomaly/022.JPG,FN,0.8615049123764038,0.8639975786209106,0.0008619658801020409,0.015814333545918366,1.0,small annotated defect (<1% pixels),False
+clip,capsules,capsules/Data/Images/Anomaly/023.JPG,FN,0.8403711318969727,0.8639975786209106,0.0005082110969387755,0.00850506218112245,1.0,small annotated defect (<1% pixels),False
+clip,capsules,capsules/Data/Images/Anomaly/024.JPG,FN,0.8621615171432495,0.8639975786209106,0.0006776147959183673,0.018469985650510203,0.7867647058823529,small annotated defect (<1% pixels),False
+clip,capsules,capsules/Data/Images/Anomaly/025.JPG,FN,0.7855251431465149,0.8639975786209106,0.001539580676020408,0.04243064413265306,0.9902912621359223,small annotated defect (<1% pixels),False
+clip,capsules,capsules/Data/Images/Anomaly/027.JPG,FN,0.7908560633659363,0.8639975786209106,0.00025908801020408165,0.002346739477040816,0.0,small annotated defect (<1% pixels),False
+clip,capsules,capsules/Data/Images/Anomaly/028.JPG,FN,0.8583475947380066,0.8639975786209106,0.0014847735969387755,0.010378467793367346,1.0,small annotated defect (<1% pixels),False
+clip,capsules,capsules/Data/Images/Anomaly/029.JPG,FN,0.761723518371582,0.8639975786209106,0.00039361447704081633,0.014035594706632654,1.0,small annotated defect (<1% pixels),False
+clip,capsules,capsules/Data/Images/Anomaly/030.JPG,FN,0.8480163216590881,0.8639975786209106,0.00011957908163265306,0.008719308035714286,1.0,small annotated defect (<1% pixels),False
+clip,capsules,capsules/Data/Images/Anomaly/032.JPG,FN,0.8128573298454285,0.8639975786209106,0.00015943877551020407,0.025679607780612245,1.0,small annotated defect (<1% pixels),False
+clip,capsules,capsules/Data/Images/Anomaly/033.JPG,FN,0.8211327791213989,0.8639975786209106,0.00013950892857142856,0.007379025829081632,1.0,small annotated defect (<1% pixels),False
+clip,capsules,capsules/Data/Images/Anomaly/034.JPG,FN,0.800908088684082,0.8639975786209106,0.0001096141581632653,0.0062131297831632655,1.0,small annotated defect (<1% pixels),False
+clip,capsules,capsules/Data/Images/Anomaly/039.JPG,FN,0.7932505011558533,0.8639975786209106,0.00014449139030612245,0.014449139030612245,1.0,small annotated defect (<1% pixels),False
+clip,capsules,capsules/Data/Images/Anomaly/040.JPG,FN,0.8393357992172241,0.8639975786209106,9.964923469387755e-05,0.01901805644132653,1.0,small annotated defect (<1% pixels),False
+clip,capsules,capsules/Data/Images/Anomaly/041.JPG,FN,0.8340008854866028,0.8639975786209106,0.00013452646683673468,0.009910116390306123,1.0,small annotated defect (<1% pixels),False
+clip,capsules,capsules/Data/Images/Anomaly/042.JPG,FN,0.8130925297737122,0.8639975786209106,0.00015943877551020407,0.02155911192602041,1.0,small annotated defect (<1% pixels),False
+clip,capsules,capsules/Data/Images/Anomaly/043.JPG,FN,0.8628296256065369,0.8639975786209106,0.00017438616071428572,0.03686025191326531,1.0,small annotated defect (<1% pixels),False
+clip,capsules,capsules/Data/Images/Anomaly/053.JPG,FN,0.8625437617301941,0.8639975786209106,0.00506218112244898,0.02182816485969388,1.0,small annotated defect (<1% pixels),False
+clip,capsules,capsules/Data/Images/Anomaly/054.JPG,FN,0.8492053151130676,0.8639975786209106,0.006487165178571429,0.021080795599489797,0.9692780337941628,small annotated defect (<1% pixels),False
+clip,capsules,capsules/Data/Images/Anomaly/055.JPG,FN,0.8581792712211609,0.8639975786209106,0.005490672831632653,0.032261439732142856,1.0,small annotated defect (<1% pixels),False
+clip,capsules,capsules/Data/Images/Anomaly/056.JPG,FN,0.8373042345046997,0.8639975786209106,0.01612822863520408,0.015953842474489797,0.09947482236638863,larger annotated defect (>=1% pixels),False
+clip,capsules,capsules/Data/Images/Anomaly/059.JPG,FN,0.8455662131309509,0.8639975786209106,0.01792191485969388,0.01682079081632653,0.5626911314984709,larger annotated defect (>=1% pixels),False
+clip,capsules,capsules/Data/Images/Anomaly/060.JPG,FN,0.8598015904426575,0.8639975786209106,0.006995376275510204,0.018729073660714284,0.8304843304843305,small annotated defect (<1% pixels),False
+clip,capsules,capsules/Data/Images/Anomaly/061.JPG,FN,0.7744011282920837,0.8639975786209106,0.006855867346938775,0.013726682079081632,0.75,small annotated defect (<1% pixels),False
+clip,capsules,capsules/Data/Images/Anomaly/062.JPG,FN,0.8446592092514038,0.8639975786209106,0.009028220663265306,0.02346241230867347,0.9823399558498896,small annotated defect (<1% pixels),False
+clip,capsules,capsules/Data/Images/Anomaly/065.JPG,FN,0.8232417106628418,0.8639975786209106,0.014170121173469387,0.016656369579081634,0.07032348804500703,larger annotated defect (>=1% pixels),False
+clip,capsules,capsules/Data/Images/Anomaly/066.JPG,FN,0.8544228076934814,0.8639975786209106,0.013507453762755101,0.00850506218112245,0.04315750645518259,larger annotated defect (>=1% pixels),False
+clip,capsules,capsules/Data/Images/Anomaly/069.JPG,FN,0.8312312364578247,0.8639975786209106,0.016596580038265307,0.03570432079081633,0.4341038727108976,larger annotated defect (>=1% pixels),False
+clip,capsules,capsules/Data/Images/Anomaly/071.JPG,FN,0.8282076716423035,0.8639975786209106,0.01647201849489796,0.014130261479591837,0.40199637023593465,larger annotated defect (>=1% pixels),False
+clip,capsules,capsules/Data/Images/Anomaly/074.JPG,FN,0.8204956650733948,0.8639975786209106,0.017403738839285716,0.02269511320153061,0.685370741482966,larger annotated defect (>=1% pixels),False
+clip,capsules,capsules/Data/Images/Anomaly/075.JPG,FN,0.8391503095626831,0.8639975786209106,0.016073421556122448,0.01815609056122449,0.8223806571605704,larger annotated defect (>=1% pixels),False
+clip,capsules,capsules/Data/Images/Anomaly/076.JPG,FN,0.8600023984909058,0.8639975786209106,0.0159488600127551,0.03015884088010204,0.5729459543892533,larger annotated defect (>=1% pixels),False
+clip,capsules,capsules/Data/Images/Anomaly/077.JPG,FN,0.8585237264633179,0.8639975786209106,0.016043526785714284,0.027094626913265307,0.15962732919254657,larger annotated defect (>=1% pixels),False
+clip,capsules,capsules/Data/Images/Anomaly/078.JPG,FN,0.851361095905304,0.8639975786209106,0.017867107780612245,0.01717952806122449,0.42693809258226434,larger annotated defect (>=1% pixels),False
+clip,capsules,capsules/Data/Images/Anomaly/079.JPG,FN,0.8149166703224182,0.8639975786209106,0.016671316964285716,0.013881138392857142,0.42767483562462644,larger annotated defect (>=1% pixels),False
+clip,capsules,capsules/Data/Images/Anomaly/082.JPG,FN,0.8406786918640137,0.8639975786209106,0.01534099968112245,0.04989437181122449,0.3777200389736928,larger annotated defect (>=1% pixels),False
+clip,capsules,capsules/Data/Images/Anomaly/085.JPG,FN,0.8335207104682922,0.8639975786209106,0.004832987882653061,0.01929707429846939,1.0,small annotated defect (<1% pixels),False
+clip,capsules,capsules/Data/Images/Anomaly/086.JPG,FN,0.8145756125450134,0.8639975786209106,0.0006776147959183673,0.005565409757653061,0.5588235294117647,small annotated defect (<1% pixels),False
+clip,capsules,capsules/Data/Images/Anomaly/087.JPG,FN,0.8071379661560059,0.8639975786209106,0.0003338249362244898,0.0050273038903061226,0.7313432835820896,small annotated defect (<1% pixels),False
+clip,capsules,capsules/Data/Images/Anomaly/088.JPG,FN,0.8111735582351685,0.8639975786209106,0.0009068080357142857,0.014294682716836735,0.6978021978021978,small annotated defect (<1% pixels),False
+clip,capsules,capsules/Data/Images/Anomaly/092.JPG,FN,0.8365989923477173,0.8639975786209106,0.00027403539540816324,0.034413863201530615,0.9454545454545454,small annotated defect (<1% pixels),False
+clip,capsules,capsules/Data/Images/Anomaly/093.JPG,FN,0.7598569989204407,0.8639975786209106,0.0006576849489795918,0.004195232780612245,0.0,small annotated defect (<1% pixels),False
+clip,capsules,capsules/Data/Images/Anomaly/094.JPG,FN,0.824296772480011,0.8639975786209106,0.00038863201530612245,0.01783223054846939,0.0,small annotated defect (<1% pixels),False
+clip,capsules,capsules/Data/Images/Anomaly/095.JPG,FN,0.8198952078819275,0.8639975786209106,0.0008221061862244898,0.005146882971938775,0.10303030303030303,small annotated defect (<1% pixels),False
+clip,capsules,capsules/Data/Images/Anomaly/096.JPG,FN,0.8474477529525757,0.8639975786209106,0.0010562818877551021,0.006352638711734694,0.9858490566037735,small annotated defect (<1% pixels),False
+clip,capsules,capsules/Data/Images/Anomaly/097.JPG,FN,0.79758620262146,0.8639975786209106,0.0009466677295918367,0.01363201530612245,0.0,small annotated defect (<1% pixels),False
+clip,capsules,capsules/Data/Images/Anomaly/099.JPG,FN,0.7894299626350403,0.8639975786209106,0.001305404974489796,0.01765286192602041,0.0,small annotated defect (<1% pixels),False
+clip,cashew,cashew/Data/Images/Normal/023.JPG,FP,0.9681097269058228,0.9562198519706726,0.0,0.014419244260204082,,normal-image false alarm,False
+clip,cashew,cashew/Data/Images/Normal/337.JPG,FP,0.956230103969574,0.9562198519706726,0.0,0.008554886798469387,,normal-image false alarm,False
+clip,cashew,cashew/Data/Images/Normal/213.JPG,FP,0.9614407420158386,0.9562198519706726,0.0,0.01551040338010204,,normal-image false alarm,False
+clip,cashew,cashew/Data/Images/Normal/087.JPG,FP,0.9584304690361024,0.9562198519706726,0.0,0.009685905612244899,,normal-image false alarm,False
+clip,cashew,cashew/Data/Images/Normal/389.JPG,FP,0.9591397047042848,0.9562198519706726,0.0,0.013328085140306123,,normal-image false alarm,False
+clip,cashew,cashew/Data/Images/Normal/012.JPG,FP,0.9605194330215454,0.9562198519706726,0.0,0.011554328762755101,,normal-image false alarm,True
+clip,cashew,cashew/Data/Images/Anomaly/001.JPG,FN,0.9242299795150756,0.9562198519706726,0.0011310188137755102,0.010468152104591837,1.0,small annotated defect (<1% pixels),True
+clip,cashew,cashew/Data/Images/Anomaly/002.JPG,FN,0.9521182179450988,0.9562198519706726,0.00417530293367347,0.023033920599489797,0.7947494033412887,small annotated defect (<1% pixels),False
+clip,cashew,cashew/Data/Images/Anomaly/004.JPG,FN,0.9421929121017456,0.9562198519706726,0.0015644929846938774,0.02707469706632653,1.0,small annotated defect (<1% pixels),False
+clip,cashew,cashew/Data/Images/Anomaly/007.JPG,FN,0.9510504007339478,0.9562198519706726,0.0007274394132653062,0.011340082908163265,1.0,small annotated defect (<1% pixels),False
+clip,cashew,cashew/Data/Images/Anomaly/014.JPG,FN,0.9377502202987672,0.9562198519706726,0.0022470902423469387,0.02576430963010204,1.0,small annotated defect (<1% pixels),False
+clip,cashew,cashew/Data/Images/Anomaly/021.JPG,FN,0.9480113387107848,0.9562198519706726,0.003099091198979592,0.024907326211734693,1.0,small annotated defect (<1% pixels),False
+clip,cashew,cashew/Data/Images/Anomaly/044.JPG,FN,0.9411094188690186,0.9562198519706726,0.0006975446428571429,0.0076430963010204085,0.0,small annotated defect (<1% pixels),False
+clip,cashew,cashew/Data/Images/Anomaly/045.JPG,FN,0.9354814291000366,0.9562198519706726,0.0006078603316326531,0.001793686224489796,0.0,small annotated defect (<1% pixels),False
+clip,cashew,cashew/Data/Images/Anomaly/046.JPG,FN,0.9540030360221864,0.9562198519706726,0.0019282126913265306,0.004633689413265306,0.028423772609819122,small annotated defect (<1% pixels),False
+clip,cashew,cashew/Data/Images/Anomaly/047.JPG,FN,0.9420245289802552,0.9562198519706726,0.0020129145408163264,0.020178970025510203,0.0,small annotated defect (<1% pixels),False
+clip,cashew,cashew/Data/Images/Anomaly/048.JPG,FN,0.939926266670227,0.9562198519706726,0.002047791772959184,0.01522640306122449,0.9902676399026764,small annotated defect (<1% pixels),False
+clip,cashew,cashew/Data/Images/Anomaly/049.JPG,FN,0.9345676302909852,0.9562198519706726,0.0007423867984693878,0.006123445471938775,0.912751677852349,small annotated defect (<1% pixels),False
+clip,cashew,cashew/Data/Images/Anomaly/051.JPG,FN,0.9336103200912476,0.9562198519706726,0.0013004225127551021,0.01012436224489796,0.0,small annotated defect (<1% pixels),False
+clip,cashew,cashew/Data/Images/Anomaly/052.JPG,FN,0.9504038095474244,0.9562198519706726,0.0009068080357142857,0.01354233099489796,1.0,small annotated defect (<1% pixels),False
+clip,cashew,cashew/Data/Images/Anomaly/053.JPG,FN,0.9204423427581788,0.9562198519706726,0.0005630181760204082,0.00510204081632653,0.0,small annotated defect (<1% pixels),False
+clip,cashew,cashew/Data/Images/Anomaly/055.JPG,FN,0.9308043718338012,0.9562198519706726,8.470184948979592e-05,0.005610251913265306,1.0,small annotated defect (<1% pixels),False
+clip,cashew,cashew/Data/Images/Anomaly/056.JPG,FN,0.8717344999313354,0.9562198519706726,0.0015694754464285715,0.0,0.0,small annotated defect (<1% pixels),False
+clip,cashew,cashew/Data/Images/Anomaly/058.JPG,FN,0.9176452159881592,0.9562198519706726,0.0006975446428571429,0.011250398596938776,0.2857142857142857,small annotated defect (<1% pixels),False
+clip,cashew,cashew/Data/Images/Anomaly/059.JPG,FN,0.9460590481758118,0.9562198519706726,0.0006776147959183673,0.011713767538265306,0.0,small annotated defect (<1% pixels),False
+clip,cashew,cashew/Data/Images/Anomaly/078.JPG,FN,0.8891817927360535,0.9562198519706726,0.00025410554846938777,0.0031638632015306123,0.0,small annotated defect (<1% pixels),False
+clip,cashew,cashew/Data/Images/Anomaly/079.JPG,FN,0.9442080855369568,0.9562198519706726,0.0014748086734693877,0.018853635204081634,0.0,small annotated defect (<1% pixels),False
+clip,cashew,cashew/Data/Images/Anomaly/081.JPG,FN,0.9339394569396972,0.9562198519706726,0.0015246332908163266,0.012112364477040817,0.0,small annotated defect (<1% pixels),False
+clip,cashew,cashew/Data/Images/Anomaly/082.JPG,FN,0.9297797679901124,0.9562198519706726,0.001992984693877551,0.00543586575255102,0.0875,small annotated defect (<1% pixels),False
+clip,cashew,cashew/Data/Images/Anomaly/083.JPG,FN,0.9358322024345398,0.9562198519706726,0.003138950892857143,0.016491948341836735,0.2920634920634921,small annotated defect (<1% pixels),False
+clip,cashew,cashew/Data/Images/Anomaly/085.JPG,FN,0.9284799098968506,0.9562198519706726,0.0010363520408163266,0.0016790896045918368,0.0,small annotated defect (<1% pixels),False
+clip,cashew,cashew/Data/Images/Anomaly/086.JPG,FN,0.9293035864830016,0.9562198519706726,0.0022221779336734694,0.013562260841836735,0.0,small annotated defect (<1% pixels),False
+clip,cashew,cashew/Data/Images/Anomaly/087.JPG,FN,0.9025784134864808,0.9562198519706726,0.0016392299107142857,0.009222536670918368,0.0,small annotated defect (<1% pixels),False
+clip,cashew,cashew/Data/Images/Anomaly/088.JPG,FN,0.9384660124778748,0.9562198519706726,0.0019780373086734694,0.00931720344387755,0.0,small annotated defect (<1% pixels),False
+clip,cashew,cashew/Data/Images/Anomaly/090.JPG,FN,0.92672598361969,0.9562198519706726,0.002551020408163265,0.009142817283163265,0.0,small annotated defect (<1% pixels),False
+clip,cashew,cashew/Data/Images/Anomaly/091.JPG,FN,0.946837604045868,0.9562198519706726,0.0006178252551020409,0.007344148596938775,0.0,small annotated defect (<1% pixels),False
+clip,cashew,cashew/Data/Images/Anomaly/092.JPG,FN,0.9508723020553588,0.9562198519706726,0.004603794642857143,0.004673549107142857,0.0010822510822510823,small annotated defect (<1% pixels),False
+clip,cashew,cashew/Data/Images/Anomaly/093.JPG,FN,0.9434319138526917,0.9562198519706726,0.0016840720663265306,0.003617267219387755,0.0,small annotated defect (<1% pixels),False
+clip,cashew,cashew/Data/Images/Anomaly/097.JPG,FN,0.9372623562812804,0.9562198519706726,0.2710807955994898,0.04975984534438776,0.15005422096421417,larger annotated defect (>=1% pixels),False
+clip,cashew,cashew/Data/Images/Anomaly/098.JPG,FN,0.9464755654335022,0.9562198519706726,0.21922333386479592,0.03838986766581633,0.16268551557989955,larger annotated defect (>=1% pixels),False
+clip,chewinggum,chewinggum/Data/Images/Normal/467.JPG,FP,0.8685139417648315,0.8471333980560303,0.0,0.02170360331632653,,normal-image false alarm,True
+clip,chewinggum,chewinggum/Data/Images/Anomaly/027.JPG,FN,0.7935709357261658,0.8471333980560303,0.0022271603954081634,0.02330795599489796,0.9776286353467561,small annotated defect (<1% pixels),True
+clip,chewinggum,chewinggum/Data/Images/Anomaly/028.JPG,FN,0.8121345043182373,0.8471333980560303,0.0012804926658163266,0.019561144770408163,0.7859922178988327,small annotated defect (<1% pixels),False
+clip,chewinggum,chewinggum/Data/Images/Anomaly/031.JPG,FN,0.7727175951004028,0.8471333980560303,0.0019830197704081634,0.003582389987244898,0.0,small annotated defect (<1% pixels),False
+clip,chewinggum,chewinggum/Data/Images/Anomaly/032.JPG,FN,0.802931547164917,0.8471333980560303,0.003961057079081632,0.016651387117346938,0.0,small annotated defect (<1% pixels),False
+clip,chewinggum,chewinggum/Data/Images/Anomaly/033.JPG,FN,0.7436323165893555,0.8471333980560303,0.0007672991071428571,0.0021823182397959183,0.14935064935064934,small annotated defect (<1% pixels),False
+clip,chewinggum,chewinggum/Data/Images/Anomaly/034.JPG,FN,0.7271824479103088,0.8471333980560303,0.001878388073979592,0.00034378985969387755,0.0,small annotated defect (<1% pixels),False
+clip,chewinggum,chewinggum/Data/Images/Anomaly/037.JPG,FN,0.7060286998748779,0.8471333980560303,0.0016193000637755102,0.020298549107142856,0.8523076923076923,small annotated defect (<1% pixels),False
+clip,chewinggum,chewinggum/Data/Images/Anomaly/071.JPG,FN,0.8294421434402466,0.8471333980560303,0.0011957908163265306,0.03882334183673469,1.0,small annotated defect (<1% pixels),False
+clip,chewinggum,chewinggum/Data/Images/Anomaly/072.JPG,FN,0.833844780921936,0.8471333980560303,0.0003138950892857143,0.04295380261479592,1.0,small annotated defect (<1% pixels),False
+clip,chewinggum,chewinggum/Data/Images/Anomaly/073.JPG,FN,0.7818734645843506,0.8471333980560303,0.0009267378826530613,0.03857920121173469,1.0,small annotated defect (<1% pixels),False
+clip,chewinggum,chewinggum/Data/Images/Anomaly/091.JPG,FN,0.809904158115387,0.8471333980560303,0.003582389987244898,0.03480249521683673,0.8289290681502086,small annotated defect (<1% pixels),False
+clip,fryum,fryum/Data/Images/Normal/050.JPG,FP,0.9747961163520812,0.972652792930603,0.0,0.0,,normal-image false alarm,True
+clip,fryum,fryum/Data/Images/Normal/087.JPG,FP,0.9738315343856812,0.972652792930603,0.0,0.0004185267857142857,,normal-image false alarm,False
+clip,fryum,fryum/Data/Images/Normal/392.JPG,FP,0.978553295135498,0.972652792930603,0.0,0.03841976243622449,,normal-image false alarm,False
+clip,fryum,fryum/Data/Images/Normal/089.JPG,FP,0.97473406791687,0.972652792930603,0.0,0.00430484693877551,,normal-image false alarm,False
+clip,fryum,fryum/Data/Images/Normal/284.JPG,FP,0.9770081043243408,0.972652792930603,0.0,0.027468311543367346,,normal-image false alarm,False
+clip,fryum,fryum/Data/Images/Normal/482.JPG,FP,0.9797875881195068,0.972652792930603,0.0,0.015749561543367346,,normal-image false alarm,False
+clip,fryum,fryum/Data/Images/Normal/272.JPG,FP,0.9803637862205504,0.972652792930603,0.0,0.024708027742346938,,normal-image false alarm,False
+clip,fryum,fryum/Data/Images/Anomaly/021.JPG,FN,0.9700632095336914,0.972652792930603,0.00043347417091836734,0.00432975924744898,1.0,small annotated defect (<1% pixels),True
+clip,fryum,fryum/Data/Images/Anomaly/024.JPG,FN,0.9688323736190796,0.972652792930603,0.00015943877551020407,0.007802535076530612,0.0,small annotated defect (<1% pixels),False
+clip,fryum,fryum/Data/Images/Anomaly/036.JPG,FN,0.964052677154541,0.972652792930603,8.96843112244898e-05,0.008554886798469387,0.0,small annotated defect (<1% pixels),False
+clip,fryum,fryum/Data/Images/Anomaly/041.JPG,FN,0.961642324924469,0.972652792930603,0.20178471779336735,0.02356704400510204,0.11590409639744191,larger annotated defect (>=1% pixels),False
+clip,fryum,fryum/Data/Images/Anomaly/042.JPG,FN,0.9726219177246094,0.972652792930603,0.15825294961734693,0.004035794005102041,0.023707575089729867,larger annotated defect (>=1% pixels),False
+clip,fryum,fryum/Data/Images/Anomaly/046.JPG,FN,0.9694050550460817,0.972652792930603,0.16045021524234693,0.04245057397959184,0.22740117380368288,larger annotated defect (>=1% pixels),False
+clip,fryum,fryum/Data/Images/Anomaly/047.JPG,FN,0.9684375524520874,0.972652792930603,0.19406190210459184,0.013671875,0.06944979331946904,larger annotated defect (>=1% pixels),False
+clip,fryum,fryum/Data/Images/Anomaly/050.JPG,FN,0.93756103515625,0.972652792930603,0.20626395089285715,0.003542530293367347,0.017174742741195227,larger annotated defect (>=1% pixels),False
+clip,fryum,fryum/Data/Images/Anomaly/058.JPG,FN,0.957821249961853,0.972652792930603,0.18566147161989796,0.02014907525510204,0.09081394412688189,larger annotated defect (>=1% pixels),False
+clip,fryum,fryum/Data/Images/Anomaly/095.JPG,FN,0.9629104137420654,0.972652792930603,0.0013602120535714285,0.0009765625,0.0,small annotated defect (<1% pixels),False
+clip,fryum,fryum/Data/Images/Anomaly/099.JPG,FN,0.9649429321289062,0.972652792930603,0.00034877232142857144,0.013706752232142858,0.0,small annotated defect (<1% pixels),False
+clip,pipe_fryum,pipe_fryum/Data/Images/Normal/352.JPG,FP,0.9701544046401978,0.9650012254714966,0.0,0.110595703125,,normal-image false alarm,False
+clip,pipe_fryum,pipe_fryum/Data/Images/Normal/337.JPG,FP,0.9687841534614564,0.9650012254714966,0.0,0.000408561862244898,,normal-image false alarm,False
+clip,pipe_fryum,pipe_fryum/Data/Images/Normal/400.JPG,FP,0.978617250919342,0.9650012254714966,0.0,0.07925601881377552,,normal-image false alarm,False
+clip,pipe_fryum,pipe_fryum/Data/Images/Normal/260.JPG,FP,0.9662083983421326,0.9650012254714966,0.0,0.0821059869260204,,normal-image false alarm,False
+clip,pipe_fryum,pipe_fryum/Data/Images/Normal/309.JPG,FP,0.9727670550346376,0.9650012254714966,0.0,0.033083545918367346,,normal-image false alarm,False
+clip,pipe_fryum,pipe_fryum/Data/Images/Normal/344.JPG,FP,0.9661881923675536,0.9650012254714966,0.0,0.04083127391581633,,normal-image false alarm,False
+clip,pipe_fryum,pipe_fryum/Data/Images/Normal/369.JPG,FP,0.96665358543396,0.9650012254714966,0.0,0.07376534598214286,,normal-image false alarm,False
+clip,pipe_fryum,pipe_fryum/Data/Images/Normal/093.JPG,FP,0.9704665541648864,0.9650012254714966,0.0,0.02573441485969388,,normal-image false alarm,True
+clip,pipe_fryum,pipe_fryum/Data/Images/Normal/245.JPG,FP,0.965097725391388,0.9650012254714966,0.0,0.028405014349489797,,normal-image false alarm,False
+clip,pipe_fryum,pipe_fryum/Data/Images/Anomaly/013.JPG,FN,0.9600980281829834,0.9650012254714966,0.002152423469387755,0.03671576052295918,1.0,small annotated defect (<1% pixels),True
+clip,pipe_fryum,pipe_fryum/Data/Images/Anomaly/014.JPG,FN,0.9602115750312804,0.9650012254714966,0.002486248405612245,0.02369658801020408,1.0,small annotated defect (<1% pixels),False
+clip,pipe_fryum,pipe_fryum/Data/Images/Anomaly/023.JPG,FN,0.960955023765564,0.9650012254714966,0.0037318638392857145,0.012680365114795918,0.986648865153538,small annotated defect (<1% pixels),False
+clip,pipe_fryum,pipe_fryum/Data/Images/Anomaly/027.JPG,FN,0.9547672271728516,0.9650012254714966,0.0018136160714285715,0.013442681760204082,1.0,small annotated defect (<1% pixels),False
+clip,pipe_fryum,pipe_fryum/Data/Images/Anomaly/028.JPG,FN,0.9592710137367249,0.9650012254714966,0.002765266262755102,0.017020089285714284,1.0,small annotated defect (<1% pixels),False
+clip,pipe_fryum,pipe_fryum/Data/Images/Anomaly/033.JPG,FN,0.9398780465126038,0.9650012254714966,0.00025410554846938777,0.02504683514030612,1.0,small annotated defect (<1% pixels),False
+clip,pipe_fryum,pipe_fryum/Data/Images/Anomaly/050.JPG,FN,0.9637224078178406,0.9650012254714966,0.00048828125,0.01373664700255102,1.0,small annotated defect (<1% pixels),False
+clip,pipe_fryum,pipe_fryum/Data/Images/Anomaly/053.JPG,FN,0.9634135961532592,0.9650012254714966,0.0004832987882653061,0.01287468112244898,0.6907216494845361,small annotated defect (<1% pixels),False
+clip,pipe_fryum,pipe_fryum/Data/Images/Anomaly/055.JPG,FN,0.9629029035568236,0.9650012254714966,0.00038863201530612245,0.009541414221938776,1.0,small annotated defect (<1% pixels),False
+clip,pipe_fryum,pipe_fryum/Data/Images/Anomaly/058.JPG,FN,0.964971363544464,0.9650012254714966,0.00043347417091836734,0.0037318638392857145,1.0,small annotated defect (<1% pixels),False
+clip,pipe_fryum,pipe_fryum/Data/Images/Anomaly/069.JPG,FN,0.9268009662628174,0.9650012254714966,0.00045838647959183676,0.003756776147959184,1.0,small annotated defect (<1% pixels),False
+clip,pipe_fryum,pipe_fryum/Data/Images/Anomaly/071.JPG,FN,0.9503023624420166,0.9650012254714966,0.005326251594387755,0.04788145727040816,0.9962581852198317,small annotated defect (<1% pixels),False
+clip,pipe_fryum,pipe_fryum/Data/Images/Anomaly/073.JPG,FN,0.958185374736786,0.9650012254714966,0.0020926339285714285,0.024613360969387755,1.0,small annotated defect (<1% pixels),False
+clip,pipe_fryum,pipe_fryum/Data/Images/Anomaly/075.JPG,FN,0.9451860189437866,0.9650012254714966,0.001504703443877551,0.024598413584183673,1.0,small annotated defect (<1% pixels),False
+clip,pipe_fryum,pipe_fryum/Data/Images/Anomaly/076.JPG,FN,0.9626476764678956,0.9650012254714966,0.00277523118622449,0.046795280612244895,0.9694793536804309,small annotated defect (<1% pixels),False
+clip,pipe_fryum,pipe_fryum/Data/Images/Anomaly/078.JPG,FN,0.9438448548316956,0.9650012254714966,0.0037667410714285715,0.04931142378826531,0.9629629629629629,small annotated defect (<1% pixels),False
+clip,pipe_fryum,pipe_fryum/Data/Images/Anomaly/082.JPG,FN,0.9574377536773682,0.9650012254714966,0.0009367028061224489,0.032306281887755105,1.0,small annotated defect (<1% pixels),False
+clip,pipe_fryum,pipe_fryum/Data/Images/Anomaly/086.JPG,FN,0.9609209299087524,0.9650012254714966,0.0012755102040816326,0.021484375,1.0,small annotated defect (<1% pixels),False
+clip,pipe_fryum,pipe_fryum/Data/Images/Anomaly/088.JPG,FN,0.9561145901679992,0.9650012254714966,0.0009018255739795918,0.01382633131377551,1.0,small annotated defect (<1% pixels),False
+clip,pipe_fryum,pipe_fryum/Data/Images/Anomaly/089.JPG,FN,0.948690950870514,0.9650012254714966,0.004180285395408163,0.013432716836734694,0.8438617401668653,small annotated defect (<1% pixels),False
+clip,pipe_fryum,pipe_fryum/Data/Images/Anomaly/091.JPG,FN,0.961126148700714,0.9650012254714966,0.25912288743622447,0.23749402104591838,0.7922779625819601,larger annotated defect (>=1% pixels),False
+clip,pipe_fryum,pipe_fryum/Data/Images/Anomaly/098.JPG,FN,0.9144335985183716,0.9650012254714966,0.27340760522959184,0.22899394132653061,0.7929256114006633,larger annotated defect (>=1% pixels),False
