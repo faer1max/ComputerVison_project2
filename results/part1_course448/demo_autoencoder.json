@@ -1,0 +1,8 @@
+{
+  "method": "autoencoder",
+  "category": "candle",
+  "score": 0.10553466528654099,
+  "threshold": 0.117046036,
+  "decision": "OK",
+  "threshold_source": "normal validation only"
+}

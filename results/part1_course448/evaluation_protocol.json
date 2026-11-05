@@ -1,0 +1,21 @@
+{
+  "image_threshold": "normal validation quantile; predict score > threshold",
+  "source_sha256": {
+    "experiment_protocol.json": "9bcf036cbffdd132954dd85a9500e9f62bfb2f879c0905c732f2fe146e7e64e7",
+    "part1/01_template_baseline.py": "13e7cfe1de1a5dfded03e75486da3882ee0bfa6077c3cb69c1067f823d65ff7c",
+    "part1/02_autoencoder.py": "d84072db061822c15717e1a3dd01fa460f09039db8994f3295a4fb57a16d9935",
+    "part1/03_evaluate.py": "a358c7a53c10d1958f78a4ac138c0a6aca3e046d74903c80ba2009c5f69f6e8b",
+    "part1/common.py": "21a6837222a19cfd8d3ec10456f5d776fb717c2b7e0fc5d3a390caf517427415",
+    "part1/verify.py": "5de34f1e70aeb7140bf32108cedca0fbbe7a29c831d254a319aca825221c9e7b"
+  },
+  "aupro_thresholds": 200,
+  "aupro_connectivity": 8,
+  "all_pixels_evaluated": true,
+  "pixel_threshold": "99th percentile of normal validation pixels (target pixel FPR 1%)",
+  "aupro_max_fpr": 0.3,
+  "image_score": "mean of top 1% anomaly-map pixels",
+  "pixel_maps_resized_to": [
+    448,
+    448
+  ]
+}

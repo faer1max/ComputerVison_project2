@@ -1,0 +1,582 @@
+{
+  "template": {
+    "candle": {
+      "method": "template_ecc_absdiff",
+      "category": "candle",
+      "seed": 42,
+      "image_size": [
+        448,
+        448
+      ],
+      "reference_images_used": 24,
+      "reference_images_requested": [
+        "candle/Data/Images/Normal/0485.JPG",
+        "candle/Data/Images/Normal/0290.JPG",
+        "candle/Data/Images/Normal/0893.JPG",
+        "candle/Data/Images/Normal/0499.JPG",
+        "candle/Data/Images/Normal/0317.JPG",
+        "candle/Data/Images/Normal/0516.JPG",
+        "candle/Data/Images/Normal/0246.JPG",
+        "candle/Data/Images/Normal/0182.JPG",
+        "candle/Data/Images/Normal/0161.JPG",
+        "candle/Data/Images/Normal/0984.JPG",
+        "candle/Data/Images/Normal/0478.JPG",
+        "candle/Data/Images/Normal/0367.JPG",
+        "candle/Data/Images/Normal/0641.JPG",
+        "candle/Data/Images/Normal/0334.JPG",
+        "candle/Data/Images/Normal/0428.JPG",
+        "candle/Data/Images/Normal/0671.JPG",
+        "candle/Data/Images/Normal/0441.JPG",
+        "candle/Data/Images/Normal/0498.JPG",
+        "candle/Data/Images/Normal/0849.JPG",
+        "candle/Data/Images/Normal/0304.JPG",
+        "candle/Data/Images/Normal/0950.JPG",
+        "candle/Data/Images/Normal/0911.JPG",
+        "candle/Data/Images/Normal/0362.JPG",
+        "candle/Data/Images/Normal/0271.JPG"
+      ],
+      "template_construction_seconds": 1.9438816999972914,
+      "scoring_seconds": {
+        "validation": 9.113335100002587,
+        "test": 22.507383599993773
+      },
+      "registration_failures": {
+        "validation": 0,
+        "test": 0
+      },
+      "heatmap_coordinates": "original resized test image",
+      "border_rule": "unaligned difference fallback for unmapped pixels; all pixels evaluated",
+      "template_bytes": 602112,
+      "gpu_peak_memory_bytes": 0,
+      "source_sha256": {
+        "experiment_protocol.json": "9bcf036cbffdd132954dd85a9500e9f62bfb2f879c0905c732f2fe146e7e64e7",
+        "part1/01_template_baseline.py": "13e7cfe1de1a5dfded03e75486da3882ee0bfa6077c3cb69c1067f823d65ff7c",
+        "part1/02_autoencoder.py": "d84072db061822c15717e1a3dd01fa460f09039db8994f3295a4fb57a16d9935",
+        "part1/03_evaluate.py": "a358c7a53c10d1958f78a4ac138c0a6aca3e046d74903c80ba2009c5f69f6e8b",
+        "part1/common.py": "21a6837222a19cfd8d3ec10456f5d776fb717c2b7e0fc5d3a390caf517427415",
+        "part1/verify.py": "5de34f1e70aeb7140bf32108cedca0fbbe7a29c831d254a319aca825221c9e7b"
+      }
+    },
+    "capsules": {
+      "method": "template_ecc_absdiff",
+      "category": "capsules",
+      "seed": 42,
+      "image_size": [
+        448,
+        448
+      ],
+      "reference_images_used": 24,
+      "reference_images_requested": [
+        "capsules/Data/Images/Normal/314.JPG",
+        "capsules/Data/Images/Normal/247.JPG",
+        "capsules/Data/Images/Normal/332.JPG",
+        "capsules/Data/Images/Normal/079.JPG",
+        "capsules/Data/Images/Normal/230.JPG",
+        "capsules/Data/Images/Normal/553.JPG",
+        "capsules/Data/Images/Normal/430.JPG",
+        "capsules/Data/Images/Normal/346.JPG",
+        "capsules/Data/Images/Normal/155.JPG",
+        "capsules/Data/Images/Normal/078.JPG",
+        "capsules/Data/Images/Normal/068.JPG",
+        "capsules/Data/Images/Normal/038.JPG",
+        "capsules/Data/Images/Normal/351.JPG",
+        "capsules/Data/Images/Normal/529.JPG",
+        "capsules/Data/Images/Normal/292.JPG",
+        "capsules/Data/Images/Normal/416.JPG",
+        "capsules/Data/Images/Normal/041.JPG",
+        "capsules/Data/Images/Normal/054.JPG",
+        "capsules/Data/Images/Normal/533.JPG",
+        "capsules/Data/Images/Normal/387.JPG",
+        "capsules/Data/Images/Normal/071.JPG",
+        "capsules/Data/Images/Normal/365.JPG",
+        "capsules/Data/Images/Normal/302.JPG",
+        "capsules/Data/Images/Normal/555.JPG"
+      ],
+      "template_construction_seconds": 6.7506294999984675,
+      "scoring_seconds": {
+        "validation": 16.559264199997415,
+        "test": 46.62969210000301
+      },
+      "registration_failures": {
+        "validation": 1,
+        "test": 1
+      },
+      "heatmap_coordinates": "original resized test image",
+      "border_rule": "unaligned difference fallback for unmapped pixels; all pixels evaluated",
+      "template_bytes": 602112,
+      "gpu_peak_memory_bytes": 0,
+      "source_sha256": {
+        "experiment_protocol.json": "9bcf036cbffdd132954dd85a9500e9f62bfb2f879c0905c732f2fe146e7e64e7",
+        "part1/01_template_baseline.py": "13e7cfe1de1a5dfded03e75486da3882ee0bfa6077c3cb69c1067f823d65ff7c",
+        "part1/02_autoencoder.py": "d84072db061822c15717e1a3dd01fa460f09039db8994f3295a4fb57a16d9935",
+        "part1/03_evaluate.py": "a358c7a53c10d1958f78a4ac138c0a6aca3e046d74903c80ba2009c5f69f6e8b",
+        "part1/common.py": "21a6837222a19cfd8d3ec10456f5d776fb717c2b7e0fc5d3a390caf517427415",
+        "part1/verify.py": "5de34f1e70aeb7140bf32108cedca0fbbe7a29c831d254a319aca825221c9e7b"
+      }
+    },
+    "cashew": {
+      "method": "template_ecc_absdiff",
+      "category": "cashew",
+      "seed": 42,
+      "image_size": [
+        448,
+        448
+      ],
+      "reference_images_used": 24,
+      "reference_images_requested": [
+        "cashew/Data/Images/Normal/462.JPG",
+        "cashew/Data/Images/Normal/289.JPG",
+        "cashew/Data/Images/Normal/387.JPG",
+        "cashew/Data/Images/Normal/493.JPG",
+        "cashew/Data/Images/Normal/118.JPG",
+        "cashew/Data/Images/Normal/474.JPG",
+        "cashew/Data/Images/Normal/491.JPG",
+        "cashew/Data/Images/Normal/126.JPG",
+        "cashew/Data/Images/Normal/068.JPG",
+        "cashew/Data/Images/Normal/296.JPG",
+        "cashew/Data/Images/Normal/082.JPG",
+        "cashew/Data/Images/Normal/412.JPG",
+        "cashew/Data/Images/Normal/433.JPG",
+        "cashew/Data/Images/Normal/393.JPG",
+        "cashew/Data/Images/Normal/066.JPG",
+        "cashew/Data/Images/Normal/029.JPG",
+        "cashew/Data/Images/Normal/045.JPG",
+        "cashew/Data/Images/Normal/420.JPG",
+        "cashew/Data/Images/Normal/173.JPG",
+        "cashew/Data/Images/Normal/091.JPG",
+        "cashew/Data/Images/Normal/425.JPG",
+        "cashew/Data/Images/Normal/179.JPG",
+        "cashew/Data/Images/Normal/055.JPG",
+        "cashew/Data/Images/Normal/321.JPG"
+      ],
+      "template_construction_seconds": 8.045252900003106,
+      "scoring_seconds": {
+        "validation": 19.511627399995632,
+        "test": 69.55547420000221
+      },
+      "registration_failures": {
+        "validation": 0,
+        "test": 0
+      },
+      "heatmap_coordinates": "original resized test image",
+      "border_rule": "unaligned difference fallback for unmapped pixels; all pixels evaluated",
+      "template_bytes": 602112,
+      "gpu_peak_memory_bytes": 0,
+      "source_sha256": {
+        "experiment_protocol.json": "9bcf036cbffdd132954dd85a9500e9f62bfb2f879c0905c732f2fe146e7e64e7",
+        "part1/01_template_baseline.py": "13e7cfe1de1a5dfded03e75486da3882ee0bfa6077c3cb69c1067f823d65ff7c",
+        "part1/02_autoencoder.py": "d84072db061822c15717e1a3dd01fa460f09039db8994f3295a4fb57a16d9935",
+        "part1/03_evaluate.py": "a358c7a53c10d1958f78a4ac138c0a6aca3e046d74903c80ba2009c5f69f6e8b",
+        "part1/common.py": "21a6837222a19cfd8d3ec10456f5d776fb717c2b7e0fc5d3a390caf517427415",
+        "part1/verify.py": "5de34f1e70aeb7140bf32108cedca0fbbe7a29c831d254a319aca825221c9e7b"
+      }
+    },
+    "chewinggum": {
+      "method": "template_ecc_absdiff",
+      "category": "chewinggum",
+      "seed": 42,
+      "image_size": [
+        448,
+        448
+      ],
+      "reference_images_used": 24,
+      "reference_images_requested": [
+        "chewinggum/Data/Images/Normal/274.JPG",
+        "chewinggum/Data/Images/Normal/473.JPG",
+        "chewinggum/Data/Images/Normal/288.JPG",
+        "chewinggum/Data/Images/Normal/495.JPG",
+        "chewinggum/Data/Images/Normal/197.JPG",
+        "chewinggum/Data/Images/Normal/034.JPG",
+        "chewinggum/Data/Images/Normal/210.JPG",
+        "chewinggum/Data/Images/Normal/465.JPG",
+        "chewinggum/Data/Images/Normal/068.JPG",
+        "chewinggum/Data/Images/Normal/316.JPG",
+        "chewinggum/Data/Images/Normal/020.JPG",
+        "chewinggum/Data/Images/Normal/413.JPG",
+        "chewinggum/Data/Images/Normal/459.JPG",
+        "chewinggum/Data/Images/Normal/320.JPG",
+        "chewinggum/Data/Images/Normal/066.JPG",
+        "chewinggum/Data/Images/Normal/338.JPG",
+        "chewinggum/Data/Images/Normal/481.JPG",
+        "chewinggum/Data/Images/Normal/421.JPG",
+        "chewinggum/Data/Images/Normal/262.JPG",
+        "chewinggum/Data/Images/Normal/091.JPG",
+        "chewinggum/Data/Images/Normal/287.JPG",
+        "chewinggum/Data/Images/Normal/240.JPG",
+        "chewinggum/Data/Images/Normal/350.JPG",
+        "chewinggum/Data/Images/Normal/196.JPG"
+      ],
+      "template_construction_seconds": 4.940330199999153,
+      "scoring_seconds": {
+        "validation": 11.918222400003287,
+        "test": 43.44219169999997
+      },
+      "registration_failures": {
+        "validation": 0,
+        "test": 0
+      },
+      "heatmap_coordinates": "original resized test image",
+      "border_rule": "unaligned difference fallback for unmapped pixels; all pixels evaluated",
+      "template_bytes": 602112,
+      "gpu_peak_memory_bytes": 0,
+      "source_sha256": {
+        "experiment_protocol.json": "9bcf036cbffdd132954dd85a9500e9f62bfb2f879c0905c732f2fe146e7e64e7",
+        "part1/01_template_baseline.py": "13e7cfe1de1a5dfded03e75486da3882ee0bfa6077c3cb69c1067f823d65ff7c",
+        "part1/02_autoencoder.py": "d84072db061822c15717e1a3dd01fa460f09039db8994f3295a4fb57a16d9935",
+        "part1/03_evaluate.py": "a358c7a53c10d1958f78a4ac138c0a6aca3e046d74903c80ba2009c5f69f6e8b",
+        "part1/common.py": "21a6837222a19cfd8d3ec10456f5d776fb717c2b7e0fc5d3a390caf517427415",
+        "part1/verify.py": "5de34f1e70aeb7140bf32108cedca0fbbe7a29c831d254a319aca825221c9e7b"
+      }
+    },
+    "fryum": {
+      "method": "template_ecc_absdiff",
+      "category": "fryum",
+      "seed": 42,
+      "image_size": [
+        448,
+        448
+      ],
+      "reference_images_used": 24,
+      "reference_images_requested": [
+        "fryum/Data/Images/Normal/462.JPG",
+        "fryum/Data/Images/Normal/289.JPG",
+        "fryum/Data/Images/Normal/387.JPG",
+        "fryum/Data/Images/Normal/493.JPG",
+        "fryum/Data/Images/Normal/118.JPG",
+        "fryum/Data/Images/Normal/474.JPG",
+        "fryum/Data/Images/Normal/491.JPG",
+        "fryum/Data/Images/Normal/126.JPG",
+        "fryum/Data/Images/Normal/068.JPG",
+        "fryum/Data/Images/Normal/296.JPG",
+        "fryum/Data/Images/Normal/082.JPG",
+        "fryum/Data/Images/Normal/412.JPG",
+        "fryum/Data/Images/Normal/433.JPG",
+        "fryum/Data/Images/Normal/393.JPG",
+        "fryum/Data/Images/Normal/066.JPG",
+        "fryum/Data/Images/Normal/029.JPG",
+        "fryum/Data/Images/Normal/045.JPG",
+        "fryum/Data/Images/Normal/420.JPG",
+        "fryum/Data/Images/Normal/173.JPG",
+        "fryum/Data/Images/Normal/091.JPG",
+        "fryum/Data/Images/Normal/425.JPG",
+        "fryum/Data/Images/Normal/179.JPG",
+        "fryum/Data/Images/Normal/055.JPG",
+        "fryum/Data/Images/Normal/321.JPG"
+      ],
+      "template_construction_seconds": 5.511753799997678,
+      "scoring_seconds": {
+        "validation": 12.961603800002194,
+        "test": 41.47784010000032
+      },
+      "registration_failures": {
+        "validation": 0,
+        "test": 0
+      },
+      "heatmap_coordinates": "original resized test image",
+      "border_rule": "unaligned difference fallback for unmapped pixels; all pixels evaluated",
+      "template_bytes": 602112,
+      "gpu_peak_memory_bytes": 0,
+      "source_sha256": {
+        "experiment_protocol.json": "9bcf036cbffdd132954dd85a9500e9f62bfb2f879c0905c732f2fe146e7e64e7",
+        "part1/01_template_baseline.py": "13e7cfe1de1a5dfded03e75486da3882ee0bfa6077c3cb69c1067f823d65ff7c",
+        "part1/02_autoencoder.py": "d84072db061822c15717e1a3dd01fa460f09039db8994f3295a4fb57a16d9935",
+        "part1/03_evaluate.py": "a358c7a53c10d1958f78a4ac138c0a6aca3e046d74903c80ba2009c5f69f6e8b",
+        "part1/common.py": "21a6837222a19cfd8d3ec10456f5d776fb717c2b7e0fc5d3a390caf517427415",
+        "part1/verify.py": "5de34f1e70aeb7140bf32108cedca0fbbe7a29c831d254a319aca825221c9e7b"
+      }
+    },
+    "pipe_fryum": {
+      "method": "template_ecc_absdiff",
+      "category": "pipe_fryum",
+      "seed": 42,
+      "image_size": [
+        448,
+        448
+      ],
+      "reference_images_used": 24,
+      "reference_images_requested": [
+        "pipe_fryum/Data/Images/Normal/462.JPG",
+        "pipe_fryum/Data/Images/Normal/289.JPG",
+        "pipe_fryum/Data/Images/Normal/387.JPG",
+        "pipe_fryum/Data/Images/Normal/493.JPG",
+        "pipe_fryum/Data/Images/Normal/118.JPG",
+        "pipe_fryum/Data/Images/Normal/474.JPG",
+        "pipe_fryum/Data/Images/Normal/491.JPG",
+        "pipe_fryum/Data/Images/Normal/126.JPG",
+        "pipe_fryum/Data/Images/Normal/068.JPG",
+        "pipe_fryum/Data/Images/Normal/296.JPG",
+        "pipe_fryum/Data/Images/Normal/082.JPG",
+        "pipe_fryum/Data/Images/Normal/412.JPG",
+        "pipe_fryum/Data/Images/Normal/433.JPG",
+        "pipe_fryum/Data/Images/Normal/393.JPG",
+        "pipe_fryum/Data/Images/Normal/066.JPG",
+        "pipe_fryum/Data/Images/Normal/029.JPG",
+        "pipe_fryum/Data/Images/Normal/045.JPG",
+        "pipe_fryum/Data/Images/Normal/420.JPG",
+        "pipe_fryum/Data/Images/Normal/173.JPG",
+        "pipe_fryum/Data/Images/Normal/091.JPG",
+        "pipe_fryum/Data/Images/Normal/425.JPG",
+        "pipe_fryum/Data/Images/Normal/179.JPG",
+        "pipe_fryum/Data/Images/Normal/055.JPG",
+        "pipe_fryum/Data/Images/Normal/321.JPG"
+      ],
+      "template_construction_seconds": 3.256338400002278,
+      "scoring_seconds": {
+        "validation": 6.4589603999993415,
+        "test": 26.29852949999622
+      },
+      "registration_failures": {
+        "validation": 0,
+        "test": 0
+      },
+      "heatmap_coordinates": "original resized test image",
+      "border_rule": "unaligned difference fallback for unmapped pixels; all pixels evaluated",
+      "template_bytes": 602112,
+      "gpu_peak_memory_bytes": 0,
+      "source_sha256": {
+        "experiment_protocol.json": "9bcf036cbffdd132954dd85a9500e9f62bfb2f879c0905c732f2fe146e7e64e7",
+        "part1/01_template_baseline.py": "13e7cfe1de1a5dfded03e75486da3882ee0bfa6077c3cb69c1067f823d65ff7c",
+        "part1/02_autoencoder.py": "d84072db061822c15717e1a3dd01fa460f09039db8994f3295a4fb57a16d9935",
+        "part1/03_evaluate.py": "a358c7a53c10d1958f78a4ac138c0a6aca3e046d74903c80ba2009c5f69f6e8b",
+        "part1/common.py": "21a6837222a19cfd8d3ec10456f5d776fb717c2b7e0fc5d3a390caf517427415",
+        "part1/verify.py": "5de34f1e70aeb7140bf32108cedca0fbbe7a29c831d254a319aca825221c9e7b"
+      }
+    }
+  },
+  "autoencoder": {
+    "candle": {
+      "method": "normal_only_conv_autoencoder",
+      "category": "candle",
+      "seed": 42,
+      "epochs_requested": 10,
+      "best_epoch": 10,
+      "batch_size": 16,
+      "learning_rate": 0.001,
+      "loss": "mean squared reconstruction error",
+      "input_cache": "normal train/validation RGB uint8 arrays cached once; no augmentation",
+      "image_score": "mean of top 1% absolute residual pixels",
+      "device": "cuda",
+      "training_seconds": 72.10838939999667,
+      "validation_scoring_seconds": 4.013153699997929,
+      "test_scoring_seconds": 8.322281000000658,
+      "gpu_peak_memory_bytes": 1174281728,
+      "checkpoint_bytes": 5545688,
+      "parameter_bytes": 5525772,
+      "validation_inference_stages": {
+        "encoder_seconds": 0.2966055999931996,
+        "decoder_residual_transfer_seconds": 0.39183710000361316
+      },
+      "test_inference_stages": {
+        "encoder_seconds": 0.5489944999790168,
+        "decoder_residual_transfer_seconds": 0.8234924999851501
+      },
+      "image_size": [
+        448,
+        448
+      ],
+      "source_sha256": {
+        "experiment_protocol.json": "9bcf036cbffdd132954dd85a9500e9f62bfb2f879c0905c732f2fe146e7e64e7",
+        "part1/01_template_baseline.py": "13e7cfe1de1a5dfded03e75486da3882ee0bfa6077c3cb69c1067f823d65ff7c",
+        "part1/02_autoencoder.py": "d84072db061822c15717e1a3dd01fa460f09039db8994f3295a4fb57a16d9935",
+        "part1/03_evaluate.py": "a358c7a53c10d1958f78a4ac138c0a6aca3e046d74903c80ba2009c5f69f6e8b",
+        "part1/common.py": "21a6837222a19cfd8d3ec10456f5d776fb717c2b7e0fc5d3a390caf517427415",
+        "part1/verify.py": "5de34f1e70aeb7140bf32108cedca0fbbe7a29c831d254a319aca825221c9e7b"
+      }
+    },
+    "capsules": {
+      "method": "normal_only_conv_autoencoder",
+      "category": "capsules",
+      "seed": 42,
+      "epochs_requested": 10,
+      "best_epoch": 9,
+      "batch_size": 16,
+      "learning_rate": 0.001,
+      "loss": "mean squared reconstruction error",
+      "input_cache": "normal train/validation RGB uint8 arrays cached once; no augmentation",
+      "image_score": "mean of top 1% absolute residual pixels",
+      "device": "cuda",
+      "training_seconds": 42.896490999999514,
+      "validation_scoring_seconds": 2.615048299994669,
+      "test_scoring_seconds": 7.630027500003052,
+      "gpu_peak_memory_bytes": 1172971008,
+      "checkpoint_bytes": 5545688,
+      "parameter_bytes": 5525772,
+      "validation_inference_stages": {
+        "encoder_seconds": 0.17392089997883886,
+        "decoder_residual_transfer_seconds": 0.2381337000260828
+      },
+      "test_inference_stages": {
+        "encoder_seconds": 0.48518440001498675,
+        "decoder_residual_transfer_seconds": 0.6893425000016578
+      },
+      "image_size": [
+        448,
+        448
+      ],
+      "source_sha256": {
+        "experiment_protocol.json": "9bcf036cbffdd132954dd85a9500e9f62bfb2f879c0905c732f2fe146e7e64e7",
+        "part1/01_template_baseline.py": "13e7cfe1de1a5dfded03e75486da3882ee0bfa6077c3cb69c1067f823d65ff7c",
+        "part1/02_autoencoder.py": "d84072db061822c15717e1a3dd01fa460f09039db8994f3295a4fb57a16d9935",
+        "part1/03_evaluate.py": "a358c7a53c10d1958f78a4ac138c0a6aca3e046d74903c80ba2009c5f69f6e8b",
+        "part1/common.py": "21a6837222a19cfd8d3ec10456f5d776fb717c2b7e0fc5d3a390caf517427415",
+        "part1/verify.py": "5de34f1e70aeb7140bf32108cedca0fbbe7a29c831d254a319aca825221c9e7b"
+      }
+    },
+    "cashew": {
+      "method": "normal_only_conv_autoencoder",
+      "category": "cashew",
+      "seed": 42,
+      "epochs_requested": 10,
+      "best_epoch": 9,
+      "batch_size": 16,
+      "learning_rate": 0.001,
+      "loss": "mean squared reconstruction error",
+      "input_cache": "normal train/validation RGB uint8 arrays cached once; no augmentation",
+      "image_score": "mean of top 1% absolute residual pixels",
+      "device": "cuda",
+      "training_seconds": 36.08449280000059,
+      "validation_scoring_seconds": 2.361703700000362,
+      "test_scoring_seconds": 7.325896300004388,
+      "gpu_peak_memory_bytes": 1171184640,
+      "checkpoint_bytes": 5545688,
+      "parameter_bytes": 5525772,
+      "validation_inference_stages": {
+        "encoder_seconds": 0.14525750001484994,
+        "decoder_residual_transfer_seconds": 0.21059949996561045
+      },
+      "test_inference_stages": {
+        "encoder_seconds": 0.4638596999866422,
+        "decoder_residual_transfer_seconds": 0.6463834999667597
+      },
+      "image_size": [
+        448,
+        448
+      ],
+      "source_sha256": {
+        "experiment_protocol.json": "9bcf036cbffdd132954dd85a9500e9f62bfb2f879c0905c732f2fe146e7e64e7",
+        "part1/01_template_baseline.py": "13e7cfe1de1a5dfded03e75486da3882ee0bfa6077c3cb69c1067f823d65ff7c",
+        "part1/02_autoencoder.py": "d84072db061822c15717e1a3dd01fa460f09039db8994f3295a4fb57a16d9935",
+        "part1/03_evaluate.py": "a358c7a53c10d1958f78a4ac138c0a6aca3e046d74903c80ba2009c5f69f6e8b",
+        "part1/common.py": "21a6837222a19cfd8d3ec10456f5d776fb717c2b7e0fc5d3a390caf517427415",
+        "part1/verify.py": "5de34f1e70aeb7140bf32108cedca0fbbe7a29c831d254a319aca825221c9e7b"
+      }
+    },
+    "chewinggum": {
+      "method": "normal_only_conv_autoencoder",
+      "category": "chewinggum",
+      "seed": 42,
+      "epochs_requested": 10,
+      "best_epoch": 10,
+      "batch_size": 16,
+      "learning_rate": 0.001,
+      "loss": "mean squared reconstruction error",
+      "input_cache": "normal train/validation RGB uint8 arrays cached once; no augmentation",
+      "image_score": "mean of top 1% absolute residual pixels",
+      "device": "cuda",
+      "training_seconds": 36.29328859999805,
+      "validation_scoring_seconds": 2.0526574999967124,
+      "test_scoring_seconds": 7.233099299999594,
+      "gpu_peak_memory_bytes": 1172971008,
+      "checkpoint_bytes": 5545688,
+      "parameter_bytes": 5525772,
+      "validation_inference_stages": {
+        "encoder_seconds": 0.13465459996950813,
+        "decoder_residual_transfer_seconds": 0.19578639998508152
+      },
+      "test_inference_stages": {
+        "encoder_seconds": 0.4781888999714283,
+        "decoder_residual_transfer_seconds": 0.6884973999694921
+      },
+      "image_size": [
+        448,
+        448
+      ],
+      "source_sha256": {
+        "experiment_protocol.json": "9bcf036cbffdd132954dd85a9500e9f62bfb2f879c0905c732f2fe146e7e64e7",
+        "part1/01_template_baseline.py": "13e7cfe1de1a5dfded03e75486da3882ee0bfa6077c3cb69c1067f823d65ff7c",
+        "part1/02_autoencoder.py": "d84072db061822c15717e1a3dd01fa460f09039db8994f3295a4fb57a16d9935",
+        "part1/03_evaluate.py": "a358c7a53c10d1958f78a4ac138c0a6aca3e046d74903c80ba2009c5f69f6e8b",
+        "part1/common.py": "21a6837222a19cfd8d3ec10456f5d776fb717c2b7e0fc5d3a390caf517427415",
+        "part1/verify.py": "5de34f1e70aeb7140bf32108cedca0fbbe7a29c831d254a319aca825221c9e7b"
+      }
+    },
+    "fryum": {
+      "method": "normal_only_conv_autoencoder",
+      "category": "fryum",
+      "seed": 42,
+      "epochs_requested": 10,
+      "best_epoch": 9,
+      "batch_size": 16,
+      "learning_rate": 0.001,
+      "loss": "mean squared reconstruction error",
+      "input_cache": "normal train/validation RGB uint8 arrays cached once; no augmentation",
+      "image_score": "mean of top 1% absolute residual pixels",
+      "device": "cuda",
+      "training_seconds": 35.384888699998555,
+      "validation_scoring_seconds": 0.8305703000005451,
+      "test_scoring_seconds": 2.8120978999941144,
+      "gpu_peak_memory_bytes": 1171184640,
+      "checkpoint_bytes": 5545688,
+      "parameter_bytes": 5525772,
+      "validation_inference_stages": {
+        "encoder_seconds": 0.0570605999964755,
+        "decoder_residual_transfer_seconds": 0.137165099986305
+      },
+      "test_inference_stages": {
+        "encoder_seconds": 0.19637709997186903,
+        "decoder_residual_transfer_seconds": 0.4527234999623033
+      },
+      "image_size": [
+        448,
+        448
+      ],
+      "source_sha256": {
+        "experiment_protocol.json": "9bcf036cbffdd132954dd85a9500e9f62bfb2f879c0905c732f2fe146e7e64e7",
+        "part1/01_template_baseline.py": "13e7cfe1de1a5dfded03e75486da3882ee0bfa6077c3cb69c1067f823d65ff7c",
+        "part1/02_autoencoder.py": "d84072db061822c15717e1a3dd01fa460f09039db8994f3295a4fb57a16d9935",
+        "part1/03_evaluate.py": "a358c7a53c10d1958f78a4ac138c0a6aca3e046d74903c80ba2009c5f69f6e8b",
+        "part1/common.py": "21a6837222a19cfd8d3ec10456f5d776fb717c2b7e0fc5d3a390caf517427415",
+        "part1/verify.py": "5de34f1e70aeb7140bf32108cedca0fbbe7a29c831d254a319aca825221c9e7b"
+      }
+    },
+    "pipe_fryum": {
+      "method": "normal_only_conv_autoencoder",
+      "category": "pipe_fryum",
+      "seed": 42,
+      "epochs_requested": 10,
+      "best_epoch": 10,
+      "batch_size": 16,
+      "learning_rate": 0.001,
+      "loss": "mean squared reconstruction error",
+      "input_cache": "normal train/validation RGB uint8 arrays cached once; no augmentation",
+      "image_score": "mean of top 1% absolute residual pixels",
+      "device": "cuda",
+      "training_seconds": 35.49971740000183,
+      "validation_scoring_seconds": 0.961851399995794,
+      "test_scoring_seconds": 2.8275704000043334,
+      "gpu_peak_memory_bytes": 1171184640,
+      "checkpoint_bytes": 5545688,
+      "parameter_bytes": 5525772,
+      "validation_inference_stages": {
+        "encoder_seconds": 0.06561799997871276,
+        "decoder_residual_transfer_seconds": 0.13922989999264246
+      },
+      "test_inference_stages": {
+        "encoder_seconds": 0.1950921000316157,
+        "decoder_residual_transfer_seconds": 0.4551255000260426
+      },
+      "image_size": [
+        448,
+        448
+      ],
+      "source_sha256": {
+        "experiment_protocol.json": "9bcf036cbffdd132954dd85a9500e9f62bfb2f879c0905c732f2fe146e7e64e7",
+        "part1/01_template_baseline.py": "13e7cfe1de1a5dfded03e75486da3882ee0bfa6077c3cb69c1067f823d65ff7c",
+        "part1/02_autoencoder.py": "d84072db061822c15717e1a3dd01fa460f09039db8994f3295a4fb57a16d9935",
+        "part1/03_evaluate.py": "a358c7a53c10d1958f78a4ac138c0a6aca3e046d74903c80ba2009c5f69f6e8b",
+        "part1/common.py": "21a6837222a19cfd8d3ec10456f5d776fb717c2b7e0fc5d3a390caf517427415",
+        "part1/verify.py": "5de34f1e70aeb7140bf32108cedca0fbbe7a29c831d254a319aca825221c9e7b"
+      }
+    }
+  }
+}

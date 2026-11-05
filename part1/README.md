@@ -51,6 +51,9 @@ python part1/01_template_baseline.py
 python part1/02_autoencoder.py
 python part1/03_evaluate.py
 python scripts/verify_part1_release.py
+python scripts/export_part1_results.py
+python scripts/analyze_visual_cases.py
+python scripts/benchmark_part1_inference.py
 ```
 
 单类快速运行（只验证流程，不作为正式结果）：
@@ -64,6 +67,17 @@ python part1/03_evaluate.py --categories candle --methods template autoencoder
 快速实验请指定另一个 `CVPROJECT_OUTPUT_ROOT`，避免覆盖正式10轮输出；正式发布核查器
 会拒绝训练轮次/源码/样本与协议不符的输出。阈值参数和模型训练参数的具体选项见 `--help`。
 
+训练并评估后可运行单图demo（不读取该输入的真值）：
+
+```powershell
+python scripts/part1_demo.py --method template --category candle --image data/VisA/candle/Data/Images/Anomaly/000.JPG --output outputs/demo_template
+python scripts/part1_demo.py --method autoencoder --category candle --image data/VisA/candle/Data/Images/Anomaly/000.JPG --output outputs/demo_autoencoder
+```
+
+输出prediction.json、prediction.png和原始heatmap.npy。图像判定与像素二值图分别使用
+各自正常验证阈值，因此OK与非空像素预测可以同时出现。演示样本000.JPG是异常图，
+本次两基线均漏检；保留真实失败，不把demo能运行误写成该样本检测正确。
+
 ## 结果、检查与限制
 
 输出包含检查点、训练历史、validation/test逐图CSV和448×448 float32热图；evaluation保存
@@ -71,6 +85,11 @@ python part1/03_evaluate.py --categories candle --methods template autoencoder
 AE分别记录encoder、decoder/残差/传回CPU耗时、完整推理耗时、训练显存峰值与参数字节数；
 模板记录建库和完整配准/差异评分耗时、模板字节数，无学习型特征提取阶段。
 耗时包含的步骤不同，不能将单个字段直接称为同一口径的模型速度排名。
+`benchmark_part1_inference.py` 在训练结束后用两方法相同的每类16张正常验证图串行测量，
+另报纯推理峰值显存。模板encoder字段不适用，ECC/差异包含在scoring中。
+AE正常训练/验证RGB输入一次性缓存以免每轮解码；训练计时不含该缓存准备阶段。
+可视化色图按每张图的范围显示，跨图颜色强弱不能直接当作分数比较；阈值和指标始终
+使用原始浮点值，不做逐图最小最大归一化。
 
 行为检查覆盖平移、旋转、边界和配准失败回退、低值mask、数据隔离、阈值并列分数、
 完美/常数热图AUPRO。发布核查另逐张验证所有2568张预测热图、CSV分数和图像级指标，

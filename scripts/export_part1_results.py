@@ -45,6 +45,7 @@ def export_results():
     for method in ["template", "autoencoder"]:
         for category in common.REQUIRED_CATEGORIES:
             group = errors.query("method == @method and category == @category")
+            group = group[~group.image.isin([item.image for item in selected])]
             chosen = []
             for kind in ["false_positive", "false_negative"]:
                 subset = group[group.error_type == kind]
@@ -74,7 +75,8 @@ def export_results():
                 axes[index, column].axis("off")
             axes[index, 0].set_title(f"{case.case_id} {case.method}/{case.category}\n{case.error_type}: {Path(case.image).name}", fontsize=9)
         for column, name in enumerate(["Input", "Ground truth", "Heatmap", "Thresholded"]):
-            axes[0, column].set_xlabel(name)
+            if column > 0:
+                axes[0, column].set_title(name)
         fig.tight_layout()
         fig.savefig(destination / f"visual_cases_{page+1}.png", dpi=120)
         plt.close(fig)

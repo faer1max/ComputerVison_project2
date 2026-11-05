@@ -27,6 +27,18 @@ def verify_release():
                 raise ValueError("输入尺寸不一致")
             if method == "autoencoder" and metadata["epochs_requested"] != common.PROTOCOL["autoencoder_epochs"]:
                 raise ValueError("AE训练轮次与协议不同")
+            if method == "autoencoder":
+                import torch
+                history = pd.read_csv(directory / "training_history.csv")
+                expected_epochs = common.PROTOCOL["autoencoder_epochs"]
+                if history.epoch.tolist() != list(range(1, expected_epochs + 1)):
+                    raise ValueError("训练历史缺轮次")
+                best_epoch = int(history.loc[history.validation_mse.idxmin(), "epoch"])
+                checkpoint = torch.load(directory / "model.pt", map_location="cpu", weights_only=True)
+                if (best_epoch != metadata["best_epoch"] or checkpoint["best_epoch"] != best_epoch
+                        or checkpoint["image_size"] != list(common.IMAGE_SIZE)
+                        or checkpoint["category"] != category):
+                    raise ValueError("最佳轮次/检查点/输入协议不一致")
             fit, validation = common.split_normal_train(common.load_visa_split(category, "train"))
             test = common.load_visa_split(category, "test")
             if set(fit.image) & set(validation.image) or set(fit.image) & set(test.image):
@@ -55,6 +67,9 @@ def verify_release():
             for key, value in expected.items():
                 if not np.isclose(row[key], value):
                     raise ValueError(f"图像指标复算不一致: {key}")
+            for key in ["pixel_auroc", "pixel_ap", "aupro"]:
+                if not np.isfinite(row[key]) or not 0 <= row[key] <= 1:
+                    raise ValueError(f"像素指标数值无效: {key}")
             if float((validation.score > threshold).mean()) > 0.05 + 1e-9:
                 raise ValueError("验证误报率超过预定上限")
             checks.append({"method": method, "category": category, "finite_maps_verified": count})

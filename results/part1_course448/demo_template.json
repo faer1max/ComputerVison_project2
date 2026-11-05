@@ -1,0 +1,8 @@
+{
+  "method": "template",
+  "category": "candle",
+  "score": 0.37167826294898987,
+  "threshold": 0.5412301,
+  "decision": "OK",
+  "threshold_source": "normal validation only"
+}
