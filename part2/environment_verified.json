@@ -1,0 +1,14 @@
+{
+  "environment": "cvproject",
+  "python": "3.11.17",
+  "base_conda_prefix": "cvproject",
+  "numpy_process_overlay": "1.26.4",
+  "pandas_overlay": "2.2.3",
+  "torch": "2.12.0+cu130",
+  "cuda_build": "13.0",
+  "gpu": "NVIDIA GeForce RTX 4060 Laptop GPU",
+  "cuda_available": true,
+  "dependencies_location": "ASSETS/part2/.deps; FAISS from ASSETS/part2/.faiss",
+  "faiss": "official conda CPU 1.8.0, exact IndexFlatL2",
+  "note": "Base environment preserved; absolute machine paths omitted"
+}

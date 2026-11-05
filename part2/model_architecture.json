@@ -1,0 +1,52 @@
+{
+  "dino": {
+    "vision_layers": 12,
+    "patch_projection_shape": [
+      384,
+      3,
+      14,
+      14
+    ],
+    "position_embedding_shape": [
+      1,
+      1370,
+      384
+    ],
+    "course_patch_grid": [
+      32,
+      32
+    ],
+    "patch_feature_dimension": 384
+  },
+  "clip": {
+    "vision_layers": 24,
+    "vision_projection_shape": [
+      1024,
+      3,
+      14,
+      14
+    ],
+    "vision_to_shared_projection_shape": [
+      1024,
+      768
+    ],
+    "text_layers": 12,
+    "token_embedding_shape": [
+      49408,
+      768
+    ],
+    "text_projection_shape": [
+      768,
+      768
+    ],
+    "pretrained_visual_position_shape": [
+      577,
+      1024
+    ],
+    "course_patch_grid": [
+      32,
+      32
+    ],
+    "shared_feature_dimension": 768
+  }
+}
