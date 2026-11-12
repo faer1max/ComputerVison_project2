@@ -1,21 +1,21 @@
-"""课程统一输入：共享几何变换，骨干归一化显式作为模型接口。"""
+'Shared geometry and explicit pretrained-model normalization interfaces.'
 from pathlib import Path
 import numpy as np
 from PIL import Image
 import torch
 from torchvision import transforms
 
-SIZE = 448  # 同时是 patch=14 和 AE 下采样倍率=16 的整数倍。
-RGB_SIZE = (SIZE, SIZE)  # Pillow 的顺序为宽、高。
+SIZE = 448
+RGB_SIZE = (SIZE, SIZE)
 DINO_MEAN, DINO_STD = (0.485, 0.456, 0.406), (0.229, 0.224, 0.225)
 CLIP_MEAN = (0.48145466, 0.4578275, 0.40821073)
 CLIP_STD = (0.26862954, 0.26130258, 0.27577711)
 
 
 def shared_rgb(image, image_size=RGB_SIZE):
-    """Path/str、PIL 或 RGB ndarray → 共享的 448×448×3 uint8 RGB 数组。"""
+    'Return shared 448x448 uint8 RGB from a path, PIL image or RGB array.'
     if tuple(image_size) != RGB_SIZE:
-        raise ValueError("课程模式禁止覆盖 448×448 统一尺寸")
+        raise ValueError("Course mode requires the shared 448x448 size")
     if isinstance(image, (str, Path)):
         with Image.open(image) as source:
             source = source.convert("RGB")
@@ -27,9 +27,9 @@ def shared_rgb(image, image_size=RGB_SIZE):
 
 
 def shared_mask(mask_path, image_size=RGB_SIZE):
-    """掩码路径或 None → 448×448 uint8 0/1；缩放只使用最近邻。"""
+    'Return a 448x448 uint8 0/1 mask using nearest-neighbor resizing.'
     if tuple(image_size) != RGB_SIZE:
-        raise ValueError("课程模式禁止覆盖掩码尺寸")
+        raise ValueError("Course mode does not allow a different mask size")
     if mask_path is None:
         return np.zeros((SIZE, SIZE), dtype=np.uint8)
     with Image.open(mask_path) as source:
@@ -37,7 +37,7 @@ def shared_mask(mask_path, image_size=RGB_SIZE):
 
 
 def model_tensor(image, model):
-    """共享 RGB 图 → C/H/W Tensor；只在模型入口应用权重要求的仿射归一化。"""
+    'Apply only the selected pretrained model normalization to shared RGB.'
     rgb = shared_rgb(image)
     tensor = torch.from_numpy(rgb).permute(2, 0, 1).float() / 255.0
     if model == "dino":
@@ -50,25 +50,25 @@ def model_tensor(image, model):
 
 
 def clip_mask_tensor(image):
-    """官方 Dataset 已提供 PIL 二值掩码；按共享最近邻规则转为 1/H/W Tensor。"""
+    'Convert a PIL binary mask to a 1/H/W tensor with nearest resizing.'
     mask = np.asarray(image.convert("L").resize(RGB_SIZE, Image.Resampling.NEAREST)) > 0
     return torch.from_numpy(mask.astype(np.float32)).unsqueeze(0)
 
 
 def dino_prepare_image(self, image):
-    """替换官方 prepare_image 接口，返回统一 Tensor 与 32×32 patch 网格。"""
+    'Return the shared tensor and the 32x32 patch grid.'
     return model_tensor(image, "dino"), (SIZE // 14, SIZE // 14)
 
 
 def clip_transform(args):
-    """替换官方 get_transform 接口，阻止内部再次使用 bicubic/center crop。"""
+    'Use shared geometry instead of bicubic resizing or center cropping.'
     if args.image_size != SIZE:
-        raise ValueError("课程 CLIP 输入必须是 448")
+        raise ValueError("Course CLIP image_size must be 448")
     return lambda image: model_tensor(image, "clip"), clip_mask_tensor
 
 
 def configure_part1(common, output_root):
-    """将原有基线/评估模块共享的 common 接口接到 448 设置及独立输出目录。"""
+    'Configure part1.'
     common.IMAGE_SIZE = RGB_SIZE
     common.OUTPUT_DIR = Path(output_root)
     common.load_rgb_image = shared_rgb

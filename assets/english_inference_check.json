@@ -1,0 +1,19 @@
+{
+  "status": "passed",
+  "new_model_smokes": [
+    {
+      "model": "dino",
+      "images": 24,
+      "max_absolute_error": 0.0
+    },
+    {
+      "model": "clip",
+      "images": 24,
+      "max_absolute_error": 0.0
+    }
+  ],
+  "bridge_accepts_exact_legacy": true,
+  "bridge_rejects_unknown_legacy": true,
+  "bridge_rejects_modified_publication": true,
+  "bridge_rejects_missing_keys": true
+}

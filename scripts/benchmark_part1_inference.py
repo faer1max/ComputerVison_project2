@@ -1,4 +1,4 @@
-"""用相同正常验证图片分别测量两方法推理；与AE训练显存分开报告。"""
+'Measure both baselines sequentially on the same normal validation images.'
 from pathlib import Path
 import importlib.util
 import json

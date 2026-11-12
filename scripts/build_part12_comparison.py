@@ -1,4 +1,4 @@
-"""汇总已经固定的四方法结果与局部示例，不重新选择测试阈值或模型。"""
+'Summarize fixed four-method results and visualization-only detail crops.'
 from pathlib import Path
 import os,sys
 ROOT=Path(__file__).resolve().parents[1];ASSETS=Path(os.environ.get('CVPROJECT_ASSETS',ROOT))
@@ -24,7 +24,7 @@ def main():
                     for m,n in [('image_auroc','native_image_auroc'),('image_ap','native_image_ap'),('test_fpr','native_test_fpr')]:g[m]=d.groupby('seed')[n].mean()
                 records.append(dict(method=method,scoring=scoring,shot=shot,seeds=len(g),**{m:float(g[m].mean()) for m in metrics},**{m+'_std':float(g[m].std()) if len(g)>1 else None for m in metrics}))
     f=pd.DataFrame(records);f.to_csv(dest/'macro_metrics.csv',index=False)
-    # 同一幅图展示整图与GT包围框局部；选择固定类别的第一张异常，不按成绩挑选。
+
     out=Path(os.environ['CVPROJECT_PART2_OUTPUT'])/'full'
     for category in ['capsules','chewinggum']:
         td=pd.read_csv(out/'dino/seed_42/shot_1'/category/'test/predictions.csv');row=td[td.label=='anomaly'].iloc[0]

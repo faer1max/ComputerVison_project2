@@ -1,4 +1,4 @@
-"""准备/核对固定版本官方仓库，不覆盖已有修改。"""
+'Prepare and verify pinned official repositories without overwriting local changes.'
 from pathlib import Path
 import os,json,subprocess,argparse
 ROOT=Path(__file__).resolve().parents[1]

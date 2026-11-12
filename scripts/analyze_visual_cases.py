@@ -1,4 +1,4 @@
-"""计算已选视觉案例的可核对数值；不自动推断失败原因。"""
+'Measure selected visual cases without inferring causal explanations.'
 from pathlib import Path
 import sys
 import numpy as np
@@ -13,7 +13,7 @@ if __name__ == "__main__":
     destination = ROOT / "results/part1_course448"
     cases = pd.read_csv(destination / "visual_cases.csv")
     if len(cases) < 20 or not cases.image.is_unique:
-        raise ValueError("视觉案例不足20张不同图像")
+        raise ValueError("At least 20 distinct visual cases are required")
     metrics = pd.read_csv(destination / "metrics.csv")
     records = []
     for case in cases.itertuples():

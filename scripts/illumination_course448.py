@@ -1,4 +1,4 @@
-"""共同448正常验证集亮度压力实验：固定既有模板、AE和阈值，不接触测试标签。"""
+'Fixed-model, fixed-threshold brightness stress test on normal validation images.'
 from pathlib import Path
 import sys,os,json,hashlib,importlib.util,io
 ROOT=Path(__file__).resolve().parents[1];sys.path.insert(0,str(ROOT/'part1'))
@@ -34,7 +34,7 @@ def run():
                         with torch.inference_mode():
                             tensor=common.image_to_tensor(changed).unsqueeze(0).to(device);heat=(tensor-model(tensor)).abs().mean(dim=1)[0].cpu().numpy()
                     raw_score=common.image_score(heat)
-                    # 原Part1预测CSV以float32最短十进制保存；严格复用同一表示，避免阈值并列样本被精度差翻转。
+
                     score=float(pd.read_csv(io.StringIO('score\n'+str(np.float32(raw_score)))).score.iloc[0])
                     scores.append(score);clipped.append(float((scaled>255).mean()))
                     records.append(dict(category=category,method=method,factor=factor,image=row.image,score=score,raw_float32_score=raw_score,threshold=threshold,false_positive=bool(score>threshold),clipped_channel_fraction=clipped[-1]))

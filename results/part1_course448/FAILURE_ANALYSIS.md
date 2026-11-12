@@ -1,42 +1,34 @@
-# 24例失败案例的视觉复核
+# Visual review of 24 distinct Part 1 failures
 
-图像与官方掩码来自 [VisA / spot-diff](https://github.com/amazon-science/spot-diff)，
-Zou et al., 2022，CC BY 4.0；面板是本项目对原图、标注和预测的对照展示。
-`visual_cases.csv` 提供24张不同图像的相对路径、方法、真值、分数与固定阈值；
-`visual_case_statistics.csv` 提供缺陷占比、阈值余量、像素召回和背景误报数值。
-四张visual_cases图片依次对应C01–06、C07–12、C13–18、C19–24；四列为输入、GT、热图、阈值图。
+Images and official masks originate from VisA/SPot-the-Difference (Zou et al., 2022), CC BY 4.0. `visual_cases.csv` indexes distinct relative image paths, fixed scores and thresholds. `visual_case_statistics.csv` quantifies area, recall, background false alarms and score margins. Four panels cover C01-C06, C07-C12, C13-C18 and C19-C24 with input/GT/heatmap/thresholded prediction.
 
-下表由助手逐页看图复核，**观测与可能机制分列**。这不是受控因果实验，也不冒充作者
-已经完成人工审核；最终报告需作者复核。FP/FN指图像级判定错误，不能据此断言像素定位必错。
-色图按每图范围显示，跨图色彩不比较绝对强弱；数值比较以CSV原始分数为准。
+Reviewed again on 2026-11-12. Observations and possible mechanisms are separated; assistant review is not an author signature or a controlled causal experiment. FP/FN refers to the image decision, not necessarily pixel-localization success. Per-image color scales do not make colors comparable across images.
 
-| 案例 | 观测到的错误模式 | 分类与待验证解释 |
-| --- | --- | --- |
-| C01 template/candle FP | 正常四枚蜡烛的上下圆弧普遍高响应，GT全零。 | 正常轮廓变化；均值模板与单张轮廓/位置差异可能主导RGB差。 |
-| C02 template/candle FN | GT是小块局部缺陷，预测主要沿正常圆周，整图分数未过阈值。 | 小缺陷/背景轮廓干扰；top1%聚合可能被常规边缘残差影响。 |
-| C03 template/capsules FP | 正常胶囊的多处条状高光进入二值图。 | 反光与多物体排列变化；单个欧氏变换可能无法对齐各胶囊独立位姿。 |
-| C04 template/capsules FN | 单个很小GT区域没有主导热图；多胶囊边缘和亮条更显著。 | 细小缺陷与正常反光混淆；图像阈值对这种局部信号不敏感。 |
-| C05 template/cashew FP | 正常腰果上部两处轮廓形成粗白弧。 | 正常形状变化；模板轮廓与该样本不完全匹配。 |
-| C06 template/cashew FN | 斑点/细长GT与普通轮廓、背景响应并存，图像仍判正常。 | 局部缺陷与聚合脱节；背景纹理和形状差异可能抬高正常阈值。 |
-| C07 template/chewinggum FP | 正常矩形产品两侧及上下边进入阈值图。 | 正常边界残差；尺寸/边缘外观与均值模板差异可能造成误报。 |
-| C08 template/chewinggum FN | 明显局部破损已有像素响应，但整图分数仍低于正常验证阈值。 | 图像/像素决策脱节；应研究聚合与校准，不能简单说定位完全失败。 |
-| C09 template/fryum FP | 正常轮状产品的外圈和内部辐条广泛响应。 | 位姿/形状变化；轮状结构与平均模板的几何差异被当作缺陷。 |
-| C10 template/fryum FN | GT位于局部辐条损伤，阈值图只保留零散位置。 | 局部信号不足；正常结构残差可能使图像操作阈值偏高。 |
-| C11 template/pipe_fryum FP | 正常管状产品两端和外边界显著，GT全零。 | 正常轮廓变化；端部形状/弯曲差异可能导致高差异分数。 |
-| C12 template/pipe_fryum FN | 产品内的小斑点GT不突出，阈值图主要是外框。 | 内部微小外观缺陷；轮廓主导、缺陷敏感度不足。 |
-| C13 AE/candle FP | 正常蜡烛圆周、烛芯及少量点状残差进入阈值图。 | 重建边缘残差；局部正常高频结构可能重建不充分。 |
-| C14 AE/candle FN | 右下蜡烛的局部损伤仅有弱响应，常规圆周仍明显。 | 小损伤响应不足；重建误差未将其与正常边缘可靠区分。 |
-| C15 AE/capsules FP | 正常胶囊表面的若干亮条、边缘产生残差。 | 反光/排列变化；正常复杂外观可能超出该AE的重建精度。 |
-| C16 AE/capsules FN | 很小的单胶囊GT区域未突出，二值图仍有多处普通表面残差。 | 微小缺陷/反光混淆；需用局部特征或受控背景抑制验证。 |
-| C17 AE/cashew FP | 正常腰果周围的粗糙黑色背景出现许多点状预测。 | 背景重建残差；高频背景纹理可能推高整图top1%分数。 |
-| C18 AE/cashew FN | 两个小斑点GT没有明显集中响应，背景点状残差广泛。 | 小外观缺陷弱响应与背景干扰共同出现；机制仍需消融。 |
-| C19 AE/chewinggum FN | 产品上边缘明显缺损的GT处没有相应强响应。 | 结构缺损漏检；不能只凭重建误差证明模型理解了正常结构。 |
-| C20 AE/chewinggum FN | 下侧损伤及细线GT仅部分局部响应，图像分数未过阈值。 | 聚合/校准不足；像素局部可见不等于整图NG判定成功。 |
-| C21 AE/fryum FP | 正常外环与辐条的细轮廓进入阈值图。 | 重建正常边缘误差；高频几何边界可能影响图像评分。 |
-| C22 AE/fryum FN | 细长GT区域未从普通辐条轮廓中突出。 | 细线缺陷弱响应；图像分数略低于固定阈值，需研究局部评分。 |
-| C23 AE/pipe_fryum FP | 正常矩形边界成框状预测，整图分数略高于阈值。 | 边界重建残差与操作点敏感；不据此擅自放宽阈值。 |
-| C24 AE/pipe_fryum FN | 小块GT与内部点状残差并存，边界仍是主要可见结构。 | 小斑点弱区分；重建纹理噪声和边缘残差可能影响聚合。 |
+| Case | Method/error | Observation | Classification / possible mechanism |
+| --- | --- | --- | --- |
+| C01 | Template/candle FP | Normal candle arcs dominate the response. | Normal contour mismatch; mean-template position/shape differences may dominate RGB error. |
+| C02 | Template/candle FN | The tiny annotated spot is weak; ordinary arcs dominate. | Small appearance defect; score aggregation may dilute local evidence. |
+| C03 | Template/capsules FP | Normal highlights and capsule outlines produce many responses. | Normal arrangement/reflection differences not removed by global alignment. |
+| C04 | Template/capsules FN | A tiny single-capsule defect is not prominent. | Fine defect response competes with ordinary highlights and arrangement differences. |
+| C05 | Template/cashew FP | Normal object edges produce a strong outline. | Shape/contour variability relative to the mean template. |
+| C06 | Template/cashew FN | Spot and thin-line annotations compete with background and contour response. | Weak local appearance contrast and background mismatch. |
+| C07 | Template/chewinggum FP | Normal rectangular edges form a bright frame. | Normal position/shape mismatch and background texture. |
+| C08 | Template/chewinggum FN | Damage is locally visible, while image score stays below threshold. | Local evidence and image-level aggregation/calibration disagree. |
+| C09 | Template/fryum FP | Normal spokes and outer ring respond strongly. | Normal structural alignment/shape variability. |
+| C10 | Template/fryum FN | Annotated local damage is not stronger than normal wheel boundaries. | Weak damage discrimination amid complex geometry. |
+| C11 | Template/pipe_fryum FP | Normal rectangular boundary forms a bright frame. | Boundary/pose mismatch after global alignment. |
+| C12 | Template/pipe_fryum FN | A small interior mark is weak while the outer frame dominates. | Small appearance defect masked by contour response. |
+| C13 | AE/candle FP | Normal circumference, wicks and small residuals cross the pixel threshold. | Normal high-frequency reconstruction error. |
+| C14 | AE/candle FN | Lower-right damage is weak; ordinary circumference remains visible. | Small damage response insufficiently separated from edge residuals. |
+| C15 | AE/capsules FP | Normal reflections and capsule edges produce residuals. | Complex normal reflective appearance is not reconstructed precisely. |
+| C16 | AE/capsules FN | Tiny single-capsule GT does not stand out from ordinary residuals. | Fine defect/reflection ambiguity; causal mechanism still needs an ablation. |
+| C17 | AE/cashew FP | Many black-background texture residuals are predicted. | High-frequency background reconstruction residuals may inflate the image score. |
+| C18 | AE/cashew FN | Two annotated spots lack concentrated response; background residuals are widespread. | Weak local appearance discrimination with background interference. |
+| C19 | AE/chewinggum FN | A large upper-edge structural defect lacks a correspondingly strong response. | Reconstruction error does not guarantee normal-structure understanding. |
+| C20 | AE/chewinggum FN | Lower damage and fine-line GT are only partially visible in the response. | Local evidence may not exceed the fixed image operating point. |
+| C21 | AE/fryum FP | Normal ring and spoke boundaries are predicted. | Normal geometric edge reconstruction error. |
+| C22 | AE/fryum FN | A thin annotated defect does not stand out from normal spokes. | Thin-line response and aggregation sensitivity. |
+| C23 | AE/pipe_fryum FP | Normal rectangular edges form a predicted frame. | Boundary reconstruction residual and operating-point sensitivity. |
+| C24 | AE/pipe_fryum FN | Small GT and interior residuals coexist while boundaries dominate. | Weak spot discrimination amid edge/texture residuals. |
 
-初步方向：模板边缘/形状变化、AE背景纹理残差、细小缺陷低响应，以及图像/像素判定脱节。
-这些只是Part3候选动机。需要保持骨干/数据/阈值协议不变做受控消融，不能将相关性直接写成改进已证实。
-本次没有因看过这些测试图而重选训练轮数、参考图、阈值或后处理参数。
+These patterns motivate future controlled work on background suppression, fine detail and aggregation. They do not establish a proven improvement. No reference, threshold, training epoch or postprocessing parameter was retuned using these test cases.

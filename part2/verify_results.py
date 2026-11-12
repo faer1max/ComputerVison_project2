@@ -1,17 +1,19 @@
-"""核对Part2完整输出并生成可分享摘要；不训练或选择测试阈值。"""
+'Verify complete Part 2 outputs and export shareable summaries.'
 from pathlib import Path
 import os,sys,json,hashlib
 ROOT=Path(__file__).resolve().parents[1];ASSETS=Path(os.environ.get('CVPROJECT_ASSETS',ROOT))
 sys.path.insert(0,str(ASSETS/'part2/.deps'));sys.path.insert(0,str(ROOT/'part1'))
 import numpy as np,pandas as pd
 import common
+sys.path.insert(0,str(ROOT/'scripts'))
+from source_provenance import matches_hashes
 from sklearn.metrics import roc_auc_score,average_precision_score
 OUT=Path(os.environ['CVPROJECT_PART2_OUTPUT'])/'full'
 DEST=ROOT/'results/part2_course448'
 
 def verify():
     expected={p.name:hashlib.sha256(p.read_bytes()).hexdigest() for p in [ROOT/'part2/benchmark.py',ROOT/'part2/course_inputs.py',ROOT/'experiment_protocol.json',ROOT/'part2/reference_selections.csv',ROOT/'part1/03_evaluate.py',ROOT/'part1/common.py']}
-    assert json.loads((OUT/'source.json').read_text())==expected
+    recorded_source=json.loads((OUT/'source.json').read_text());assert matches_hashes(recorded_source,expected,ROOT)
     paths=list((OUT/'dino').glob('seed_*/shot_*/*/metrics.json'))+list((OUT/'clip').glob('*/metrics.json'))
     assert len(paths)==78,len(paths)
     required={('dino',c,s,k) for c in common.REQUIRED_CATEGORIES for s in [42,43,44] for k in [1,2,4,8]}|{('clip',c,42,0) for c in common.REQUIRED_CATEGORIES}
@@ -56,8 +58,8 @@ def verify():
     dino=frame[frame.method=='dino'];dino.groupby(['category','shot'])[metrics].agg(['mean','std']).to_csv(DEST/'dino_category_mean_std.csv')
     dino.groupby(['seed','shot'])[metrics].mean().groupby('shot').agg(['mean','std']).to_csv(DEST/'dino_macro_mean_std.csv')
     frame[frame.method=='clip'].to_csv(DEST/'clip_categories.csv',index=False)
-    (DEST/'verification.json').write_text(json.dumps({'status':'passed','runs':78,'maps':count,'source_sha256':expected,'std_ddof':1},indent=2),encoding='utf-8')
-    # 只发布目录统计，保留逐图预测与大数组在本地输出目录。
+    (DEST/'verification.json').write_text(json.dumps({'status':'passed','runs':78,'maps':count,'source_sha256':recorded_source,'verified_with_source_sha256':expected,'std_ddof':1},indent=2),encoding='utf-8')
+
     inventory={}
     for name,pattern in [('prediction_maps','*/**/maps/*.npy'),('feature_cache','cache/dino/**/*.npy')]:
         files=list(OUT.glob(pattern));inventory[name]={'files':len(files),'bytes':sum(p.stat().st_size for p in files)}

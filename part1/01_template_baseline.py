@@ -1,4 +1,4 @@
-"""正常均值模板：ECC配准、差异打分，并将热图还原到测试图坐标。"""
+'Normal mean-template baseline with ECC alignment and maps restored to test coordinates.'
 from __future__ import annotations
 import argparse
 import json
@@ -12,7 +12,7 @@ from common import (IMAGE_SIZE, PROTOCOL, REQUIRED_CATEGORIES, ensure_output_dir
 
 
 def register_to_template(image, template):
-    """RGB数组→(模板坐标中的图、template→test的2×3矩阵、成功标志)。"""
+    'Return aligned RGB, the template-to-test affine matrix, and success status.'
     image_gray = cv2.cvtColor(image, cv2.COLOR_RGB2GRAY).astype(np.float32) / 255
     template_gray = cv2.cvtColor(template, cv2.COLOR_RGB2GRAY).astype(np.float32) / 255
     warp = np.eye(2, 3, dtype=np.float32)
@@ -24,14 +24,14 @@ def register_to_template(image, template):
                                  borderMode=cv2.BORDER_REFLECT)
         return aligned, warp, True
     except cv2.error:
-        return image, np.eye(2, 3, dtype=np.float32), False  # 不删除失败样本。
+        return image, np.eye(2, 3, dtype=np.float32), False
 
 
 def build_template(training_rows, max_references=24):
-    """拟合表→最多24张配准正常图的均值模板及实际使用张数。"""
+    'Average up to 24 successfully aligned normal fit references.'
     rows = training_rows.head(max_references)
     if rows.empty:
-        raise ValueError("正常拟合池为空")
+        raise ValueError("Normal fit pool is empty")
     reference = load_rgb_image(rows.iloc[0].image_path, IMAGE_SIZE)
     images = [reference.astype(np.float32)]
     for row in rows.iloc[1:].itertuples():
@@ -42,19 +42,19 @@ def build_template(training_rows, max_references=24):
 
 
 def restore_map(aligned_map, warp, fallback):
-    """模板热图+template→test矩阵+未配准差异→原测试坐标热图及有效覆盖率。"""
+    'Restore a template-coordinate map; use unaligned differences at unmapped borders.'
     h, w = aligned_map.shape
     ones = np.ones((h, w), dtype=np.uint8)
-    # 双向有效性排除配准时反射产生的人工边缘；原图所有像素仍参与评估。
+
     valid_template = cv2.warpAffine(ones, warp, (w, h), flags=cv2.INTER_NEAREST | cv2.WARP_INVERSE_MAP)
     valid_test = cv2.warpAffine(valid_template, warp, (w, h), flags=cv2.INTER_NEAREST).astype(bool)
     returned = cv2.warpAffine(aligned_map, warp, (w, h), flags=cv2.INTER_LINEAR)
-    returned[~valid_test] = fallback[~valid_test]  # 无对应模板位置时回退，不伪造零异常。
+    returned[~valid_test] = fallback[~valid_test]
     return returned.astype(np.float32), float(valid_test.mean())
 
 
 def make_difference_map(image, template):
-    """两张RGB数组→原测试坐标浮点异常图、配准标志与有效覆盖率。"""
+    'Return a test-coordinate float map, registration status and valid coverage.'
     aligned, warp, ok = register_to_template(image, template)
     difference = np.abs(aligned.astype(np.float32) - template.astype(np.float32)).mean(axis=2) / 255
     smoothed = cv2.GaussianBlur(difference, (5, 5), 0.8)
@@ -65,7 +65,7 @@ def make_difference_map(image, template):
 
 
 def predict_rows(rows, template):
-    """图片表→热图、分数、逐图质量记录和耗时；不使用标签调参。"""
+    'Predict every input row, retaining failed-registration fallbacks and timing.'
     maps, scores, quality = [], [], []
     started = time.perf_counter()
     for row in rows.itertuples():
@@ -78,7 +78,7 @@ def predict_rows(rows, template):
 
 
 def run_category(category, seed=42):
-    """单类别→独立模板、完整validation/test预测及可追溯元数据。"""
+    'Run a single category with normal-only fitting and complete validation/test outputs.'
     set_seed(seed)
     fit, validation = split_normal_train(load_visa_split(category, "train"), seed=seed)
     test = load_visa_split(category, "test")

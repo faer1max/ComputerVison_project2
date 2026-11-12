@@ -1,5 +1,3 @@
-# 文献共读笔记
+# Reading notes
 
-此目录用于后续保存逐篇笔记、跨论文对比和 Part 3 改进假设。当前仅完成文献准备，尚未开始精读。
-
-建议每篇笔记包含：研究问题、核心方法、公式解释、实验依据、局限、项目启发与验证方案；附原文页码，并区分作者结论与我们的推测。
+Use this directory for future critical reading notes: research question, method, evidence, limitations, project relevance and a testable hypothesis. Distinguish author claims from project interpretations and record original page references. Prepared source links do not substitute for the final related-work review.

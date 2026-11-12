@@ -1,8 +1,8 @@
-# 四方法统一比较（六类宏平均）
+# Four-method comparison: six-category macro means
 
-所有数值为0–1。DINO为三种子均值；样本SD在CSV的_std列。common与native分开，参考预算和计时边界见../../docs/PART1_PART2_ANALYSIS.md。
+Values are 0-1. DINO averages three seeds; the CSV includes sample-SD columns. Native/common scores and normal-data budgets are distinct; see ../../docs/PART1_PART2_ANALYSIS.md.
 
-| 方法 | shot | 评分 | image AUROC | image AP | test FPR | pixel AUROC | pixel AP | AUPRO |
+| Method | Shot | Scoring | Image AUROC | Image AP | Test FPR | Pixel AUROC | Pixel AP | AUPRO |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | template | not_applicable | common_heatmap_top1pct | 0.6562 | 0.7661 | 0.0828 | 0.8131 | 0.1624 | 0.5543 |
 | autoencoder | not_applicable | common_heatmap_top1pct | 0.7680 | 0.8408 | 0.0583 | 0.6941 | 0.0312 | 0.5580 |
@@ -17,9 +17,9 @@
 | clip | 0 | common_heatmap_top1pct | 0.9026 | 0.9491 | 0.0467 | 0.9649 | 0.3126 | 0.9025 |
 | clip | 0 | official_native | 0.8913 | 0.9353 | 0.1017 | 0.9649 | 0.3126 | 0.9025 |
 
-## 光照压力实验
+## Fixed-threshold brightness study
 
-| 方法 | 亮度因子 | 合并正常验证FPR |
+| Method | Brightness factor | Pooled normal validation FPR |
 | --- | --- | --- |
 | autoencoder | 0.75 | 0.5093 |
 | autoencoder | 1.0 | 0.0432 |
@@ -28,4 +28,4 @@
 | template | 1.0 | 0.0432 |
 | template | 1.25 | 0.4198 |
 
-脚本：scripts/illumination_course448.py、scripts/build_part12_comparison.py、scripts/verify_part12_supplement.py。原始逐图亮度分数留在本地，不上传大数组。所有实验固定原阈值，×1.0复现原CSV评分和决策；高光裁剪局限见分析文档。
+Scripts: illumination_course448.py, build_part12_comparison.py, verify_part12_supplement.py. Raw brightness predictions stay local. Thresholds are unchanged and the 1.0 condition reproduces original decisions. Brightening includes highlight clipping; no defect-recall claim is made.

@@ -1,0 +1,30 @@
+{
+  "status": "passed",
+  "base_commit": "4ca7c66325b1a01c5b26d76fe355f896b93a7d6f",
+  "scope": "All Python AST structure and non-Chinese literals unchanged after removing docstrings; only Chinese human-readable messages may differ. Subsequent provenance-only changes are documented separately.",
+  "files": [
+    "part1/01_template_baseline.py",
+    "part1/02_autoencoder.py",
+    "part1/03_evaluate.py",
+    "part1/common.py",
+    "part1/verify.py",
+    "part2/benchmark.py",
+    "part2/check_contract.py",
+    "part2/course_inputs.py",
+    "part2/export_failures.py",
+    "part2/plot_results.py",
+    "part2/verify_results.py",
+    "scripts/analyze_visual_cases.py",
+    "scripts/benchmark_part1_inference.py",
+    "scripts/build_part12_comparison.py",
+    "scripts/download_literature.py",
+    "scripts/export_part1_results.py",
+    "scripts/illumination_course448.py",
+    "scripts/part1_demo.py",
+    "scripts/prepare_assets.py",
+    "scripts/prepare_repositories.py",
+    "scripts/prepare_visa.py",
+    "scripts/verify_part12_supplement.py",
+    "scripts/verify_part1_release.py"
+  ]
+}

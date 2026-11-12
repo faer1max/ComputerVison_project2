@@ -1,4 +1,4 @@
-"""读取已训练产物，输出异常分数、OK/NG、热图和阈值图；不读取输入真值。"""
+'Predict a single image without reading its ground truth.'
 from pathlib import Path
 import argparse
 import importlib.util
@@ -18,7 +18,7 @@ from common import OUTPUT_DIR, REQUIRED_CATEGORIES, image_score, load_rgb_image,
 
 
 def predict_image(method, category, image_path, destination):
-    """方法名、类别、输入路径、输出目录→无标签单图预测摘要dict并保存可视化。"""
+    'Return label-free prediction metadata and save image/heatmap panels.'
     image = load_rgb_image(image_path)
     if method == "template":
         spec = importlib.util.spec_from_file_location("demo_template", ROOT / "part1/01_template_baseline.py")
@@ -40,7 +40,7 @@ def predict_image(method, category, image_path, destination):
     metrics = pd.read_csv(OUTPUT_DIR / "evaluation/metrics.csv")
     calibration = metrics.query("category == @category and method == @method").iloc[0]
     raw_score = image_score(anomaly_map)
-    # 与已校准Part1 CSV的float32十进制评分表示一致，避免并列阈值精度翻转。
+
     score = float(pd.read_csv(io.StringIO("score\n" + str(np.float32(raw_score)))).score.iloc[0])
     threshold = float(calibration.image_threshold)
     result = {"method": method, "category": category, "score": score,

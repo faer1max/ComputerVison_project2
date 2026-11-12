@@ -1,0 +1,52 @@
+{
+  "checked_on": "2026-11-12",
+  "checks": [
+    {
+      "name": "VisA",
+      "url": "https://amazon-visual-anomaly.s3.us-west-2.amazonaws.com/VisA_20220922.tar",
+      "status": 206,
+      "content_range": "bytes 0-0/1929840640",
+      "content_length": "1",
+      "reachable": true
+    },
+    {
+      "name": "DINOv2",
+      "url": "https://dl.fbaipublicfiles.com/dinov2/dinov2_vits14/dinov2_vits14_pretrain.pth",
+      "reachable": false,
+      "error": "HTTPSConnectionPool(host='dl.fbaipublicfiles.com', port=443): Max retries exceeded with url: /dinov2/dinov2_vits14/dinov2_vits14_pretrain.pth (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: certificate has expired (_ssl.c:1016)')))"
+    },
+    {
+      "name": "CLIP",
+      "url": "https://openaipublic.azureedge.net/clip/models/3035c92b350959924f9f00213499208652fc7ea050643e8b385c2dac08641f02/ViT-L-14-336px.pt",
+      "status": 206,
+      "content_range": "bytes 0-0/934088680",
+      "content_length": "1",
+      "reachable": true
+    },
+    {
+      "name": "torch_wheel_index",
+      "status": 200,
+      "recorded_version": "2.12.0",
+      "recorded_windows_py311_wheel_found": true
+    },
+    {
+      "name": "torchvision_wheel_index",
+      "status": 200,
+      "recorded_version": "0.27.0",
+      "recorded_windows_py311_wheel_found": true
+    }
+  ],
+  "dino_primary_curl_result": "SEC_E_CERT_EXPIRED; TLS was not disabled",
+  "safe_fallback": "scripts/stage_local_weights.py with an exact verified original checkpoint; source must be supplied by the project owner when upstream TLS is unavailable",
+  "full_fresh_machine_installation": false,
+  "faiss_package_checks": [
+    {
+      "url": "https://conda.anaconda.org/pytorch/win-64/libfaiss-1.8.0-h2e52968_0_cpu.tar.bz2",
+      "status": 200
+    },
+    {
+      "url": "https://conda.anaconda.org/pytorch/win-64/faiss-cpu-1.8.0-py3.11_h2272212_0_cpu.tar.bz2",
+      "status": 200
+    }
+  ]
+}

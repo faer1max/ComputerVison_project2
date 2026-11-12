@@ -1,7 +1,3 @@
-# Part 3: Robustness and Reliable Decisions
+# Part 3: pending exploration
 
-本目录存放针对已确认失败模式的改进方法、消融配置与分析。具体改进方向在文献阅读和基线实验后确定。
-
-复用共享的数据、权重和评估协议；本部分输出放到 outputs/part3/。
-
-\n
+No improvement implementation or controlled ablation is claimed here. The next step is to choose a concrete observed failure mode, implement at least one justified modification, and evaluate it with the shared data/threshold/evaluation protocol. Freeze the main backbone unless explicitly studying a small adapter. Report negative results honestly. Completing Parts 1/2 does not remove this mandatory course requirement.

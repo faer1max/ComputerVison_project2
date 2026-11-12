@@ -1,45 +1,35 @@
-# Part 1 / Part 2 补齐后复核清单
+# Parts 1 and 2 requirement checklist
 
-日期：2026-11-12。权威原件：**AIAA3201_Project2_Few_Shot_Industrial_Visual_Anomaly_Detection_Spring2027.pdf**（原第2页公平比较、第3页5.1、第4页5.2、第5页6.1/6.2）。仅对前两个Part判定；不将本表当作Part3/最终论文/最终提交完成证明。
+Authority: AIAA3201_Project2_Few_Shot_Industrial_Visual_Anomaly_Detection_Spring2027.pdf, pages 2-5. The original course PDF is retained locally, not redistributed. This checklist addresses Parts 1/2 only; Part 3, the final paper and final submission remain separate mandatory work.
 
-## 本次结论
+| Requirement | Technical evidence and status |
+| --- | --- |
+| Normal template, ECC and difference map | Implemented; test-coordinate restoration, border fallback and retained registration failures |
+| Normal-only convolutional AE, six classes | Implemented; six histories and 12 baseline metric rows |
+| Normal-validation thresholds and strict ties | Passed; seven behavior tests and 648 unchanged-input decisions reproduced |
+| Common-resolution brightness comparison | Completed; 324 normal images x 3 conditions x 2 methods = 1,944 predictions / 36 groups |
+| Texture, structure and brightness interpretation | Completed in analysis document, with observed patterns separated from hypotheses |
+| Official DINO/CLIP sources and weights | Pinned identities; official-entry sample parity checks retained |
+| DINO 1/2/4/8-shot x three random seeds | Complete: seeds 42/43/44, six categories, 72 groups, 270 reference-use records |
+| Means, sample SD and few-shot curves | Complete; within-seed category means then cross-seed ddof=1 |
+| CLIP target-category zero-shot comparison | Six groups; MVTec-trained prompts, no VisA gradient training |
+| Frozen-feature reasoning and coarse-patch limits | Analysis and two full-frame/detail-crop comparisons included |
+| Shared split, geometry, resolution and evaluation | Protocol plus split/reference/RGB/normalization-inverse checks |
+| Image AUROC/AP/FPR and pixel AUROC/AP/AUPRO | Both parts report them separately; AUPRO limit 0.30, 200 thresholds, 8-connectivity |
+| Four-method comparison with native/common separation | 12-row table independently recomputed from fixed results |
+| At least 20 categorized failures | 24 distinct Part 1 images, per-case observations and tentative mechanisms; Part 2 cases separately indexed |
+| Extraction/scoring time, GPU peak and bank size | Records and stage boundaries retained; no unsupported isolated FPS ranking |
+| Download/setup instructions for excluded files | PREPARATION covers pinned clones, official data/weights, metadata preparation and reconstruction of project outputs |
+| Python, dependencies and execution commands | Python 3.11; matched CUDA torch/torchvision; isolated Windows Part 2 NumPy/FAISS |
+| Single-image score, OK/NG and heatmap demo | Both baseline demos rerun successfully without input labels |
+| Preserve historical numerical experiments | English translation checked structurally; historical hashes retained with explicit mapping |
 
-前次指出的复现说明、正式448光照对照、统一表、纹理/结构/光照及粗patch分析已补齐。前两部分核心功能、规定主实验和上述补充核查均有通过证据。原Part1/Part2模型推理核心、协议、参考清单及历史主指标保持不变；本次新增实验真实执行，未使用测试标签调整阈值。
+## Verified supplementary results
 
-| 核查项 | 状态 | 证据 |
-| --- | --- | --- |
-| Part1正常模板/ECC/差异图 | 通过 | part1/01_template_baseline.py；热图恢复测试坐标、失败回退测试通过 |
-| Part1正常图AE、六类训练与评估 | 通过 | 6份历史、12行正式指标，原核验记录保留 |
-| 正常validation阈值、严格大于及并列处理 | 通过 | 原校准不变；7项行为测试通过；亮度×1.0的648次判定与原记录一致 |
-| 共同448下的光照对照 | 本次补齐/通过 | 324正常图×3亮度×2方法=1944预测；36组；illumination/summary.csv与verification.json |
-| 纹理、结构及光照差异解释 | 本次补齐 | docs/PART1_PART2_ANALYSIS.md，逐例现象与候选机制分开，未声称真实光照泛化 |
-| Part2官方源码/权重与样例数值 | 通过 | 原assets_verified/equivalence保留；四仓库固定commit及Python改动检查通过 |
-| DINO六类×1/2/4/8-shot×3随机种子 | 通过 | seeds42/43/44，共72组，270条引用记录，非270张独立参考 |
-| DINO均值/样本SD与曲线 | 通过 | 每类别和宏均值表、few_shot_curves，ddof=1 |
-| CLIP六类目标类别零样本比较 | 通过 | 六组，MVTec提示，未在VisA梯度训练，阈值校准单独说明 |
-| 冻结特征有效性与粗patch局限 | 本次补齐 | 分析文档＋capsules_detail/chewinggum_detail局部图；未将插值当作新增特征细节 |
-| 同划分、RGB几何输入、分辨率及评估 | 通过 | 共享协议、参考隔离；模型特有归一化显式说明；448为项目共同选择而非PDF规定尺寸 |
-| 图像AUROC/AP/FPR与pixel AUROC/AP/AUPRO | 通过 | 两部分原始指标，AUPRO maxFPR0.30/200阈值/8邻域 |
-| 四方法统一表，native/common分列 | 本次补齐/通过 | macro_metrics.csv共12行重算通过，训练/参考预算差异已说明 |
-| 至少20个失败案例分类 | 通过技术复核 | Part1 24张独立图像的四联图再次目视检查，逐例分类保留；Part2案例另列，不夸大独立图数 |
-| 时间/评分/显存/库大小 | 通过记录要求 | 原效率文件与口径保留；模板提取/CLIP参考库“不适用”；不作隔离端到端速度排名 |
-| 官方源码新机器准备说明 | 本次补齐 | prepare_repositories.py --install；PREPARATION明确四仓库clone及固定checkout顺序，已有仓库检查实际通过 |
-| Python/依赖/运行入口 | 本次补齐 | Python3.11表述统一，保留CUDA torch/torchvision与独立Part2依赖说明，新增实验核查命令明确 |
-| 单图异常分数/OK-NG/热图 | 通过重新运行 | template和AE candle单图demo成功；原阈值及CSV分数表示一致，raw分数单独输出 |
-| 历史核心与主结果未改写 | 通过 | 8个协议/核心/参考文件与8ae7710逐字节一致；主表不因看图改动 |
+Template pooled normal-validation FPR at brightness 0.75/1.0/1.25: 14.8148% / 4.3210% / 41.9753%. AE: 50.9259% / 4.3210% / 99.6914%. The normal 1.0 condition reproduces all 648 original decisions. This is a fixed-threshold synthetic brightness test, including clipping for brightened images, not a defect-recall or real-lighting generalization study.
 
-## 关键实测与数值表示说明
+## Review limits
 
-亮度×0.75/1.0/1.25时，合并324正常validation图FPR：模板14.8148%/4.3210%/41.9753%；AE50.9259%/4.3210%/99.6914%。另存六类宏平均，不能混用。×1.25包含高光裁剪，不测缺陷召回，也不等同真实相机光照。
+The historical full Part 1 checks and Part 2 78-group/16,692-map checks are retained; an English release is not described as full retraining. Translation/provenance behavior and actual release checks are documented separately in SOURCE_PROVENANCE.md. No test label selects thresholds, references or epochs. Failure classifications are evidence-backed interpretations, not causal proof or an author signature. Existing official assets are checked; a completely new machine and a full redownload are not claimed as tested. Resource records are not an isolated end-to-end speed comparison.
 
-原Part1预测保存为float32最短十进制CSV，阈值依据该表校准。补充实验与demo复用相同CSV评分表示，另留raw_float32_score。该处理只消除阈值并列附近的浮点表示翻转，没有改阈值、引入容差判NG或重写主指标。
-
-## 本轮验证及限度
-
-- 独立补充核查：1944条逐图分数/36组汇总、648个未扰动判定、参考normal validation集合、12行统一表重算通过。
-- Part1 7项行为测试通过；两基线demo重新运行；新增三张分析图目视检查通过。
-- 原Part2 78组/16692张热图核验及原Part1全量核验继续有效，核心身份未变。本次不宣称重跑过全部历史主实验。
-- 没有为测试成绩调阈值、换随机参考或轮数。分类是有数值/图像支持的现象与候选解释，助手复核不冒充作者签名，也不证明单一因果机制。
-- 四仓库现有资产版本已实际核对；没有在完全空白机器上重新下载全部数据/环境，不能宣称完成了跨机器安装测试。
-- 现有资源记录满足报告项目，不支持严格隔离端到端速度排名；本轮没有提出该排名结论。
-- Part3、6–8页CVPR论文/arXiv/Canvas及最终anomaly_demo.zip属于后续完整课程交付，不在“前两个Part补齐”的完成声明内。
+All three course parts remain mandatory; this checklist does not claim completion of Part 3, the 6-8 page CVPR paper, arXiv/Canvas submission or final anomaly_demo.zip.

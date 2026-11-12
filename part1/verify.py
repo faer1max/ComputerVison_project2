@@ -1,4 +1,4 @@
-"""发布前的行为检查；不依赖测试集调参，也不启动完整训练。"""
+'Behavioral contract tests without full training or test-set tuning.'
 from pathlib import Path
 import importlib.util
 import tempfile
@@ -44,7 +44,7 @@ class ContractChecks(unittest.TestCase):
     def test_translation_and_border_fallback(self):
         image = np.zeros((256, 256, 3), dtype=np.uint8)
         image[100:110, 170:180] = 255
-        image[90:100, 0:6] = 255  # 模板覆盖外的缺陷也不能被置零。
+        image[90:100, 0:6] = 255
         reference = np.zeros_like(image)
         warp = np.array([[1, 0, 20], [0, 1, 0]], dtype=np.float32)
         aligned = cv2.warpAffine(image, warp, (256, 256), flags=cv2.INTER_LINEAR | cv2.WARP_INVERSE_MAP)

@@ -1,4 +1,4 @@
-"""只使用正常训练图的卷积自编码器基线。"""
+'Convolutional autoencoder trained on normal images only.'
 
 from __future__ import annotations
 
@@ -30,11 +30,11 @@ from common import (
 
 
 class NormalImageDataset(Dataset):
-    """只返回图像张量，确保训练过程不会使用测试掩码或标签。"""
+    'Normal-image dataset without test labels.'
 
     def __init__(self, rows):
         self.paths = rows["image_path"].tolist()
-        # 无随机增强：只缓存确定性RGB uint8输入，避免每轮反复解码大图。
+
         self.images = [load_rgb_image(path, IMAGE_SIZE) for path in self.paths]
 
     def __len__(self) -> int:
@@ -45,7 +45,7 @@ class NormalImageDataset(Dataset):
 
 
 class ConvAutoencoder(nn.Module):
-    """四级卷积编码器和对称解码器，输入输出均为448×448 RGB。"""
+    'Four-stage convolutional encoder/decoder for 448x448 RGB.'
 
     def __init__(self):
         super().__init__()
@@ -160,7 +160,7 @@ def run_category(
 
     training_seconds = time.perf_counter() - training_started
     if best_state is None:
-        raise RuntimeError("训练没有产生有效的模型检查点。")
+        raise RuntimeError("Training did not produce a valid checkpoint.")
     model.load_state_dict(best_state)
 
     output_dir = ensure_output_dir("autoencoder", category)
@@ -207,7 +207,7 @@ def run_category(
         "source_sha256": source_revision(),
     }
     (output_dir / "run_metadata.json").write_text(json.dumps(metadata, indent=2), encoding="utf-8")
-    print(f"[{category}] 自编码器完成；最佳 epoch={best_epoch}；设备={device}")
+    print(f"[{category}] Autoencoder finished; best epoch={best_epoch}; device={device}")
 
 
 def main() -> None:
@@ -219,7 +219,7 @@ def main() -> None:
     parser.add_argument("--learning-rate", type=float, default=PROTOCOL["autoencoder_learning_rate"])
     args = parser.parse_args()
     if args.epochs < 1 or args.batch_size < 1 or args.learning_rate <= 0:
-        parser.error("epochs/batch-size/learning-rate 必须为正")
+        parser.error("epochs, batch size and learning rate must be positive")
     torch.set_num_threads(4)
     for category in args.categories:
         run_category(category, args.seed, args.epochs, args.batch_size, args.learning_rate)

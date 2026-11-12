@@ -1,10 +1,10 @@
-"""课程Part2：官方模型接口、冻结特征缓存、固定参考、Part1共享评估。"""
+'Course448 official-model adapters, frozen caches and fixed-reference evaluation.'
 import os,sys,json,time,hashlib,argparse,importlib.util
 from pathlib import Path
 ROOT=Path(__file__).resolve().parents[1]
 ASSETS=Path(os.environ.get('CVPROJECT_ASSETS',ROOT))
 sys.path.insert(0,str(ASSETS/'part2/.deps'))
-# 官方conda FAISS避免Windows pip OpenMP冲突。
+
 site=ASSETS/'part2/.faiss/Lib/site-packages/faiss'
 handles=[os.add_dll_directory(str(ASSETS/p)) for p in ['part2/.faiss/Library/bin','part2/.faiss/bin']]
 spec=importlib.util.spec_from_file_location('faiss',site/'__init__.py',submodule_search_locations=[str(site)])
@@ -12,6 +12,8 @@ faiss=importlib.util.module_from_spec(spec);sys.modules['faiss']=faiss;spec.load
 import numpy as np,pandas as pd,torch
 sys.path.insert(0,str(ROOT/'part1'))
 import common
+sys.path.insert(0,str(ROOT/'scripts'))
+from source_provenance import matches_hashes
 from course_inputs import shared_rgb,model_tensor
 OUT=Path(os.environ.get('CVPROJECT_PART2_OUTPUT',ROOT/'outputs/course448/part2'))
 
@@ -33,7 +35,7 @@ def evaluate(directory,category):
     (directory/'metrics.json').write_text(json.dumps(r,indent=2),encoding='utf-8');return r
 
 def save_predictions(rows,maps,native,directory):
-    # 统一主评分为448热图top1%，保留官方原生评分以便核对差异。
+
     directory.mkdir(parents=True,exist_ok=True);(directory/'maps').mkdir(exist_ok=True)
     table=rows.copy();paths=[];scores=[]
     for i,a in enumerate(maps):
@@ -129,6 +131,6 @@ if __name__=='__main__':
     OUT=OUT/('smoke' if args.smoke else 'full');OUT.mkdir(parents=True,exist_ok=True)
     identity={p.name:hashlib.sha256(p.read_bytes()).hexdigest() for p in [Path(__file__),ROOT/'part2/course_inputs.py',ROOT/'experiment_protocol.json',ROOT/'part2/reference_selections.csv',ROOT/'part1/03_evaluate.py',ROOT/'part1/common.py']}
     stamp=OUT/'source.json'
-    if stamp.exists() and json.loads(stamp.read_text())!=identity:raise ValueError('Source changed: use a new output directory')
-    stamp.write_text(json.dumps(identity,indent=2),encoding='utf-8')
+    if stamp.exists() and not matches_hashes(json.loads(stamp.read_text()),identity,ROOT):raise ValueError('Source changed: use a new output directory')
+    if not stamp.exists():stamp.write_text(json.dumps(identity,indent=2),encoding='utf-8')
     (run_dino if args.model=='dino' else run_clip)(list(common.REQUIRED_CATEGORIES),args.smoke)

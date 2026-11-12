@@ -1,8 +1,10 @@
-"""重新核对补充实验、分数表示、共享源码身份、结果表和案例数量。"""
+'Verify supplementary scores, calibration decisions, summaries and provenance.'
 from pathlib import Path
 import os,sys,json,hashlib,subprocess,io
 ROOT=Path(__file__).resolve().parents[1];ASSETS=Path(os.environ.get('CVPROJECT_ASSETS',ROOT));sys.path.insert(0,str(ASSETS/'part2/.deps'));sys.path.insert(0,str(ROOT/'part1'))
 import numpy as np,pandas as pd,common
+sys.path.insert(0,str(ROOT/'scripts'))
+from source_provenance import matches_hashes
 
 def verify():
     dest=ROOT/'results/part12_comparison'
@@ -21,7 +23,7 @@ def verify():
             assert np.array_equal(fp.to_numpy(),(original.score>threshold).to_numpy())
             assert np.isclose(fp.mean(),float(old.query('method==@method and category==@category').iloc[0].validation_image_fpr))
     identity=json.loads((ROOT/'results/part1_course448/illumination/verification.json').read_text())
-    assert all(hashlib.sha256((ROOT/f).read_bytes()).hexdigest()==h or hashlib.sha256((ROOT/f).read_bytes().replace(b'\r\n',b'\n')).hexdigest()==identity.get('source_canonical_lf_sha256',{}).get(f) for f,h in identity['source_sha256'].items())
+    current={f:hashlib.sha256((ROOT/f).read_bytes()).hexdigest() for f in identity['source_sha256']};assert matches_hashes(identity['source_sha256'],current,ROOT) or matches_hashes(identity.get('source_canonical_lf_sha256',{}),current,ROOT)
     for model in ['template','autoencoder']:
         for category in common.REQUIRED_CATEGORIES:
             for name in ['normal_template.png'] if model=='template' else ['model.pt']:

@@ -1,4 +1,4 @@
-"""统一评估 Part 1 预测：校准阈值、计算指标并导出失败案例。"""
+'Shared normal-validation calibration and image/pixel evaluation.'
 
 from __future__ import annotations
 
@@ -27,88 +27,88 @@ from common import (
 
 
 def calibrate_threshold(validation: pd.DataFrame, target_fpr: float) -> float:
-    """用正常验证图的分数分位数设图像级阈值，不读取测试标签。"""
+    'Calibrate the image threshold from normal validation scores only.'
     if not 0 < target_fpr < 1:
-        raise ValueError("target_fpr 必须在 0 和 1 之间。")
+        raise ValueError("target_fpr must be between 0 and 1.")
     if not validation["label"].eq("normal").all():
-        raise ValueError("阈值校准集必须只包含正常图。")
+        raise ValueError("Threshold calibration requires normal validation images only.")
     threshold = float(np.quantile(validation["score"].to_numpy(), 1 - target_fpr, method="higher"))
-    # 统一使用严格大于，分数相同的样本不会因并列而被误报。
+
     return threshold
 
 
 def calibrate_pixel_threshold(validation: pd.DataFrame, target_pixel_fpr: float = 0.01) -> float:
-    """用正常验证热图的像素分位数设可视化/分割阈值。"""
+    'Calibrate the pixel threshold from normal validation map pixels only.'
     if not validation["label"].eq("normal").all():
-        raise ValueError("像素阈值只允许正常验证数据")
+        raise ValueError("Pixel threshold calibration requires normal validation data.")
     pixel_values = [np.load(path).astype(np.float32).ravel() for path in validation["map_path"]]
     normal_pixels = np.concatenate(pixel_values)
     return float(np.quantile(normal_pixels, 1 - target_pixel_fpr, method="higher"))
 
 
 def evaluate_aupro(test_predictions, category, max_fpr=0.30, num_thresholds=200):
-    """计算标准区域级 PRO 曲线在 FPR 上限内的归一化面积 AUPRO。"""
-    if not 0 < max_fpr <= 1:  # 积分上限必须是有效的正 FPR 比例。
-        raise ValueError("max_fpr 必须大于 0 且小于等于 1")  # 参数错误时停止，避免产生无效归一化。
-    if num_thresholds < 2:  # 曲线至少需要两个阈值点才能估计面积。
-        raise ValueError("num_thresholds 至少为 2")  # 点数不足时提示调用方修正设置。
-    background_score_chunks = []  # 收集真实背景像素分数，用于计算每个阈值下的 FPR。
-    region_score_chunks = []  # 每个元素保存一个真实缺陷连通区域内的所有预测分数。
-    minimum_score = np.inf  # 记录所有测试热图中的全局最小分数，作为阈值扫描下界。
-    maximum_score = -np.inf  # 记录所有测试热图中的全局最大分数，作为阈值扫描上界。
-    for _, row in test_predictions.iterrows():  # 遍历每张测试图，配对其热图和真实掩码。
-        score_map = np.load(row["map_path"]).astype(np.float32)  # 载入 H×W 预测异常分数图。
-        raw_mask_path = row["mask_path"]  # 先取 CSV 中保存的掩码路径或空值。
-        mask_path = None if pd.isna(raw_mask_path) else raw_mask_path  # 将 CSV 缺失值还原为 None。
-        true_mask = load_mask(mask_path)  # 载入二值真实掩码；正常图会得到全零掩码。
-        if score_map.shape != true_mask.shape:  # 两张图每个坐标必须一一对应。
-            raise ValueError(f"热图与掩码尺寸不一致：{score_map.shape} vs {true_mask.shape}")  # 尺寸错位时停止。
-        minimum_score = min(minimum_score, float(score_map.min()))  # 更新所有热图的最小分数。
-        maximum_score = max(maximum_score, float(score_map.max()))  # 更新所有热图的最大分数。
-        background_score_chunks.append(score_map[true_mask == 0])  # 收集真实正常背景位置的分数，用来估计误报。
-        component_labels = connected_components(true_mask.astype(bool), connectivity=2)  # 8 邻域连通分析，给每个缺陷区域编号。
-        for component_id in range(1, int(component_labels.max()) + 1):  # 标签 0 是背景，从第一个真实缺陷区域开始。
-            region_mask = component_labels == component_id  # 取出当前单独的连通缺陷区域。
-            region_score_chunks.append(score_map[region_mask])  # 保存区域内分数，之后计算这个区域被覆盖的比例。
-    if not region_score_chunks:  # 所有测试掩码都没有缺陷区域时，PRO 没有定义。
-        raise ValueError("测试掩码中没有缺陷连通区域，无法计算 AUPRO")  # 明确提示数据或掩码问题。
-    background_scores = np.sort(np.concatenate(background_score_chunks))  # 合并全部背景分数，FPR 以这些像素为分母。
+    'Compatibility wrapper for the shared 200-threshold, 8-connected AUPRO.'
+    if not 0 < max_fpr <= 1:
+        raise ValueError("max_fpr must be greater than 0 and no greater than 1")
+    if num_thresholds < 2:
+        raise ValueError("num_thresholds must be at least 2")
+    background_score_chunks = []
+    region_score_chunks = []
+    minimum_score = np.inf
+    maximum_score = -np.inf
+    for _, row in test_predictions.iterrows():
+        score_map = np.load(row["map_path"]).astype(np.float32)
+        raw_mask_path = row["mask_path"]
+        mask_path = None if pd.isna(raw_mask_path) else raw_mask_path
+        true_mask = load_mask(mask_path)
+        if score_map.shape != true_mask.shape:
+            raise ValueError(f"Map/mask shape mismatch: {score_map.shape} vs {true_mask.shape}")
+        minimum_score = min(minimum_score, float(score_map.min()))
+        maximum_score = max(maximum_score, float(score_map.max()))
+        background_score_chunks.append(score_map[true_mask == 0])
+        component_labels = connected_components(true_mask.astype(bool), connectivity=2)
+        for component_id in range(1, int(component_labels.max()) + 1):
+            region_mask = component_labels == component_id
+            region_score_chunks.append(score_map[region_mask])
+    if not region_score_chunks:
+        raise ValueError("AUPRO requires at least one annotated defect region")
+    background_scores = np.sort(np.concatenate(background_score_chunks))
     region_score_chunks = [np.sort(values) for values in region_score_chunks]
-    thresholds = np.linspace(maximum_score, minimum_score, num_thresholds)  # 从高到低扫描阈值，逐步放宽异常判定。
-    thresholds = np.concatenate(([np.inf], thresholds))  # 加入全无预测点，确保曲线从 FPR=0、PRO=0 起步。
-    fpr_points = []  # 保存每个阈值下的背景误报率，作为曲线横坐标。
-    pro_points = []  # 保存每个阈值下的区域平均覆盖率，作为曲线纵坐标。
-    for threshold in thresholds:  # 每个阈值生成曲线上的一个候选点。
-        fpr = float((background_scores.size - np.searchsorted(background_scores, threshold, side="left")) / background_scores.size)  # 背景中分数达到阈值的比例就是像素级 FPR。
-        region_overlaps = [  # 逐个缺陷区域计算覆盖率；区域大小不会改变它在平均值中的权重。
+    thresholds = np.linspace(maximum_score, minimum_score, num_thresholds)
+    thresholds = np.concatenate(([np.inf], thresholds))
+    fpr_points = []
+    pro_points = []
+    for threshold in thresholds:
+        fpr = float((background_scores.size - np.searchsorted(background_scores, threshold, side="left")) / background_scores.size)
+        region_overlaps = [
             float((region_scores.size - np.searchsorted(region_scores, threshold, side="left")) / region_scores.size) for region_scores in region_score_chunks
         ]
-        pro = float(np.mean(region_overlaps))  # 对全部缺陷区域覆盖率求平均，得到 Per-Region Overlap。
-        fpr_points.append(fpr)  # 记录当前阈值的横坐标。
-        pro_points.append(pro)  # 记录当前阈值的纵坐标。
-    fpr_points = np.asarray(fpr_points, dtype=np.float64)  # 转数组，方便筛选与曲线面积计算。
-    pro_points = np.asarray(pro_points, dtype=np.float64)  # 转数组，与 FPR 点逐一对应。
-    unique_fpr = np.unique(fpr_points)  # 多个阈值可能产生相同 FPR，面积计算前整理横坐标。
-    best_pro_at_fpr = np.asarray([  # 同一 FPR 可能有多个 PRO，保留其中最高覆盖率作为曲线包络。
+        pro = float(np.mean(region_overlaps))
+        fpr_points.append(fpr)
+        pro_points.append(pro)
+    fpr_points = np.asarray(fpr_points, dtype=np.float64)
+    pro_points = np.asarray(pro_points, dtype=np.float64)
+    unique_fpr = np.unique(fpr_points)
+    best_pro_at_fpr = np.asarray([
         pro_points[fpr_points == fpr].max() for fpr in unique_fpr
     ])
-    inside_limit = unique_fpr < max_fpr  # 只保留积分上限左侧的曲线点。
-    curve_fpr = np.concatenate((unique_fpr[inside_limit], [max_fpr]))  # 加入准确的 FPR 积分端点。
-    pro_at_limit = float(np.interp(max_fpr, unique_fpr, best_pro_at_fpr))  # 在线性曲线上插值得到端点 PRO。
-    curve_pro = np.concatenate((best_pro_at_fpr[inside_limit], [pro_at_limit]))  # 组成积分范围内完整 PRO 曲线。
-    aupro = float(auc(curve_fpr, curve_pro) / max_fpr)  # 积分后除以 FPR 上限，将面积归一化到 [0,1]。
-    return {  # 返回指标与协议参数，便于报告中明确 AUPRO 的计算设置。
-        "test_aupro": aupro,  # 归一化后的区域级定位指标。
-        "aupro_max_fpr": float(max_fpr),  # 保存曲线积分的 FPR 上限，当前为 0.30。
-        "aupro_num_thresholds": int(num_thresholds),  # 保存阈值采样点数，方便复现实验。
-        "aupro_regions": int(len(region_score_chunks)),  # 保存参与平均的真实缺陷连通区域数。
+    inside_limit = unique_fpr < max_fpr
+    curve_fpr = np.concatenate((unique_fpr[inside_limit], [max_fpr]))
+    pro_at_limit = float(np.interp(max_fpr, unique_fpr, best_pro_at_fpr))
+    curve_pro = np.concatenate((best_pro_at_fpr[inside_limit], [pro_at_limit]))
+    aupro = float(auc(curve_fpr, curve_pro) / max_fpr)
+    return {
+        "test_aupro": aupro,
+        "aupro_max_fpr": float(max_fpr),
+        "aupro_num_thresholds": int(num_thresholds),
+        "aupro_regions": int(len(region_score_chunks)),
     }
 
 
 def compute_aupro(test_rows, anomaly_maps, max_fpr=0.3, bins=200):
-    """兼容旧调用接口，数值定义统一到200阈值、8邻域。"""
+    'Integrate normalized region overlap up to the specified background FPR limit.'
     table = test_rows.copy()
-    # evaluate_aupro读取原始预测路径，避免重存或更改已有热图。
+
     return evaluate_aupro(table, "shared", max_fpr=max_fpr, num_thresholds=bins)["test_aupro"]
 
 
@@ -146,7 +146,7 @@ def make_error_panel(
     output_dir.mkdir(parents=True, exist_ok=True)
     if not records:
         return records
-    # 每类/方法最多展示分数最偏离阈值的 6 个错误，完整错误列表仍写入 CSV。
+
     selected = sorted(records, key=lambda item: abs(item["score"] - threshold), reverse=True)[:6]
     fig, axes = plt.subplots(len(selected), 4, figsize=(12, 3.2 * len(selected)), squeeze=False)
     for row_index, record in enumerate(selected):
@@ -253,8 +253,8 @@ def main() -> None:
         ),
         encoding="utf-8",
     )
-    print(f"指标：{results_path}")
-    print(f"错误案例：{errors_path}")
+    print(f"Metrics: {results_path}")
+    print(f"Error cases: {errors_path}")
 
 
 if __name__ == "__main__":

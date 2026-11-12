@@ -1,4 +1,4 @@
-"""从已核验结果画原生图像评分与统一像素指标曲线，并生成代表图。"""
+'Plot verified few-shot curves and representative four-panel predictions.'
 from pathlib import Path
 import os,sys
 ROOT=Path(__file__).resolve().parents[1];ASSETS=Path(os.environ.get('CVPROJECT_ASSETS',ROOT));sys.path.insert(0,str(ASSETS/'part2/.deps'));sys.path.insert(0,str(ROOT/'part1'))

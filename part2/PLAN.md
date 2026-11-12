@@ -1,3 +1,5 @@
-# Part 2 固定执行方案
+# Fixed Part 2 experiment plan
 
-沿用Part1 c679ca1的共享448协议和评估代码。DINO六类×shots1/2/4/8×seeds42/43/44共72组，CLIP六类零样本共6组；正常validation与参考图互斥。官方DINO ViT-S/14、8角度参考增强、官方PCA测试前景策略、CPU FAISS精确检索；CLIP ViT-L/14、MVTec提示权重、DPAM20/features24/sigma4。冻结全部模型，无VisA拟合。缓存输入特征，只复用同源码身份缓存。原生评分与统一热图评分分列，不能把二者当成同一结果。保存validation/test逐图CSV、448浮点热图、原生score、参考图、时间/显存/记忆库字节及指标。验收78组/16692张图，核对随机参考和完整样本。上传前验证干净Git归档，上传后核对远程；不提交数据/缓存/权重/全量热图。
+Share the course448 protocol and released Part 1 evaluation. DINO: six categories x shots 1/2/4/8 x seeds 42/43/44 = 72 groups. CLIP: six zero-shot groups. References come only from normal fit rows and never validation/test. DINO uses official ViT-S/14, eight reference rotations, official PCA test masking, CPU FAISS exact search. CLIP uses ViT-L/14, MVTec-trained prompt weights, DPAM20/features24/sigma4. Freeze all model parameters; no VisA optimization.
+
+Retain native and common image scores separately. Save complete validation/test indexes/maps, source identity, references, feature/build/search timings, memory-bank bytes and allocated GPU peaks. Verify 78 groups and 16,692 maps before publishing. Review a clean Git archive, then check remote branch/file bytes. Exclude datasets, official clones, environments, caches, full heatmaps and weights from Git. Never choose thresholds from test labels.

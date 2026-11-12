@@ -1,4 +1,4 @@
-"""固定操作阈值下导出失败清单；不据此调整Part2参数。"""
+'Export fixed-operating-point failures without tuning model parameters.'
 from pathlib import Path
 import os,sys
 ROOT=Path(__file__).resolve().parents[1];ASSETS=Path(os.environ.get('CVPROJECT_ASSETS',ROOT))
@@ -19,7 +19,7 @@ def export():
             m=metrics[(metrics.method==method)&(metrics.category==category)&(metrics.seed==42)&(metrics.shot==(1 if method=='dino' else 0))].iloc[0]
             table=pd.read_csv(directory/'test/predictions.csv');table['predicted_ng']=table.native_score>m.native_threshold
             errors=table[table.predicted_ng!=table.label.eq('anomaly')].copy()
-            # 固定按路径选择，避免只挑视觉效果明显的失败；每类先FP再FN各一例。
+
             picks=[]
             for label in ['normal','anomaly']:
                 subset=errors[errors.label==label].sort_values('image')
@@ -30,7 +30,7 @@ def export():
             for row in errors.itertuples():
                 heat=np.load(row.map_path);mask=common.load_mask(None if pd.isna(row.mask_path) else row.mask_path);pred=heat>m.pixel_threshold
                 area=float(mask.mean());intersection=int((pred&mask).sum());recall=float(intersection/mask.sum()) if mask.any() else None
-                # 下面是可核对的现象分组，不把形状统计当作模型失败的因果解释。
+
                 group='normal-image false alarm' if row.label=='normal' else ('small annotated defect (<1% pixels)' if area<.01 else 'larger annotated defect (>=1% pixels)')
                 record={'method':method,'category':category,'image':row.image,'error_type':'FP' if row.label=='normal' else 'FN','native_score':row.native_score,'native_threshold':m.native_threshold,'gt_pixel_fraction':area,'predicted_pixel_fraction':float(pred.mean()),'pixel_recall':recall,'observation_group':group,'selected':row.image in picks}
                 failures.append(record)

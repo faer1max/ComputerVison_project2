@@ -1,73 +1,36 @@
-# 开工准备
+# Preparing the environment and excluded large files
 
-## 文件位置
+Run commands from the repository root in **Windows PowerShell**. The Part 2 bootstrap and FAISS lock file are Windows-specific; Linux/macOS require a separate FAISS/DLL adapter and have not been validated. Allow at least 50 GB of free working space for datasets, environments, caches and full results. Published summaries are much smaller.
 
-| 内容 | 路径 |
-| --- | --- |
-| VisA 官方完整压缩包 | `data/downloads/VisA_20220922.tar` |
-| VisA 原始数据及 AnomalyCLIP 元数据 | `data/VisA/`、`data/VisA/meta.json` |
-| 官方 1-class 数据目录 | `data/VisA_pytorch/1cls/` |
-| AnomalyDINO 官方源码 | `external/AnomalyDINO/` |
-| AnomalyCLIP 官方源码及提示学习检查点 | `external/AnomalyCLIP/` |
-| DINOv2 官方源码 | `external/dinov2/` |
-| VisA 官方划分与预处理代码 | `external/spot-diff/` |
-| DINOv2 ViT-S/14 骨干权重 | `weights/dinov2_vits14_pretrain.pth` |
-| CLIP ViT-L/14@336px 骨干权重 | `weights/ViT-L-14-336px.pt` |
-| 课程 PDF 指定的 CVPR 模板 | `assets/templates/CVPR2026-v1-latex.zip` |
-
-下载完成情况以 `assets/preparation_status.json` 为准，数据检查结果见
-`assets/visa_inventory.json`（数据准备完成后生成）。
-
-官方仓库 URL 和精确 commit 保存在 `assets/source_revisions.json`。`external/`、数据、模型权重与模板压缩包不纳入本项目 Git 提交。
-
-## 复现准备过程
-
-在项目根目录执行（Python 3.11（本次实测3.11.17），系统有 curl；数据整理另需 numpy、Pillow）：
+## 1. Clone this project and create the Python environment
 
 ```powershell
-python scripts/prepare_repositories.py --install
-python scripts/prepare_assets.py
-python scripts/prepare_visa.py
+git clone https://github.com/faer1max/ComputerVison_project2.git
+cd ComputerVison_project2
+conda create -n cvproject python=3.11 -y
+conda activate cvproject
 ```
 
-下载脚本使用官方 URL，分段下载支持重跑复用已完整下载的分段。记录每个完整文件的 SHA-256；CLIP 另外与官方 URL 中的 SHA-256 核对。DINOv2 和 VisA 的本地 SHA-256 用于记录文件身份，不代表已有官方校验值。VisA 解压采用安全路径过滤，随后检查原图和标注可解码、官方划分无重复图、训练集全为正常图、整理后的异常掩码已二值化。
+If `cvproject` already exists, activate and inspect it instead of recreating or overwriting it. Tested hardware: RTX 4060 Laptop GPU (8 GB); Python 3.11.17; torch 2.12.0+cu130; torchvision 0.27.0+cu130. These are recorded versions, not a claim that they are the latest or available for every driver. Install a mutually compatible CUDA torch/torchvision pair using the [official PyTorch selector](https://pytorch.org/get-started/locally/). For the recorded CUDA 13.0 build, when available for your platform:
 
-`prepare_visa.py` 调用未修改的官方 `external/spot-diff/utils/prepare_data.py` 整理数据；另按 AnomalyCLIP 官方字段约定生成原始数据目录中的 `meta.json`，不改动官方 train/test 划分。数据目录中 `pipe_fryum` 对应课程说明中的 pipe fryum。
+```powershell
+python -m pip install torch==2.12.0 torchvision==0.27.0 --index-url https://download.pytorch.org/whl/cu130
+python -c "import torch, torchvision; print(torch.__version__, torchvision.__version__); print(torch.cuda.is_available()); print(torch.cuda.get_device_name(0) if torch.cuda.is_available() else 'CPU')"
+python -m pip install -r part1/requirements.txt
+```
 
-## 模型使用注意
+Part 2 requires CUDA in the provided runner. Stop and resolve incompatible GPU/driver/torchvision builds before a full experiment. Part 1 supports CPU, but the published full runs used the recorded GPU environment. Exact historical environment information is under `results/part1_course448/environment.*` and `part2/environment_verified.json`.
 
-- AnomalyDINO 官方默认骨干是 `dinov2_vits14`，对应已准备的 ViT-S/14 权重。
-- 在 VisA 上评估 AnomalyCLIP 应使用 `external/AnomalyCLIP/checkpoints/9_12_4_multiscale_visa/epoch_15.pth`。官方 `train.sh` 明确将这组模型训练在 MVTec 上；没有 `_visa` 后缀的另一组模型训练在 VisA 上，不用于这里的零样本 VisA 评估。不能只根据脚本注释或目录名猜测训练来源。
-- 骨干权重已放在项目 `weights/` 中，后续运行时需要明确配置本地加载/缓存路径，避免默认重新下载到 C 盘。
-- 文件完整性检查不等于模型推理验证。本分支现已完成Part1与Part2的正式实验；Part2模型加载、官方接口数值核对、指标及显存记录见part2/REPORT.md和results/part2_course448。
-
-## 运行环境与待办
-
-2026-11-05：Part 1 使用 Python 3.11 / CUDA PyTorch；共享输入协议固定于
-`experiment_protocol.json`，精确运行环境和验证摘要见 `results/part1_course448`。
-数据默认位于项目内 `data/VisA`；通过 `CVPROJECT_DATA_ROOT` 可以复用其他目录的数据。
-运行命令以 `part1/README.md` 为准。Part 2 的FAISS/NumPy依赖已采用独立配置，复现命令见part2/README.md，
-不要用Part1的requirements直接覆盖其环境。数据、权重和完整实验输出不随Git提交。
-
-## 官方来源
-
-- VisA：<https://github.com/amazon-science/spot-diff>
-- AnomalyDINO：<https://github.com/dammsi/AnomalyDINO>
-- AnomalyCLIP：<https://github.com/zqhang/AnomalyCLIP>
-- DINOv2：<https://github.com/facebookresearch/dinov2>
-- CVPR 模板：<https://github.com/cvpr-org/author-kit/releases/tag/CVPR2026-v1(latex)>
-
-## 从空目录准备官方源码（固定版本）
-
-先安装Git以及Python3.11环境和匹配的CUDA torch/torchvision，再安装part1/requirements.txt。默认资产放仓库根目录；--install仅克隆缺失仓库，已有版本不符或有Python改动会拒绝覆盖。可复用资产时设置CVPROJECT_ASSETS；数据准备脚本仍从其所在仓库根目录准备数据，跨目录复用数据应直接设置CVPROJECT_DATA_ROOT而不重复整理。
+## 2. Obtain the four official source repositories
 
 ```powershell
 python scripts/prepare_repositories.py --install
-# 只核对已有源码，不下载：
 python scripts/prepare_repositories.py
 ```
 
-等效手工命令（在仓库根目录执行，仅用于尚未克隆时）：
+The installer clones missing repositories and checks out the exact commits in `assets/source_revisions.json`. It rejects an existing incompatible revision or modified tracked Python code instead of overwriting it. The prompt checkpoint is supplied by the pinned AnomalyCLIP clone. Git must be installed and GitHub must be reachable.
+
+Equivalent commands for a clean `external/` directory:
 
 ```powershell
 git clone --no-checkout https://github.com/dammsi/AnomalyDINO.git external/AnomalyDINO
@@ -80,4 +43,82 @@ git clone --no-checkout https://github.com/amazon-science/spot-diff.git external
 git -C external/spot-diff checkout --detach 2a692ab575001cbde74d402d897a7286086c6199
 ```
 
-顺序：官方源码 → prepare_assets下载并解压VisA/骨干 → prepare_visa官方划分与CLIP元数据 → Part1正式训练/评估 → Part2独立依赖与推理。AnomalyCLIP提示checkpoint随固定官方仓库提供；不得换成VisA训练的另一组提示。已有数据/权重可直接复用，不需清空或重装cvproject。
+## 3. Download excluded data and backbone weights
+
+| Asset | Expected local path | Official source / reconstruction |
+| --- | --- | --- |
+| Raw VisA archive (1,929,840,640 bytes) | `data/downloads/VisA_20220922.tar` | [AWS archive](https://amazon-visual-anomaly.s3.us-west-2.amazonaws.com/VisA_20220922.tar) |
+| DINOv2 ViT-S/14 backbone | `weights/dinov2_vits14_pretrain.pth` | [Meta weight file](https://dl.fbaipublicfiles.com/dinov2/dinov2_vits14/dinov2_vits14_pretrain.pth) |
+| CLIP ViT-L/14@336px backbone | `weights/ViT-L-14-336px.pt` | [OpenAI weight file](https://openaipublic.azureedge.net/clip/models/3035c92b350959924f9f00213499208652fc7ea050643e8b385c2dac08641f02/ViT-L-14-336px.pt) |
+| MVTec-trained AnomalyCLIP prompt | `external/AnomalyCLIP/checkpoints/9_12_4_multiscale_visa/epoch_15.pth` | Included in pinned AnomalyCLIP clone; not trained on VisA |
+| Optional CVPR template | `assets/templates/CVPR2026-v1-latex.zip` | [CVPR author-kit release](https://github.com/cvpr-org/author-kit/releases/tag/CVPR2026-v1(latex)); not needed for model execution |
+
+Download only the model/data assets needed for Parts 1/2:
+
+```powershell
+python scripts/prepare_assets.py --only "VisA"
+python scripts/prepare_assets.py --only "DINOv2 ViT-S/14"
+python scripts/prepare_assets.py --only "CLIP ViT-L/14@336px"
+```
+
+The script uses Windows `curl.exe`, validated HTTP byte ranges, resumable parts and safe archive extraction. Retry the same command after interruption; do not delete valid parts unnecessarily. A proxy/firewall must allow GitHub, the AWS archive, Meta's public files, the CLIP asset host and the conda/pip package hosts. Downloading from arbitrary mirrors is not part of the verified setup.
+
+The script writes `assets/preparation_status.json`. CLIP's SHA256 is encoded in its official URL. DINO/VisA SHA256 values in the inventory identify the tested downloads; they are **not independently published official checksum attestations**. Model asset identities are also recorded in `part2/assets_verified.json`. A completed download alone does not prove inference works.
+
+## Safe fallback when the upstream DINO TLS endpoint is unavailable
+
+On 2026-11-12 the official DINO file host returned an expired-certificate error in both Python and Windows curl from the release environment. VisA and CLIP returned valid byte-range responses. Do not use `--insecure`, disable certificate checks or silently download a different model. The original official URL above remains the primary source when its TLS service is valid.
+
+For an immediate handoff, obtain the **already verified original DINO checkpoint** from the project owner through an agreed file-transfer method (the owner's local file is `weights/dinov2_vits14_pretrain.pth`). It is intentionally not committed to Git. Validate and stage that exact binary:
+
+```powershell
+python scripts/stage_local_weights.py --asset dino --source "E:/handoff/dinov2_vits14_pretrain.pth"
+python scripts/stage_local_weights.py --asset dino --verify-only
+# Optional offline CLIP handoff, checked against the hash in its official URL:
+python scripts/stage_local_weights.py --asset clip --source "E:/handoff/ViT-L-14-336px.pt"
+```
+
+The script refuses mismatched source or existing destination files, verifies a copied temporary file and atomically stages it under `weights/`. DINO expected SHA256 is `b938bf1bc15cd2ec0feacfe3a1bb553fe8ea9ca46a7e1d8d00217f29aef60cd9`; this is the previously verified project artifact identity, not an independently published official checksum. Do not rename a Hugging Face-format checkpoint into the torch-hub filename: different key layouts/serializations are not a verified replacement. An official Meta mirror was investigated but a complete compatible binary download was not verified in this environment, so no untested mirror-conversion command is provided.
+
+A new recipient needs either restored upstream TLS availability or access to the verified handoff file. The Git clone alone cannot overcome an unavailable upstream service. After staging the file, skip the failed DINO download command and proceed normally. Raw data, AE checkpoints, caches and heatmaps are still prepared by the commands above/below.
+
+## 4. Prepare official VisA splits and metadata
+
+```powershell
+python scripts/prepare_visa.py
+```
+
+This verifies all 10,821 raw images and annotated masks, invokes pinned `spot-diff/utils/prepare_data.py`, checks normal-only training/binary prepared masks, copies the official split to `data/VisA/split_csv/1cls.csv`, and writes `data/VisA/meta.json` for CLIP-compatible metadata. Prepared 1-class data are under `data/VisA_pytorch/1cls`. Keep normal raw masks absent; anomalous raw masks are binarized with `>0`, not `>127`.
+
+The course runners read the raw `data/VisA` images with the official split, not a second resized/cropped prepared dataset. The data inventory under `assets/` is overwritten only by intentional preparation; historical published inventories describe the tested data, not guaranteed files on a new machine.
+
+## 5. Run Part 1, then Part 2
+
+Follow [Part 1 commands](part1/README.md) to create normal templates and AE checkpoints and calibrate/evaluate them. Then follow [Part 2 commands](part2/README.md) for isolated NumPy/FAISS dependencies, both smoke tests, the full few-shot/zero-shot runs and verification. Do not install the Part 2 NumPy 1 overlay over the base Part 1 environment. The provided FAISS lock is Windows win-64 only.
+
+For the supplementary comparison, both parts' full outputs must already exist:
+
+```powershell
+python scripts/illumination_course448.py
+python scripts/build_part12_comparison.py
+python scripts/verify_part12_supplement.py
+```
+
+## Existing assets and output recovery
+
+- `CVPROJECT_ASSETS`: directory containing `external/`, `weights/`, `part2/.deps/`, and `part2/.faiss/` for the Part 2 runner and repository checker.
+- `CVPROJECT_DATA_ROOT`: raw VisA directory containing `split_csv/1cls.csv`.
+- `CVPROJECT_OUTPUT_ROOT`: existing or new Part 1 output root.
+- `CVPROJECT_PART2_OUTPUT`: Part 2 root containing `smoke/` and `full/`.
+
+The download/data-preparation scripts prepare files under their own repository root. For a brand-new setup, leave defaults and run everything in one clone. If reusing assets elsewhere, set the runtime variables above; do not assume all preparation scripts relocate with the asset variable.
+
+No pretrained project AE checkpoint is offered for download: regenerate it by normal-only training. Templates are regenerated by the template runner. Full heatmaps and DINO feature caches are regenerated by inference; they are not required to read the published CSV/PNG summaries. Saved prediction CSVs contain local absolute map paths: after moving an output directory to another machine, regenerate predictions into the new output root instead of blindly reusing invalid absolute paths. Keep historical output folders intact while testing a new setup.
+
+## Troubleshooting and handoff boundaries
+
+If imports fail, confirm the active interpreter with `python -c "import sys; print(sys.executable)"`. If FAISS raises an OpenMP conflict, use the pinned conda sidecar, not duplicate-runtime suppression. If source identity fails, use a new output root for actual code changes; only the explicit audited translation mapping may recognize historical source hashes. If models or templates are missing, run their generating commands before demos/evaluation.
+
+AnomalyCLIP folder names can be misleading: the `_visa` prompt directory is the MVTec-trained checkpoint used to evaluate VisA. Do not substitute the other checkpoint trained on VisA. Preserve the official source revisions, weights, random-reference manifest and protocol when reproducing results.
+
+VisA images/annotations originate from [SPot-the-Difference](https://github.com/amazon-science/spot-diff) (CC BY 4.0). Cite VisA, DINOv2, CLIP, AnomalyDINO, AnomalyCLIP and other borrowed components; retain upstream license obligations. Do not redistribute course PDFs or third-party checkpoints merely because they were available locally.

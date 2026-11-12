@@ -1,88 +1,50 @@
 # Few-Shot Industrial Visual Anomaly Detection
 
-Final project for AIAA 3201 Introduction to Computer Vision.
+AIAA 3201 project: normal-only classical baselines and frozen foundation-model anomaly detection on VisA.
 
-## Goal
+## Handoff status
 
-Given a small set of defect-free reference images, this project builds a visual anomaly detection system that:
+Part 1 and Part 2 implementations and required six-category experiments are complete. The supplementary course448 brightness comparison and requirement checks are included. Part 3, the final CVPR-format paper, and the final course submission remain pending. This repository is not a claim that the entire course project is finished.
 
-- predicts an image-level anomaly score,
-- makes an OK/NG decision,
-- localizes anomalous regions at pixel level with a heatmap,
-- remains robust under changes in illumination, viewpoint, background, and product category.
+**Start with [PREPARATION.md](PREPARATION.md).** It covers every excluded large asset, pinned upstream repositories, the tested Windows environment, and preparation order. Then follow [Part 1](part1/README.md), [Part 2](part2/README.md), and the [handoff checklist](docs/PART1_PART2_REQUIREMENT_CHECKLIST.md).
 
-## Planned Scope
+The DINO upstream TLS endpoint had an expired-certificate error during handoff checks. PREPARATION includes an exact-hash, safe offline-weight transfer path; do not disable TLS verification.
 
-- Classical normality modeling baseline:
-  - image registration to normal templates,
-  - hand-crafted difference maps,
-  - thresholding based only on normal validation data,
-  - convolutional autoencoder reconstruction baseline.
-- Foundation-model reproduction:
-  - AnomalyDINO with DINOv2 patch features,
-  - 1/2/4/8-shot memory-bank retrieval,
-  - AnomalyCLIP zero-shot comparison.
-- Exploration:
-  - robustness and reliability improvement such as multi-scale features, background suppression, feature/prompt fusion, memory compression, or selective prediction.
+## What is included
 
-## Dataset
+| Directory | Contents |
+| --- | --- |
+| `part1/` | ECC/mean-template difference and normal-only convolutional AE |
+| `part2/` | Official AnomalyDINO/AnomalyCLIP adapters, fixed references and verification |
+| `scripts/` | Repository/data/weight preparation, demos and supplementary experiments |
+| `results/part1_course448/` | Six-category metrics, histories, 24 classified failures and brightness study |
+| `results/part2_course448/` | 78 configurations, mean/SD curves, resource records and visualizations |
+| `results/part12_comparison/` | Four-method comparison and fixed example detail crops |
+| `docs/` | Interpretation, reproducibility limits, and requirement checklist |
+| `assets/` | Pinned source revisions, asset inventories and translation provenance |
+| `literature/` | Source links for the recommended papers; not the paper PDFs |
+| `part3/` | Explicit placeholder for future improvements and ablations |
 
-The required dataset is VisA. The course benchmark categories are:
+Raw images, weights, official clones, dependency environments, checkpoints, feature caches and full heatmaps are excluded. **A Git clone alone does not contain a trained AE or a working model environment.** Rebuild them using PREPARATION and the part-specific commands.
 
-- candle
-- capsules
-- cashew
-- chewinggum
-- fryum
-- pipe fryum
+## Shared evaluation contract
 
-Evaluation on all 12 VisA categories is a stretch goal.
+The six categories are candle, capsules, cashew, chewinggum, fryum and pipe_fryum. `experiment_protocol.json` fixes RGB bilinear resizing to 448x448 without crop/padding; masks use nearest resizing and `>0`. The official test split is unchanged. Normal training data are split into 2,921 fit and 324 validation images (seed 42); the test set contains 960 images, including 360 normal and 600 anomalous images.
 
-## Metrics
+Thresholds use only normal validation data: target image FPR 5%, target pixel FPR 1%, strict `score > threshold`. Report image AUROC/AP/FPR and pixel AUROC/AP/AUPRO separately. AUPRO uses 8-connected regions, 200 thresholds and normalized area up to background FPR 0.30. Test labels must never select operating thresholds.
 
-Image-level detection:
+Part 1 and Part 2 share geometry and evaluation. DINO/CLIP retain their pretrained normalization interfaces. DINO uses shots 1/2/4/8 and seeds 42/43/44. CLIP uses MVTec-trained prompts without VisA gradient training. Native image scores and common heatmap top-1% scores are separate columns; do not mix them.
 
-- AUROC
-- Average Precision
-- false-positive rate at the selected operating threshold
+## Results to inspect
 
-Pixel-level localization:
+- [Unified comparison](results/part12_comparison/README.md)
+- [Part 1 classified failures](results/part1_course448/FAILURE_ANALYSIS.md)
+- [Part 2 architecture/output report](part2/REPORT.md)
+- [Interpretation and limitations](docs/PART1_PART2_ANALYSIS.md)
 
-- pixel AUROC
-- pixel AP
-- AUPRO
+![Few-shot stability](results/part2_course448/few_shot_curves.png)
+![Fixed-threshold brightness study](results/part12_comparison/illumination_fpr.png)
 
-Few-shot stability:
+## English release and provenance
 
-- mean and standard deviation over at least three random reference selections for 1/2/4/8-shot settings
-
-Efficiency:
-
-- feature extraction time
-- scoring time
-- peak GPU memory
-- memory-bank size
-
-## Project Layout
-
-Paths below are relative to the repository root.
-
-- `part1/`: classical template/difference and reconstruction baselines.
-- `part2/`: AnomalyDINO reproduction and AnomalyCLIP comparison.
-- `part3/`: robustness improvements, controlled ablations, and failure analysis.
-- `literature/`: the ten recommended papers grouped by topic, sources, and reading notes.
-- `data/`, `weights/`, `external/`: shared datasets, model weights, and official repositories.
-- `scripts/`: shared preparation utilities.
-- `assets/`: download inventory, source revisions, data verification, and report template.
-- `experiment_protocol.json`: shared course448 input, data-split and metric contract.
-- `outputs/course448/part1/`: regenerated Part 1 predictions/checkpoints (excluded from Git).
-- `results/part1_course448/`: verified, shareable summaries and representative figures.
-
-Each part has its own README. Keep the same data split and evaluation protocol across parts. Shared assets remain at the root to avoid duplication. See `PREPARATION.md` for downloaded asset details and `PROJECT_NOTES.md` for course requirements.
-
-## Repository Status
-
-Part 1 now contains runnable template-difference and normal-only convolutional autoencoder baselines, with shared 448x448 VisA loading and evaluation utilities. Template maps are restored to test-image coordinates before pixel evaluation. See `part1/README.md` for setup, commands, metric protocol, and output locations. Part 2 includes the course448 foundation-model runner, fixed reference selections, verification tools and a directory/architecture report in `part2/REPORT.md`. All 78 configurations and 16,692 heatmaps have been verified; summaries, few-shot curves, and representative/failure visualizations are under `results/part2_course448`. Part 3 remains pending.
-
-
-2026-11-12补齐核查：见 docs/PART1_PART2_REQUIREMENT_CHECKLIST.md 和 PART1_PART2_ANALYSIS.md；统一表与局部图在results/part12_comparison，光照对照在results/part1_course448/illumination。
+The active release contains English documentation, comments and user-facing messages. Original Chinese material is retained locally outside this repository's release tree. Historical result hashes remain historical: [source provenance](docs/SOURCE_PROVENANCE.md) explains the explicitly verified English translation mapping. Translating source text does not mean that the old experiments were rerun under the new file hashes.

@@ -1,0 +1,14 @@
+{
+  "status": "passed",
+  "english_only_current_tree": true,
+  "python_behavior_tests": 7,
+  "full_part1_maps_verified": 2568,
+  "full_part2_maps_verified": 16692,
+  "supplement_predictions_verified": 1944,
+  "new_smoke_images_per_model": 24,
+  "new_smoke_vs_historical_max_absolute_error": 0.0,
+  "official_repositories_checked": 4,
+  "original_metric_csvs_unchanged": true,
+  "large_asset_checks": "VisA and CLIP reachable; DINO upstream certificate expired; safe exact-hash local staging tested; recorded Windows CUDA wheels present",
+  "fresh_machine_installation": false
+}

@@ -1,4 +1,4 @@
-"""导出可分享结果，不复制模型、完整热图或机器绝对路径。"""
+'Export verified summaries without models, full maps or personal paths.'
 from pathlib import Path
 import json
 import shutil
@@ -17,7 +17,7 @@ from verify_part1_release import verify_release
 
 
 def export_results():
-    """核查通过的完整输出→公开汇总和24例视觉检查面板，返回目的目录。"""
+    'Export results.'
     verification = verify_release()
     destination = ROOT / "results/part1_course448"
     destination.mkdir(parents=True, exist_ok=True)
@@ -40,7 +40,7 @@ def export_results():
     errors["image"] = [Path(path).relative_to(common.DATA_ROOT).as_posix() for path in errors.image_path]
     errors.drop(columns=["image_path"]).to_csv(destination / "error_cases.csv", index=False)
     errors.groupby(["method", "category", "error_type"]).size().rename("count").to_csv(destination / "error_counts.csv")
-    # 每种方法/类别优先展示一个FP和一个FN；总24个不同方法-图像案例。
+
     selected = []
     for method in ["template", "autoencoder"]:
         for category in common.REQUIRED_CATEGORIES:

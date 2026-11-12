@@ -10,5 +10,13 @@
     "03_evaluate.py": "a358c7a53c10d1958f78a4ac138c0a6aca3e046d74903c80ba2009c5f69f6e8b",
     "common.py": "21a6837222a19cfd8d3ec10456f5d776fb717c2b7e0fc5d3a390caf517427415"
   },
+  "verified_with_source_sha256": {
+    "benchmark.py": "f631a0afad19ce8fae8f293e33dfd94f3c2b42a66829b801243aaa575bd7c2f4",
+    "course_inputs.py": "fe1b5700ab10b1affa6fbdd3eb5cd3930ef0ed5533b13738e5d9723daf23d0e1",
+    "experiment_protocol.json": "9bcf036cbffdd132954dd85a9500e9f62bfb2f879c0905c732f2fe146e7e64e7",
+    "reference_selections.csv": "b1b302582c12598e0aba451cafcc33b5ad63d96fa667af956bd3c1a21b19303e",
+    "03_evaluate.py": "f28c8d4b7824db202566e22a3ff8a529bf5d87b4a222ef978c28ba07cdd3d5b8",
+    "common.py": "a73a906f09f8604f7656639d076f932116c271841fd98055ae72bf56687fe48d"
+  },
   "std_ddof": 1
 }

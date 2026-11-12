@@ -1,4 +1,4 @@
-"""数据/预处理/随机参考行为检查；不运行大模型或改动结果。"""
+'Check split isolation, random references and shared RGB preprocessing.'
 from pathlib import Path
 import os,sys
 ROOT=Path(__file__).resolve().parents[1];ASSETS=Path(os.environ.get('CVPROJECT_ASSETS',ROOT));sys.path.insert(0,str(ASSETS/'part2/.deps'));sys.path.insert(0,str(ROOT/'part1'))
