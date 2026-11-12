@@ -31,3 +31,7 @@ verify_results必须通过78组/16692张图、完整路径集合、参考图隔�
 模型核心数值与官方入口的匹配样本对比：CLIP12图max_abs_error=0，DINO6匹配图max_abs_error约4.63e-8；详情见equivalence JSON，不能把该检查误称为全量结果验收。
 
 输入448是课程公平比较配置，不冒充论文原分辨率结果。冻结特征缓存的命中/提取成本、CPU记忆库及GPU分配峰值需分开解读。Part3仍未完成。
+
+补充复现准备：首次运行请先按根PREPARATION.md执行 `python scripts/prepare_repositories.py --install`，再下载数据/骨干并整理数据。该脚本固定assets/source_revisions.json中的四个仓库版本，不覆盖已有源码修改。
+
+2026-11-12补齐核查：见 ../docs/PART1_PART2_REQUIREMENT_CHECKLIST.md 和 PART1_PART2_ANALYSIS.md；统一表与局部图在results/part12_comparison，光照对照在results/part1_course448/illumination。

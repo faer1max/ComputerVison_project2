@@ -1,0 +1,95 @@
+{
+  "status": "passed",
+  "image_size": [
+    448,
+    448
+  ],
+  "normal_validation_images": 324,
+  "predictions": 1944,
+  "factors": [
+    0.75,
+    1.0,
+    1.25
+  ],
+  "threshold_rule": "original normal validation threshold, strict >; no recalibration",
+  "data_scope": "normal validation only; no defect recall or real lighting generalization claim",
+  "score_representation": "float32 shortest decimal CSV and pandas parser, identical to original Part1 predictions; raw score also retained",
+  "rounding": "float32 multiplication, clip 0..255, uint8 truncation",
+  "source_sha256": {
+    "scripts/illumination_course448.py": "490212d687986bb818f26f5fc644f8ffa91d07df7bca4b49eac563ff6fba04cd",
+    "experiment_protocol.json": "9bcf036cbffdd132954dd85a9500e9f62bfb2f879c0905c732f2fe146e7e64e7",
+    "part1/common.py": "21a6837222a19cfd8d3ec10456f5d776fb717c2b7e0fc5d3a390caf517427415",
+    "part1/01_template_baseline.py": "13e7cfe1de1a5dfded03e75486da3882ee0bfa6077c3cb69c1067f823d65ff7c",
+    "part1/02_autoencoder.py": "d84072db061822c15717e1a3dd01fa460f09039db8994f3295a4fb57a16d9935"
+  },
+  "checks": [
+    {
+      "category": "candle",
+      "method": "template",
+      "unchanged_scores_match": true
+    },
+    {
+      "category": "candle",
+      "method": "autoencoder",
+      "unchanged_scores_match": true
+    },
+    {
+      "category": "capsules",
+      "method": "template",
+      "unchanged_scores_match": true
+    },
+    {
+      "category": "capsules",
+      "method": "autoencoder",
+      "unchanged_scores_match": true
+    },
+    {
+      "category": "cashew",
+      "method": "template",
+      "unchanged_scores_match": true
+    },
+    {
+      "category": "cashew",
+      "method": "autoencoder",
+      "unchanged_scores_match": true
+    },
+    {
+      "category": "chewinggum",
+      "method": "template",
+      "unchanged_scores_match": true
+    },
+    {
+      "category": "chewinggum",
+      "method": "autoencoder",
+      "unchanged_scores_match": true
+    },
+    {
+      "category": "fryum",
+      "method": "template",
+      "unchanged_scores_match": true
+    },
+    {
+      "category": "fryum",
+      "method": "autoencoder",
+      "unchanged_scores_match": true
+    },
+    {
+      "category": "pipe_fryum",
+      "method": "template",
+      "unchanged_scores_match": true
+    },
+    {
+      "category": "pipe_fryum",
+      "method": "autoencoder",
+      "unchanged_scores_match": true
+    }
+  ],
+  "source_canonical_lf_sha256": {
+    "scripts/illumination_course448.py": "0823fb3908d9312bfadc02a2c788e84f8cd68991d575b51d2858a20e60f6fa63",
+    "experiment_protocol.json": "9bcf036cbffdd132954dd85a9500e9f62bfb2f879c0905c732f2fe146e7e64e7",
+    "part1/common.py": "21a6837222a19cfd8d3ec10456f5d776fb717c2b7e0fc5d3a390caf517427415",
+    "part1/01_template_baseline.py": "13e7cfe1de1a5dfded03e75486da3882ee0bfa6077c3cb69c1067f823d65ff7c",
+    "part1/02_autoencoder.py": "d84072db061822c15717e1a3dd01fa460f09039db8994f3295a4fb57a16d9935"
+  },
+  "source_note": "source_sha256 records bytes at execution; canonical_lf hashes allow Git CRLF/LF conversion only, no code changes"
+}

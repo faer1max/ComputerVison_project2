@@ -84,3 +84,5 @@ Each part has its own README. Keep the same data split and evaluation protocol a
 
 Part 1 now contains runnable template-difference and normal-only convolutional autoencoder baselines, with shared 448x448 VisA loading and evaluation utilities. Template maps are restored to test-image coordinates before pixel evaluation. See `part1/README.md` for setup, commands, metric protocol, and output locations. Part 2 includes the course448 foundation-model runner, fixed reference selections, verification tools and a directory/architecture report in `part2/REPORT.md`. All 78 configurations and 16,692 heatmaps have been verified; summaries, few-shot curves, and representative/failure visualizations are under `results/part2_course448`. Part 3 remains pending.
 
+
+2026-11-12补齐核查：见 docs/PART1_PART2_REQUIREMENT_CHECKLIST.md 和 PART1_PART2_ANALYSIS.md；统一表与局部图在results/part12_comparison，光照对照在results/part1_course448/illumination。

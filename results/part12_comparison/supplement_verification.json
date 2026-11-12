@@ -1,0 +1,10 @@
+{
+  "status": "passed",
+  "illumination_predictions": 1944,
+  "illumination_groups": 36,
+  "baseline_decisions_reproduced": 648,
+  "part1_cases": 24,
+  "part2_runs": 78,
+  "comparison_rows": 12,
+  "scope": "Supplementary scores/decisions, data isolation, summary recomputation and unchanged source identity; full original maps remain covered by earlier release verification"
+}

@@ -1,0 +1,14 @@
+{
+  "template/candle/normal_template.png": "7bb5b08eb28d07214219c162d6494339372e2e12ad09a04188ebb5515a854526",
+  "template/capsules/normal_template.png": "a0d0d4da651206db0ae5e3945a0d4ac6cfd63622d11ba202daec179dce23a30b",
+  "template/cashew/normal_template.png": "35171c131b4f4980d8232ca11931fca72bc540b8e4f84542da8dca883a543b0b",
+  "template/chewinggum/normal_template.png": "2de21d9622bdecde094e4b1dee1c5264d9b088d70c8442351646a2b1074aec74",
+  "template/fryum/normal_template.png": "dad5a1a231e58b6421e37825a395bdbd620e9263f524171142401252e6469bda",
+  "template/pipe_fryum/normal_template.png": "72913d55c29cbcaf75399d26a3df69d267a3c4e6ab8041670633e4f5ab3d1d40",
+  "autoencoder/candle/model.pt": "c25f24bd667c48361833ad066563e58ebf0988b64c0c96c0934a66eec6978255",
+  "autoencoder/capsules/model.pt": "6ca73854bccc5ea58df874e1c1c5677225861ac9d11bd9513da0b4e5bf7a39f4",
+  "autoencoder/cashew/model.pt": "b2308cdb30936080a349d9c027091a1ec7cc3554ca621f3fd6081751a0a7bef3",
+  "autoencoder/chewinggum/model.pt": "a1867917bf03e4b31fc055883c907db0d1a37215f905fe6f92a6cbdd0f0e8b0f",
+  "autoencoder/fryum/model.pt": "ceba41c4b972bde84580f8d18b2021ab5872b6724fc30b0ffa4e7105a989acff",
+  "autoencoder/pipe_fryum/model.pt": "a0f53b365ce98c13e922ca0be0c8038d47654f6a2b5a6ff1bff89c6d74330194"
+}

@@ -3,6 +3,7 @@ from pathlib import Path
 import argparse
 import importlib.util
 import json
+import io
 import sys
 import numpy as np
 import pandas as pd
@@ -38,9 +39,12 @@ def predict_image(method, category, image_path, destination):
             anomaly_map = (tensor - model(tensor)).abs().mean(dim=1)[0].numpy()
     metrics = pd.read_csv(OUTPUT_DIR / "evaluation/metrics.csv")
     calibration = metrics.query("category == @category and method == @method").iloc[0]
-    score = image_score(anomaly_map)
+    raw_score = image_score(anomaly_map)
+    # 与已校准Part1 CSV的float32十进制评分表示一致，避免并列阈值精度翻转。
+    score = float(pd.read_csv(io.StringIO("score\n" + str(np.float32(raw_score)))).score.iloc[0])
     threshold = float(calibration.image_threshold)
     result = {"method": method, "category": category, "score": score,
+              "raw_float32_score": raw_score, "score_representation": "original float32 CSV decimal",
               "threshold": threshold, "decision": "NG" if score > threshold else "OK",
               "threshold_source": "normal validation only"}
     destination = Path(destination)

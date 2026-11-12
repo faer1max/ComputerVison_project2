@@ -98,3 +98,7 @@ AE正常训练/验证RGB输入一次性缓存以免每轮解码；训练计时�
 旧256结果、旧分支默认20轮AE及本地学习单模板结果不与本次448结果混用。
 Part2/3和报告仍需继续；全项目至少20例FP/FN人工原因分类若未完成，会在结果状态中
 明确标注，不能把自动错误清单当作原因分析已完成。
+
+补充复现准备：首次运行请先按根PREPARATION.md执行 `python scripts/prepare_repositories.py --install`，再下载数据/骨干并整理数据。该脚本固定assets/source_revisions.json中的四个仓库版本，不覆盖已有源码修改。
+
+2026-11-12补齐核查：见 ../docs/PART1_PART2_REQUIREMENT_CHECKLIST.md 和 PART1_PART2_ANALYSIS.md；统一表与局部图在results/part12_comparison，光照对照在results/part1_course448/illumination。

@@ -22,9 +22,10 @@
 
 ## 复现准备过程
 
-在项目根目录执行（Python 3.12+，系统有 curl；数据整理另需 numpy、Pillow）：
+在项目根目录执行（Python 3.11（本次实测3.11.17），系统有 curl；数据整理另需 numpy、Pillow）：
 
 ```powershell
+python scripts/prepare_repositories.py --install
 python scripts/prepare_assets.py
 python scripts/prepare_visa.py
 ```
@@ -55,3 +56,28 @@ python scripts/prepare_visa.py
 - AnomalyCLIP：<https://github.com/zqhang/AnomalyCLIP>
 - DINOv2：<https://github.com/facebookresearch/dinov2>
 - CVPR 模板：<https://github.com/cvpr-org/author-kit/releases/tag/CVPR2026-v1(latex)>
+
+## 从空目录准备官方源码（固定版本）
+
+先安装Git以及Python3.11环境和匹配的CUDA torch/torchvision，再安装part1/requirements.txt。默认资产放仓库根目录；--install仅克隆缺失仓库，已有版本不符或有Python改动会拒绝覆盖。可复用资产时设置CVPROJECT_ASSETS；数据准备脚本仍从其所在仓库根目录准备数据，跨目录复用数据应直接设置CVPROJECT_DATA_ROOT而不重复整理。
+
+```powershell
+python scripts/prepare_repositories.py --install
+# 只核对已有源码，不下载：
+python scripts/prepare_repositories.py
+```
+
+等效手工命令（在仓库根目录执行，仅用于尚未克隆时）：
+
+```powershell
+git clone --no-checkout https://github.com/dammsi/AnomalyDINO.git external/AnomalyDINO
+git -C external/AnomalyDINO checkout --detach b9d1c2648e3a5247437d4d953d907a8f3d994457
+git clone --no-checkout https://github.com/zqhang/AnomalyCLIP.git external/AnomalyCLIP
+git -C external/AnomalyCLIP checkout --detach 3911738c0867544f545a076ad78f3f11d9ecbfdf
+git clone --no-checkout https://github.com/facebookresearch/dinov2.git external/dinov2
+git -C external/dinov2 checkout --detach 7764ea0f912e53c92e82eb78a2a1631e92725fc8
+git clone --no-checkout https://github.com/amazon-science/spot-diff.git external/spot-diff
+git -C external/spot-diff checkout --detach 2a692ab575001cbde74d402d897a7286086c6199
+```
+
+顺序：官方源码 → prepare_assets下载并解压VisA/骨干 → prepare_visa官方划分与CLIP元数据 → Part1正式训练/评估 → Part2独立依赖与推理。AnomalyCLIP提示checkpoint随固定官方仓库提供；不得换成VisA训练的另一组提示。已有数据/权重可直接复用，不需清空或重装cvproject。
